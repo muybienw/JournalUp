@@ -1,0 +1,55 @@
+.container {
+     border-top: dashed;
+}
+
+.header {
+    background-color: #2a6496;
+    color: white;
+    font-family: "Brush Script MT", "Nanum Pen Script", Chalkboard;
+    text-align: center;
+    margin-top: auto;
+}
+
+#profile{
+    display: inline;
+}
+
+#profile img{
+    width: 5em;
+}
+
+.active {
+    background-color: palegreen;
+    font-style: italic;
+}
+
+.footer {
+    display: inline;
+    text-align: center;
+
+    color: white;
+}
+
+#my_journals{
+    background-color: orangered;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#my_journals:hover {
+    color: black;
+}
+
+#gallery {
+    background-color: yellowgreen;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#gallery:hover {
+    color: black;
+}
+
+.thumbnail {
+    margin-top: 1em;
+}
