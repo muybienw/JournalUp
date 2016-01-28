@@ -1,13 +1,22 @@
 .container {
-     border-top: dashed;
+    border-top: dotted;
+    border-top-color: #2a6496;
+    border-top-width: medium;
 }
 
 .header {
     background-color: #2a6496;
     color: white;
-    font-family: "Brush Script MT", "Nanum Pen Script", Chalkboard;
+    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
+    font-size: 3em;
     text-align: center;
     margin-top: auto;
+    padding: 0;
+    margin: 0;
+}
+
+#user_name {
+    font-weight: bold;
 }
 
 #profile{
@@ -17,6 +26,11 @@
 #profile img{
     width: 5em;
     margin: 0 auto;
+    float: right;
+}
+
+#profile p{
+    margin: 0.2em;
 }
 
 .active {
@@ -38,10 +52,15 @@
 }
 
 
+.footer p{
+    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
+    padding-top: .6em;
+    padding-bottom: .6em;
+    font-size: 2em;
+}
+
 #my_journals{
     background-color: orangered;
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 #my_journals:hover {
@@ -50,8 +69,7 @@
 
 #gallery {
     background-color: yellowgreen;
-    padding-top: 1em;
-    padding-bottom: 1em;
+
 }
 
 #gallery:hover {
@@ -60,4 +78,13 @@
 
 .thumbnail {
     margin-top: 1em;
+}
+
+#profile {
+    align-items: center;
+}
+
+.highlight {
+    font-weight: bold;
+    color: darkorange;
 }
