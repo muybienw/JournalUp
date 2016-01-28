@@ -1,4 +1,4 @@
-lab3
+Journal Up
 ====
 
-Lab 3 for Intro HCI: client-side interactivity
+An HCI Project for UCSD CSE 170
