@@ -5,6 +5,10 @@
 }
 
 .header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #2a6496;
     color: white;
     font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
@@ -20,6 +24,7 @@
 }
 
 #profile{
+    top: 10%;
     display: inline;
 }
 
@@ -51,8 +56,12 @@
     color: white;
 }
 
+.empty{
+    height: 70px;
+}
 
 .footer p{
+    z-index: 100;
     font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
     padding-top: .6em;
     padding-bottom: .6em;
