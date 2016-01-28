@@ -16,11 +16,15 @@
 
 #profile img{
     width: 5em;
+    margin: 0 auto;
 }
 
 .active {
     background-color: palegreen;
     font-style: italic;
+}
+.img-container{
+    width: 10%;
 }
 
 .footer {
