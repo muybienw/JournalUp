@@ -39,8 +39,7 @@
 }
 
 .active {
-    background-color: palegreen;
-    font-style: italic;
+    font-weight: bold;
 }
 .img-container{
     width: 10%;
@@ -87,6 +86,10 @@
 
 .thumbnail {
     margin-top: 1em;
+}
+
+#new_journal {
+    text-align: center;
 }
 
 #profile {
