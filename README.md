@@ -1,4 +1,4 @@
-Journal Up
+lab7
 ====
 
-An HCI Project for UCSD CSE 170
+Lab 7: Databases

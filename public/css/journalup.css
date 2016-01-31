@@ -1,0 +1,102 @@
+.container {
+    /*border-top: dotted;*/
+    /*border-top-color: #2a6496;*/
+    /*border-top-width: medium;*/
+}
+
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2a6496;
+    color: white;
+    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
+    font-size: 3em;
+    text-align: center;
+    margin-top: auto;
+    padding: 0;
+    margin: 0;
+}
+
+#user_name {
+    font-weight: bold;
+}
+
+#profile{
+    top: 10%;
+    display: inline;
+}
+
+#profile img{
+    width: 5em;
+    margin: 0 auto;
+    float: right;
+}
+
+#profile p{
+    margin: 0.2em;
+}
+
+.active {
+    font-weight: bold;
+}
+.img-container{
+    width: 10%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: inline;
+    text-align: center;
+
+    color: white;
+}
+
+.empty{
+    height: 70px;
+}
+
+.footer a{
+    z-index: 100;
+    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+    color: white;
+}
+
+#my_journals{
+    background-color: orangered;
+}
+
+#my_journals:hover {
+    color: black;
+}
+
+#gallery {
+    background-color: yellowgreen;
+}
+
+#gallery:hover {
+    color: black;
+}
+
+.thumbnail {
+    margin-top: 1em;
+}
+
+#new_journal {
+    text-align: center;
+}
+
+#profile {
+    align-items: center;
+}
+
+.highlight {
+    font-weight: bold;
+    color: darkorange;
+}
