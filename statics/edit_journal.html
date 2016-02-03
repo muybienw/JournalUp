@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+	<title>Journal Up</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- this is a comment in HTML -->
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Bootstrap -->
+	<link href="../public/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="../public/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+	<link href="../public/css/journalup.css" type="text/css" rel="stylesheet">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="../public/js/journalup.js"></script>
+
+
+</head>
+
+<body>
+
+	{{> header}}
+	<div class="header">
+		<p> New Journal </p>
+	</div>
+
+	<div class="empty"></div>
+
+
+	<div class="input-container">
+		<label for="form-title">Title</label>
+		<div class="input-group col-xs-12">
+			<input type="text" class="form-control" id="form-title" placeholder="Title">
+		</div>
+	</div>	
+
+	<div class="input-container">
+		<label for="form-collaborator">Collaborators</label>
+		<div class="input-group">	
+		  <input type="text" class="form-control" id="form-collaborator" placeholder="Enter username">
+		  <span class="input-group-btn">
+			<button class="btn btn-default" type="button">Search</button>
+		  </span>
+		</div>
+	</div>
+
+	<div class="input-container">
+		<div class="row">		
+			<div class="form-group col-xs-6">
+				<label for="datetimepicker-start">Start Date</label>
+				<div class='input-group date' id='datetimepicker'>
+					<input data-format="yyyy-MM-dd" type='text' class="form-control" />
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+			</div>
+			<div class="form-group col-xs-6">
+				<label for="datetimepicker-end">End Date</label>
+				<div class='input-group date' id='datetimepicker'>
+					<input data-format="yyyy-MM-dd" type='text' class="form-control" />
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="input-container">
+		<label for="form-location">Location</label>
+		<div class="input-group">	
+		  <input type="text" class="form-control" id="form-location" placeholder="Select where you are">
+		  <span class="input-group-btn">
+			<button class="btn btn-default" type="button">
+				<span class="glyphicon glyphicon-map-marker"></span>
+			</button>
+		  </span>
+		</div>
+	</div>
+
+	<div class="input-container">
+		<label for="form-photo">Cover Photo</label>
+		<div class="col-xs-12">
+			<div class="thumbnail">
+			  	<img src="../public/images/cover.jpg" alt="...">
+				<a href="#" class="btn btn-default" role="button">Choose from library</a>	
+			</div>
+	  	</div>
+	</div>
+
+
+	<div class="row">
+		<div class="text-center" id="button-create">
+			<a class="btn btn-primary btn-lg col-xs-12" href="#" role="button">Create!</a>
+		</div>
+	</div>
+
+
+</body>
+</html>

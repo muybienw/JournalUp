@@ -26,25 +26,37 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (blelow), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/journalup.js"></script>
+
 
 
 </head>
 
 <body>
-<!-- this is a comment in HTML -->
 
-<div class="container">
+    <div class="container">
 
-    <h1> Create a new journal here!</h1>
+        <h1> Create a new journal here!</h1>
 
-    <p><a href="/journal"> Finish</a></p>
+        <p><a href="/journal"> Finish</a></p>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/bootstrap.min.js"></script>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6" id="my_journals">
+                <a href='/myjournal'> My Journals </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6" id="gallery">
+                <a href='/gallery'> Gallery </a>
+            </div>
 
-</div>
+        </div>
+
+
+    </div>
 </body>
 
 </html>
