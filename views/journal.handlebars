@@ -33,11 +33,30 @@
 <body>
 <!-- this is a comment in HTML -->
 
-<div class="header">
-    <a href="/myjournal">
-        <img src="/images/back_btn.png">
-    </a>
-    <p> Journal Up </p>
+<!--<div class=" row header">-->
+    <!--<a href="/myjournal">-->
+        <!--<img src="/images/back_btn.png">-->
+    <!--</a>-->
+    <!--<p> Journal Up </p>-->
+    <!--<a href="/" class="btn-default">-->
+        <!--Log Out-->
+    <!--</a>-->
+<!--</div>-->
+
+<!--<div class="empty"> </div>-->
+
+<div class="header row">
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/myjournal" class="back_btn"> <img src="/images/back_btn.png"> </a>
+    </div>
+
+    <div class="col-md-8 col-sm-8 col-xs-8">
+        <p> Journal Up </p>
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/" class="logout_btn"> <img src="/images/logout_btn.png"> </a>
+    </div>
 </div>
 
 <div class="empty"> </div>

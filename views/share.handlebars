@@ -33,18 +33,34 @@
 <body>
 <!-- this is a comment in HTML -->
 
-<div class="header">
-    <a href="/journal">
-        <img src="/images/back_btn.png">
-    </a>
-    <p> Share </p>
+<!--<div class="header">-->
+    <!--<a href="/journal">-->
+        <!--<img src="/images/back_btn.png">-->
+    <!--</a>-->
+    <!--<p> Share </p>-->
+<!--</div>-->
+
+<!--<div class="empty"> </div>-->
+
+<div class="header row">
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/journal" class="back_btn"> <img src="/images/back_btn.png"> </a>
+    </div>
+
+    <div class="col-md-8 col-sm-8 col-xs-8">
+        <p> Share </p>
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/" class="logout_btn"> <img src="/images/logout_btn.png"> </a>
+    </div>
 </div>
 
 <div class="empty"> </div>
 
 <div class="container">
 
-    <h1> share to: </h1>
+    <h4> share to: </h4>
     <a href="http://www.facebook.com" class="btn btn-default"> Facebook </a>
     <a href="http://www.google.com" class="btn btn-default"> Google </a>
 

@@ -25,14 +25,30 @@
 <body>
 
 
-<div class="header">
-    <a href="/myjournal">
-        <img src="/images/back_btn.png">
-    </a>
-    <p> Gallery</p>
+<!--<div class="header">-->
+    <!--<a href="/myjournal">-->
+        <!--<img src="/images/back_btn.png">-->
+    <!--</a>-->
+    <!--<p> Gallery</p>-->
+<!--</div>-->
+
+<!--<div class="empty"></div>-->
+
+<div class="header row">
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/myjournal" class="back_btn"> <img src="/images/back_btn.png"> </a>
+    </div>
+
+    <div class="col-md-8 col-sm-8 col-xs-8">
+        <p> Gallery </p>
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <a href="/" class="logout_btn"> <img src="/images/logout_btn.png"> </a>
+    </div>
 </div>
 
-<div class="empty"></div>
+<div class="empty"> </div>
 
 <div class="input-group search-box">
     <input type="text" class="form-control" placeholder="Search for journals" aria-describedby="basic-addon1">

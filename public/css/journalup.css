@@ -17,13 +17,28 @@
     margin-top: auto;
     padding: 0;
     margin: 0;
+    float: left;
+    vertical-align: middle;
+
 }
 
 .header img{
-    float: left;
-    vertical-align: middle;
-    height: 70px;
+    height: 60px;
 }
+
+.header .back_btn{
+    float: left;
+}
+
+.header .logout_btn{
+    vertical-align: middle;
+}
+
+.header .logout_btn img{
+    float: right;
+    height: 50px;
+}
+
 
 #user_name {
     font-weight: bold;
@@ -158,3 +173,5 @@
 .journal_post img{
     width: 300px;
 }
+
+
