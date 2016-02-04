@@ -46,12 +46,12 @@
 }
 
 .footer {
+    z-index: 200;
     position: fixed;
     bottom: 0;
     width: 100%;
     display: inline;
     text-align: center;
-
     color: white;
 }
 
@@ -108,8 +108,6 @@
 
 #button-create{
     margin: auto;
-    font-size: 5em;
-
 }
 
 .media-container{
@@ -117,7 +115,24 @@
 }
 
 .media{
-    height: 100px;
+    height: 120px;
+    margin: 0;
+}
 
+.media img{
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+#button-view{
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+}
+
+.search-box{
+    margin-bottom: 5px;
 }
 
