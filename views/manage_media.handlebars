@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <title>Journal Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/journalup.css" type="text/css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/journalup.js"></script>
+
+</head>
+
+<body>
+
+<div class="header">
+    <a href="/journal/edit">
+        <img src="/images/back_btn.png">
+    </a>
+    <p> Manage Content </p>
+</div>
+
+<div class="empty"></div>
+
+<div class="container">
+    <div class="row">
+
+        {{#each media}}
+            <div class="col-xs-4 media-container">
+                <a href="#" class="thumbnail media">
+                    <img src={{imageURL}} alt="...">
+                </a>
+            </div>
+        {{/each}}
+
+        <div class="col-xs-4 media-container">
+            <a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">
+                <img src="/images/add.png" alt="...">
+            </a>
+        </div>
+
+        <input id="input-4" name="input4[]" type="file" multiple class="file-loading">
+        <script>
+            $(document).on('ready', function() {
+                // $("#input-4").fileinput({showCaption: false});
+                $('#add_media_btn').click(function(){
+                    console.log("add_media_btn clicked!");
+                    window.confirm("add a new media here");
+                });
+            });
+        </script>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="text-center" id="button-view">
+        <a class="btn btn-primary btn-lg col-xs-12" href="/journal" role="button">View Journal!</a>
+    </div>
+</div>
+
+
+</body>
+</html>

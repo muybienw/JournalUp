@@ -6,23 +6,17 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars');
-var mongoose = require('mongoose');
-
-var myjournal = require('./routes/myjournal');
-var signin = require('./routes/signin');
-var gallery = require('./routes/gallery');
-var journal = require('./routes/journal');
+var handlebars = require('express3-handlebars')
 
 // Example route
 // var user = require('./routes/user');
 
-// Connect to the Mongo database, whether locally or on Heroku
-// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
-var local_database_name = 'journalup';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
-mongoose.connect(database_uri);
+var myjournal = require('./routes/my_journal');
+var signin = require('./routes/signin');
+var gallery = require('./routes/gallery');
+var journal = require('./routes/journal');
+
+
 
 var app = express();
 
@@ -56,10 +50,8 @@ app.get('/journal/new', journal.addJournal);
 app.get('/journal/edit', journal.editJournal);
 app.get('/journal/share', journal.shareJournal);
 app.get('/journal/media', journal.manageMedia);
+app.get('/journal/view', journal.viewJournalBook);
 
-
-// Example route
-// app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <title>New York</title>
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <script type="text/javascript" src="/public/js/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="/public/js/modernizr.2.5.3.min.js"></script>
+</head>
+
+<body>
+<!-- div class="header" >
+    <p> New York: a travel to the big apple </p>
+</div>
+
+{{> header }}
+
+<div class="empty"></div -->
+<div>
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div style="background-image:url(/public/pages/ny.jpg)"></div>
+                <div style="background-image:url(/public/pages/word1.png)"></div>
+                <div style="background-image:url(/public/pages/empire.jpg)"></div>
+                <div style="background-image:url(/public/pages/word2.png)"></div>
+                <div style="background-image:url(/public/pages/times.jpeg)"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function loadApp() {
+
+        // Create the flipbook
+
+        $('.flipbook').turn({
+            display: 'single',
+
+            // Width
+
+            width:922/2,
+
+            // Height
+
+            height:600,
+
+            // Elevation
+
+            elevation: 50,
+
+            // Enable gradients
+
+            gradients: true,
+
+            // Auto center this flipbook
+
+            autoCenter: true
+
+        });
+    }
+
+    // Load the HTML4 version if there's not CSS transform
+
+    yepnope({
+        test : Modernizr.csstransforms,
+        yep: ['../../lib/turn.js'],
+        nope: ['../../lib/turn.html4.min.js'],
+        both: ['css/basic.css'],
+        complete: loadApp
+    });
+
+</script>
+</body>
+</html>

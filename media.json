@@ -1,0 +1,20 @@
+{
+  "media": [
+    {
+      "journal_title": "New York",
+      "imageURL": "/images/cover.jpg"
+    },
+    {
+      "journal_title": "New York",
+      "imageURL": "/images/ny.jpg"
+    },
+    {
+      "journal_title": "New York",
+      "imageURL": "/images/lorempixel.people.2.jpeg"
+    },
+    {
+      "journal_title": "New York",
+      "imageURL": "/images/cover.jpg"
+    }
+  ]
+}

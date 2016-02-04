@@ -1,0 +1,53 @@
+{
+  "journals": [
+    {
+      "title": "New York",
+      "link": "/journal",
+      "imageURL": "/images/cover.jpg"
+    },
+    {
+      "title": "New York",
+      "link": "/journal",
+      "imageURL": "/images/ny.jpg"
+    },
+    {
+      "title": "Paris",
+      "link": "/journal",
+      "imageURL": "/images/paris.jpg"
+    },
+    {
+      "title": "Antlope",
+      "link": "/journal",
+      "imageURL": "/images/antlope.jpg"
+    },
+    {
+      "title": "London",
+      "link": "/journal",
+      "imageURL": "/images/bigben.jpg"
+    },
+    {
+      "title": "Taipei",
+      "link": "/journal",
+      "imageURL": "/images/101.jpg"
+    },
+    {
+      "title": "Jenny",
+      "link": "/journal",
+      "imageURL": "/images/jenny.jpg"
+    },
+    {
+      "title": "Disney",
+      "link": "/journal",
+      "imageURL": "/images/disney.jpg"
+    },
+    {
+      "title": "Japan",
+      "link": "/journal",
+      "imageURL": "/images/japan.jpg"
+    },
+    {
+      "title": "Extra",
+      "imageURL": ""
+    }
+  ]
+}

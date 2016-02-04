@@ -1,4 +1,5 @@
-lab7
+Journal Up
 ====
 
-Lab 7: Databases
+CSE 170 introHCI team project
+
