@@ -62,7 +62,11 @@
 }
 
 .empty{
+<<<<<<< HEAD
     height: 80px;
+=======
+    height: 60px;
+>>>>>>> 473006275aa8e8fe13b0d2b73c44365da7df4208
 }
 
 .footer a{
@@ -110,7 +114,10 @@
 /* Create new journal page */
 .input-container{
     margin: 1.3em;
+<<<<<<< HEAD
     align-text: center;
+=======
+>>>>>>> 473006275aa8e8fe13b0d2b73c44365da7df4208
 }
 
 #button-create{
@@ -143,6 +150,7 @@
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 #input-4 {
     background-color: gainsboro;
     overflow: hidden;
@@ -158,3 +166,5 @@
 .journal_post img{
     width: 300px;
 }
+=======
+>>>>>>> 473006275aa8e8fe13b0d2b73c44365da7df4208
