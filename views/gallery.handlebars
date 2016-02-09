@@ -1,93 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
-    <title>Journal Up</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+    <!--<link rel="stylesheet" href="JournalUp/assets/css/main.css" />-->
 
+
+
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" />
     <link href="/css/journalup.css" type="text/css" rel="stylesheet">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/journalup.js"></script>
 
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/js/main.js"></script>
 
 </head>
-
 <body>
 
+<!-- Page Wrapper -->
+<div id="page-wrapper">
 
-<!--<div class="header">-->
-    <!--<a href="/myjournal">-->
-        <!--<img src="/images/back_btn.png">-->
-    <!--</a>-->
-    <!--<p> Gallery</p>-->
-<!--</div>-->
+    <!-- Header -->
+    {{> header }}
 
-<!--<div class="empty"></div>-->
-
-<div class="header row">
-    <div class="col-md-2 col-sm-2 col-xs-2">
-        <a href="/myjournal" class="back_btn"> <img src="/images/back_btn.png"> </a>
-    </div>
-
-    <div class="col-md-8 col-sm-8 col-xs-8">
-        <p> Gallery </p>
-    </div>
-
-    <div class="col-md-2 col-sm-2 col-xs-2">
-        <a href="/" class="logout_btn"> <img src="/images/logout_btn.png"> </a>
-    </div>
-</div>
-
-<div class="empty"> </div>
-
-<div class="input-group search-box">
-    <input type="text" class="form-control" placeholder="Search for journals" aria-describedby="basic-addon1">
+    <!-- Main -->
+    <div class="input-group search-box">
+        <input type="text" class="form-control" placeholder="Search for journals" aria-describedby="basic-addon1">
 		<span class="input-group-btn">
 			<button class="btn btn-default" type="button">
                 <span class="glyphicon glyphicon-search"></span>
             </button>
-</div>
-
-
-<div class="container">
-    <div class="row">
-
-        {{#each journals}}
-            <div class="col-xs-4 media-container">
-                <a href="{{link}}" class="thumbnail media">
-                    <img src="{{imageURL}}" alt="{{title}}">
-                </a>
-            </div>
-
-        {{/each}}
-
+        </span>
     </div>
-</div>
-<div class="empty"></div>
 
 
-<footer class="footer">
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6" id="my_journals">
-            <a href='/myjournal'> My Journals </a>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-6" id="gallery">
-            <a href='/gallery'> Gallery </a>
+
+    <div class="container">
+        <div class="row">
+
+            {{#each journals}}
+                <div class="col-xs-4 media-container">
+                    <a href="{{link}}" class="thumbnail media">
+                        <img src="{{imageURL}}" alt="{{title}}">
+                    </a>
+                </div>
+
+            {{/each}}
+
         </div>
     </div>
-</footer>
 
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+            <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
 
+</div>
 
 </body>
 </html>

@@ -39,6 +39,9 @@
     height: 50px;
 }
 
+body {
+    padding-top: 70px;
+}
 
 #user_name {
     font-weight: bold;
