@@ -4,6 +4,10 @@
 
 var data = require('../data.json');
 
+
+// db models
+var models = require('../models');
+
 exports.viewJournal = function(req, res){
 
     var id = req.params.id;
@@ -93,3 +97,32 @@ exports.manageMedia = function(req, res){
 
     res.render('manage_media', data["journals"][index]);
 };
+
+// add test journal
+exports.addTestJournal = function(req, res) {
+
+    //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    //console.log(form_data);
+    //console.log(form_data['project_title']);
+
+    // make a new Project and save it to the DB
+    // YOU MUST send an OK response w/ res.send();
+
+    var newTestJournal = new models.Journal({
+        'title': "San Diego",
+        'date': new Date("Feb 2016"),
+        'summary': "where UCSD is located",
+        'coverImage': "/images/antlope.jpg",
+        'collaborators': ["Silvia", "Jenny"],
+        'images': ["/images/tree.jpg"]
+    });
+
+
+
+    newTestJournal.save(function(err){
+        if(err) console.log(err);
+        console.log("Success! new journal added");
+        res.send(200);
+    });
+
+}

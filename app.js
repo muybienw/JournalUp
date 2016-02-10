@@ -6,7 +6,18 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
+var mongoose = require('mongoose');
+
+
+
+// Connect to the Mongo database, whether locally or on Heroku
+// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
+var local_database_name = 'journalup';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name
+var database_uri = process.env.MONGOLAB_URI || local_database_uri
+mongoose.connect(database_uri);
+
 
 // Example route
 // var user = require('./routes/user');
@@ -52,6 +63,8 @@ app.get('/newjournal', journal.addJournal);
 app.get('/journal/:id/edit', journal.editJournal);
 app.get('/journal/:id/share', journal.shareJournal);
 app.get('/journal/:id/media', journal.manageMedia);
+
+app.post('/journal/new_test_journal', journal.addTestJournal);
 
 // under construction
 app.get('/journal/view', journal.viewJournalBook);
