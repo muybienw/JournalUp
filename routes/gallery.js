@@ -2,8 +2,8 @@
  * Created by MuyBien on 1/31/16.
  */
 
-var journals = require('../journals.json');
+var data = require('../data.json');
 
 exports.view = function(req, res){
-    res.render('gallery', journals);
+    res.render('gallery', data);
 };

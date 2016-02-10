@@ -38,21 +38,35 @@
 
 <div class="container">
 
-    <a href="/journal/edit" class="btn btn-default"> Edit </a>
-    <a href="/journal/share" class="btn btn-default"> Share </a>
+    <div class="12u$">
+        <ul class="actions">
+            <li><a href="/journal/{{id}}/share" class="button special">Share</a></li>
+            <li><a href="/favorite" class="button">Favorite</a></li>
+            <li><a href="/journal/{{id}}/edit" class="button">Edit</a></li>
+            <li><a href="/myjournal" class="button">Delete</a></li>
+        </ul>
+    </div>
 
 
-    <div class="row journal_post">
-        <h2> New York: a trip to Big Apple</h2>
-        <p> Silvia, Weichen, Mubin</p>
-        <p> December 2016</p>
+    <div class="container">
+        <h2> {{title}} </h2>
 
-        <img src="images/ny.jpg">
-        <hr>
+        <ul class="actions">
+        {{# each collaborators}}
+            <li> {{this}} </li>
+        {{/each}}
+        </ul>
 
-        <img src="/images/jenny.jpg">
-        <p> A visit to Metropolitan!</p>
-        <hr>
+        <p>{{time}} </p>
+
+        <p>{{description}} </p>
+
+        <img src="{{coverImage}}" width="200px">
+
+        {{#each images}}
+            <img src="{{this}}" width="200px">
+        {{/each}}
+
     </div>
 
 </div>

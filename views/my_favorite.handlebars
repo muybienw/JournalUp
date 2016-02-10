@@ -12,8 +12,6 @@
     <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
     <!--<link rel="stylesheet" href="JournalUp/assets/css/main.css" />-->
 
-
-
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
 
@@ -40,18 +38,7 @@
 <div id="page-wrapper">
 
     <!-- Header -->
-    {{> header}}
-
-    <!-- Main -->
-    <div class="input-group search-box">
-        <input type="text" class="form-control" placeholder="Search for journals" aria-describedby="basic-addon1">
-		<span class="input-group-btn">
-			<button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-        </span>
-    </div>
-
+    {{> header }}
 
 
     <div class="container">
@@ -59,8 +46,8 @@
 
             {{#each journals}}
                 <div class="col-xs-4 media-container">
-                    <a href="journal/{{id}}" class="thumbnail media">
-                        <img src="{{coverImage}}" alt="{{title}}">
+                    <a href="{{link}}" class="thumbnail media">
+                        <img src="{{imageURL}}" alt="{{title}}">
                     </a>
                 </div>
 

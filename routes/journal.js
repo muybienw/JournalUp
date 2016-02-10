@@ -2,10 +2,26 @@
  * Created by MuyBien on 1/31/16.
  */
 
-var media = require('../media.json')
+var data = require('../data.json');
 
 exports.viewJournal = function(req, res){
-    res.render('journal');
+
+    var id = req.params.id;
+    console.log(id);
+
+    var index = 0;
+
+    for (var i in data["journals"]) {
+        console.log(i);
+        console.log(data["journals"][i]["id"]);
+
+        if (data["journals"][i]["id"] == id) {
+            index = i;
+            console.log("profile index is : " + i);
+            break;
+        }
+    }
+    res.render('journal', data["journals"][index]);
 };
 
 
@@ -19,13 +35,61 @@ exports.addJournal = function(req, res){
 };
 
 exports.editJournal = function(req, res){
-    res.render('edit_journal');
+    var id = req.params.id;
+    console.log(id);
+
+    var index = 0;
+
+    for (var i in data["journals"]) {
+        console.log(i);
+        console.log(data["journals"][i]["id"]);
+
+        if (data["journals"][i]["id"] == id) {
+            index = i;
+            console.log("profile index is : " + i);
+            break;
+        }
+    }
+
+    res.render('edit_journal', data["journals"][index]);
 };
 
 exports.shareJournal = function(req, res){
-    res.render('share');
+    var id = req.params.id;
+    console.log(id);
+
+    var index = 0;
+
+    for (var i in data["journals"]) {
+        console.log(i);
+        console.log(data["journals"][i]["id"]);
+
+        if (data["journals"][i]["id"] == id) {
+            index = i;
+            console.log("profile index is : " + i);
+            break;
+        }
+    }
+
+    res.render('share', data["journals"][index]);
 };
 
 exports.manageMedia = function(req, res){
-    res.render('manage_media', media);
+    var id = req.params.id;
+    console.log(id);
+
+    var index = 0;
+
+    for (var i in data["journals"]) {
+        console.log(i);
+        console.log(data["journals"][i]["id"]);
+
+        if (data["journals"][i]["id"] == id) {
+            index = i;
+            console.log("profile index is : " + i);
+            break;
+        }
+    }
+
+    res.render('manage_media', data["journals"][index]);
 };

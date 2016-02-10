@@ -48,10 +48,17 @@
 <div class="container">
     <div class="row">
 
-        {{#each media}}
+
+        <div class="col-xs-4 media-container">
+            <a href="#" class="thumbnail media">
+                <img src="{{coverImage}}">
+            </a>
+        </div>
+
+        {{#each images}}
             <div class="col-xs-4 media-container">
                 <a href="#" class="thumbnail media">
-                    <img src={{imageURL}} alt="...">
+                    <img src={{this}} alt="...">
                 </a>
             </div>
         {{/each}}
@@ -76,10 +83,12 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="text-center" id="button-view">
-        <a class="btn btn-primary btn-lg col-xs-12" href="/journal" role="button">View Journal!</a>
-    </div>
+<div class="empty"> </div>
+
+<div class="12u$">
+    <ul class="actions">
+        <li><a href="/journal/{{id}}" class="button special">View Journal</a></li>
+    </ul>
 </div>
 
 

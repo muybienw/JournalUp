@@ -1,0 +1,20 @@
+<div class="thumbnail active">
+    <div class="row">
+        <a href="/journal/{{id}}">
+            <div class="col-md-2 col-sm-2 col-xs-5">
+                <img class="journal_cover img-thumbnail" src="{{coverImage}}"/>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-7">
+                <h3>{{title}} </h3>
+                <p> {{time}} </p>
+
+                <p>
+                    {{#each collaborators}}
+                        {{this}}
+                    {{/each}}
+                </p>
+
+            </div>
+        </a>
+    </div>
+</div>

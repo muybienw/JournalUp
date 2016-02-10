@@ -15,6 +15,7 @@ var myjournal = require('./routes/my_journal');
 var signin = require('./routes/signin');
 var gallery = require('./routes/gallery');
 var journal = require('./routes/journal');
+var favorite = require('./routes/favorite');
 
 
 
@@ -45,11 +46,14 @@ app.get('/', signin.signIn);
 app.get('/signup', signin.signUp);
 app.get('/myjournal', myjournal.view);
 app.get('/gallery', gallery.view);
-app.get('/journal', journal.viewJournal);
-app.get('/journal/new', journal.addJournal);
-app.get('/journal/edit', journal.editJournal);
-app.get('/journal/share', journal.shareJournal);
-app.get('/journal/media', journal.manageMedia);
+app.get('/favorite', favorite.view);
+app.get('/journal/:id', journal.viewJournal);
+app.get('/newjournal', journal.addJournal);
+app.get('/journal/:id/edit', journal.editJournal);
+app.get('/journal/:id/share', journal.shareJournal);
+app.get('/journal/:id/media', journal.manageMedia);
+
+// under construction
 app.get('/journal/view', journal.viewJournalBook);
 
 

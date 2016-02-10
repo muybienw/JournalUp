@@ -92,17 +92,17 @@
     <label for="form-photo">Cover Photo</label>
     <div class="col-xs-12">
         <div class="thumbnail">
-            <img src="/images/cover.jpg" alt="...">
+            <img src="{{coverImage}}" alt="...">
             <a href="#" class="btn btn-default" role="button">Choose from library</a>
         </div>
     </div>
 </div>
 
 
-<div class="row">
-    <div class="text-center" id="button-create">
-        <a class="btn btn-primary btn-lg col-xs-12" href="/journal/media" role="button">Manage Media</a>
-    </div>
+<div class="12u$">
+    <ul class="actions">
+        <li><a href="/journal/{{id}}/media" class="button special">Manage Media</a></li>
+    </ul>
 </div>
 
 

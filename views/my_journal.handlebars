@@ -54,42 +54,18 @@
 <hr>
 
 <div class="container">
-    <div class="thumbnail active">
-        <div class="row">
-            <a href="/journal">
-                <div class="col-md-2 col-sm-2 col-xs-5">
-                    <img class="journal_cover img-thumbnail" src="images/tree.jpg"/>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-7">
-                    <h3> San Diego winter quarter </h3>
-                    <p> February 2016</p>
-                    <p> collaborators: Mubin, Silvia, Weichen</p>
-                </div>
-            </a>
-        </div>
-    </div>
 
-    <div class="thumbnail">
-        <div class="row">
-            <a href="/journal">
-                <div class="col-md-2 col-sm-2 col-xs-5">
-                    <img class="journal_cover img-thumbnail" src="images/ny.jpg"/>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-7">
-                    <h3> New York: a travel to the big apple </h3>
-                    <p> December 2015 </p>
-                    <p> collaborators: Silvia, Weichen</p>
-                </div>
-            </a>
-        </div>
-    </div>
+    {{#each journals}}
+        {{> journal_block }}
+    {{/each}}
+
 
     <div class="thumbnail" id="new_journal" >
-        <a href="/journal/new">
+        <a href="/newjournal">
             <img class="add_journal" src="images/add.png"/>
         </a>
     </div>
-    <div class="empty"></div>
+
 
 </div>
 
