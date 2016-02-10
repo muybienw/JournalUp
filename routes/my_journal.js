@@ -7,7 +7,10 @@ var models = require('../models');
 
 exports.view = function(req, res){
 
-    console.log(models.Journal.find().length);
+    models.Journal.find(function (err, journals) {
+        if (err) return console.error(err);
+        console.log(journals);
+    })
 
     res.render('my_journal', data);
 };

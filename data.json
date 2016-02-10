@@ -33,5 +33,13 @@
         "/images/bigben.jpg"
       ]
     }
-  ]
+  ],
+
+  "user":
+    {
+      "name" : "Mubin",
+      "profilePicture": "/images/profilepic.png",
+      "journalNum": "2",
+      "collaboratorNum": "2"
+    }
 }
