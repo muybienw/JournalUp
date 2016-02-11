@@ -22,8 +22,8 @@
 
 }
 
-.header img{
-    height: 60px;
+.header h1{
+    text-align: center;
 }
 
 .header .back_btn{

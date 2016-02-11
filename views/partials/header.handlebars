@@ -1,5 +1,6 @@
 <!-- Header -->
 <header id="header">
+    <i id="back_btn" class="fa fa-chevron-left"></i>
     <h1><a href="/myjournal">Journal Up</a></h1>
     <nav id="nav">
         <ul>
@@ -50,5 +51,11 @@
             });
 
         });
+
+        $('#back_btn').click(function(e){
+            e.preventDefault();
+            window.history.back();
+        });
     });
+
 </script>
