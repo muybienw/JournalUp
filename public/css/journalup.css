@@ -19,7 +19,6 @@
     margin: 0;
     float: left;
     vertical-align: middle;
-
 }
 
 .header h1{
@@ -230,4 +229,45 @@ a, a:link, a:visited, a:active, a:hover {
 .collaborator_list li{
     display: inline;
     padding-left: 0;
+}
+
+.sweet-alert{
+    background-color: #21b2a6;
+    font-family: inherit;
+    border-radius: 0;
+}
+
+.sweet-alert h2 {
+    color: white;
+    font-weight: normal;
+    font: inherit;
+    font-size: 1em;
+}
+
+
+.sweet-alert button {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 3em;
+    margin: 0;
+    border-radius: 0;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1em;
+    background-color: transparent;
+    font: inherit;
+ }
+
+.sweet-alert button.cancel{
+    margin-right: 0.8em;
+    background-color: transparent;
+    font-weight: 300;
+}
+
+.sweet-alert button.confirm{
+    text-decoration: underline;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    font-weight: 600;
 }

@@ -30,14 +30,17 @@
     $(document).on('ready', function() {
         $('#log_out').click(function(e){
             e.preventDefault();
-            console.log("log_out_btn clicked!");
+
+            var $header = $('#header');
+            $header.removeClass('alt');
+            console.log(header);
 
             swal({
                 title: "Sure to leave?",
                 //text: "You will not be able to recover this imaginary file!",
                 type: "warning",
                 showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
+                confirmButtonColor: "transparent",
                 confirmButtonText: "Leave",
                 cancelButtonText: "Stay",
                 closeOnConfirm: true,
