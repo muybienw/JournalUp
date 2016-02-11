@@ -188,3 +188,19 @@ body {
 }
 
 
+.dialog__content{
+    width: 80%;
+}
+
+.dialog__content {
+    background: #21b2a6;
+}
+
+.dialog__content .button{
+    width: 25em;
+    margin-bottom: 1em;
+}
+
+.dialog__content button{
+    margin-top: 6em;
+}

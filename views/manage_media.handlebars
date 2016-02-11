@@ -3,33 +3,7 @@
 
 <html>
 <head>
-    <title>Journal Up</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
-    <!--<link rel="stylesheet" href="JournalUp/assets/css/main.css" />-->
-
-
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css" />
-    <link href="/css/journalup.css" type="text/css" rel="stylesheet">
-
-
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.scrollex.min.js"></script>
-    <script src="/js/jquery.scrolly.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/util.js"></script>
-    <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
-    <script src="/js/main.js"></script>
-
+    {{> html_head}}
 </head>
 
 <body>
@@ -75,22 +49,23 @@
                 // $("#input-4").fileinput({showCaption: false});
                 $('#add_media_btn').click(function(){
                     console.log("add_media_btn clicked!");
-                    window.confirm("add a new media here");
+
+                    swal("add new media here!");
                 });
             });
         </script>
 
     </div>
+
+    <div class="empty"> </div>
+
+    <div class="12u$">
+        <ul class="actions">
+            <li><a href="/journal/{{id}}" class="button special">View Journal</a></li>
+        </ul>
+    </div>
+
 </div>
-
-<div class="empty"> </div>
-
-<div class="12u$">
-    <ul class="actions">
-        <li><a href="/journal/{{id}}" class="button special">View Journal</a></li>
-    </ul>
-</div>
-
 
 </body>
 </html>

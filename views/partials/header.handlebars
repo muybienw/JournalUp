@@ -15,7 +15,7 @@
                         <li><a href="/gallery">Gallery</a></li>
                         <!--<li><a href="#">Sign Up</a></li>-->
 
-                        <li><p></p><a href="/">Log Out</a></li>
+                        <li><p></p><a id="log_out">Log Out</a></li>
                     </ul>
                 </div>
             </li>
@@ -23,3 +23,32 @@
     </nav>
 
 </header>
+
+
+<script>
+    $(document).on('ready', function() {
+        $('#log_out').click(function(e){
+            e.preventDefault();
+            console.log("log_out_btn clicked!");
+
+            swal({
+                title: "Sure to leave?",
+                //text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Leave",
+                cancelButtonText: "Stay",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    window.location.replace("/");
+                } else {
+
+                }
+            });
+
+        });
+    });
+</script>

@@ -3,33 +3,7 @@
 
 <html>
 <head>
-    <title>Journal Up</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
-    <!--<link rel="stylesheet" href="JournalUp/assets/css/main.css" />-->
-
-
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css" />
-    <link href="/css/journalup.css" type="text/css" rel="stylesheet">
-
-
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.scrollex.min.js"></script>
-    <script src="/js/jquery.scrolly.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/util.js"></script>
-    <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
-    <script src="/js/main.js"></script>
-
+    {{> html_head}}
 </head>
 
 <body>
@@ -40,12 +14,32 @@
 
     <div class="12u$">
         <ul class="actions">
-            <li><a href="/journal/{{id}}/share" class="button special">Share</a></li>
+            <li><button data-dialog="somedialog" class="trigger special">Share</button></li>
             <li><a href="/favorite" class="button">Favorite</a></li>
             <li><a href="/journal/{{id}}/edit" class="button">Edit</a></li>
             <li><a href="/myjournal" class="button">Delete</a></li>
         </ul>
     </div>
+
+
+    <!--&lt;!&ndash; Modal &ndash;&gt;-->
+    <!--<div id="myModal" class="modal fade custom" role="dialog">-->
+        <!--<div class="modal-dialog">-->
+            <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+            <!--<div class="modal-content">-->
+
+                <!--<div class="modal-body">-->
+                    <!--<a href="http://www.facebook.com" class="btn btn-default"> Facebook </a>-->
+                    <!--<a href="http://www.google.com" class="btn btn-default"> Google </a>-->
+                <!--</div>-->
+
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="button special" data-dismiss="modal">Close</button>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
 
 
     <div class="container">
@@ -69,7 +63,32 @@
 
     </div>
 
+
+    <!--dialog box test-->
+
+    <div id="somedialog" class="dialog">
+        <div class="dialog__overlay"></div>
+        <div class="dialog__content">
+            <a href="http://www.facebook.com" class="button"> Facebook </a>
+            <a href="http://www.twitter.com" class="button"> Twitter </a>
+            <a href="http://www.google.com" class="button"> Google+ </a>
+            <div><button class="action" data-dialog-close>Close</button></div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+                somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+                dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
 
 </body>
 
