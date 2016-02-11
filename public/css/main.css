@@ -3270,10 +3270,11 @@
 			-ms-transition: opacity 0.2s ease;
 			transition: opacity 0.2s ease;
 			height: inherit;
-			left: 1.25em;
+			left: 4em;
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+
 		}
 
 			#header h1 a {

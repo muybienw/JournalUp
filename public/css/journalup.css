@@ -204,3 +204,8 @@ body {
 .dialog__content button{
     margin-top: 6em;
 }
+
+#back_btn {
+    font-size: 1.2em;
+    margin-left: 1em;
+}
