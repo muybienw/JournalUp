@@ -27,6 +27,7 @@ var signin = require('./routes/signin');
 var gallery = require('./routes/gallery');
 var journal = require('./routes/journal');
 var favorite = require('./routes/favorite');
+var setting = require('./routes/setting');
 
 
 
@@ -63,6 +64,7 @@ app.get('/newjournal', journal.addJournal);
 app.get('/journal/:id/edit', journal.editJournal);
 app.get('/journal/:id/share', journal.shareJournal);
 app.get('/journal/:id/media', journal.manageMedia);
+app.get('/setting', setting.viewSetting);
 
 app.post('/journal/new_test_journal', journal.addTestJournal);
 

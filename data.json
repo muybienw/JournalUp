@@ -38,6 +38,8 @@
   "user":
     {
       "name" : "Mubin",
+      "email" : "journalup@ucsd.edu",
+      "password": "password",
       "profilePicture": "/images/profilepic.png",
       "journalNum": "2",
       "collaboratorNum": "2"
