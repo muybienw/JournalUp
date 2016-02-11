@@ -12,14 +12,13 @@
 
 <div class="container">
 
-    <div class="12u$">
-        <ul class="actions">
-            <li><button data-dialog="somedialog" class="trigger special">Share</button></li>
-            <li><a href="/favorite" class="button">Favorite</a></li>
-            <li><a href="/journal/{{id}}/edit" class="button">Edit</a></li>
-            <li><a href="/myjournal" class="button">Delete</a></li>
+        <ul class="journal_options">
+            <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
+            </i></a></li>
+            <li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
+            <li><a href="/journal/{{id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
+            <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
         </ul>
-    </div>
 
 
     <!--&lt;!&ndash; Modal &ndash;&gt;-->
@@ -45,7 +44,7 @@
     <div class="container">
         <h2> {{title}} </h2>
 
-        <ul class="actions">
+        <ul class="collaborator_list">
         {{# each collaborators}}
             <li> {{this}} </li>
         {{/each}}
@@ -69,9 +68,12 @@
     <div id="somedialog" class="dialog">
         <div class="dialog__overlay"></div>
         <div class="dialog__content">
-            <a href="http://www.facebook.com" class="button"> Facebook </a>
-            <a href="http://www.twitter.com" class="button"> Twitter </a>
-            <a href="http://www.google.com" class="button"> Google+ </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://journalup.herokuapp.com/journal/{{id}}"
+               class="button"> Facebook
+            </a>
+            <a href="http://twitter.com/home?status=https://journalup.herokuapp.com/journal/{{id}}"class="button"> Twitter </a>
+            <a href="https://plus.google.com/share?url=https://journalup.herokuapp.com/journal/{{id}}" class="button"> Google+ </a>
+
             <div><button class="action" data-dialog-close>Close</button></div>
         </div>
     </div>
@@ -79,6 +81,7 @@
 </div>
 
 <script>
+
     (function() {
 
         var dlgtrigger = document.querySelector( '[data-dialog]' ),
@@ -88,6 +91,54 @@
         dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
     })();
+</script>
+
+<script>
+    $(document).on('ready', function() {
+        $('#delete_btn').click(function(e){
+            e.preventDefault();
+            console.log("delete_btn clicked!");
+
+            swal({
+                title: "Are you sure to delete this journal?",
+                //text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Delete",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    // delete the journal
+                    swal("Deleted!", "Your journal has been deleted.", "success");
+                    //window.location.reload();
+                } else {
+
+                }
+            });
+
+        });
+
+        $('#favorite_btn').click(function(e){
+            e.preventDefault();
+            console.log("delete_btn clicked!");
+
+
+            var fav = $('#favorite_btn i');
+            console.log(fav);
+            if(fav.hasClass('.fa-heart-o')){
+                console.log("not hearted yet");
+            }
+
+            fav.toggleClass('fa-heart fa-heart-o');
+
+        });
+
+
+    });
+
 </script>
 
 </body>

@@ -209,3 +209,25 @@ body {
     font-size: 1.2em;
     margin-left: 1em;
 }
+
+.journal_options li{
+     display: inline;
+     text-decoration: none;
+     margin-right:1.5em;
+}
+
+a, a:link, a:visited, a:active, a:hover {
+    border:0!important;
+}
+
+.collaborator_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline;
+ }
+
+.collaborator_list li{
+    display: inline;
+    padding-left: 0;
+}

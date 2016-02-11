@@ -19,7 +19,8 @@ var UserSchema = new Mongoose.Schema({
     'profilePicture': String,
     'email': String,
     'password': String,
-    'journals': [String] // a list of journal ids
+    'journals': [String], // a list of journal ids
+    'favorites': [String] // a list of journal ids
 });
 
 exports.Journal = Mongoose.model('Journal', JournalSchema);
