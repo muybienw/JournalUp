@@ -177,4 +177,14 @@ body {
     width: 300px;
 }
 
+.inner{
+    font-size: large;
+}
+
+.inner p{
+    font-size: smaller;
+    font-family: "Times New Roman";
+    color: whitesmoke;
+}
+
 
