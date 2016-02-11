@@ -1510,6 +1510,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/arrow.svg" afterPath="$PROJECT_DIR$/public/css/images/arrow.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/bars.svg" afterPath="$PROJECT_DIR$/public/css/images/bars.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/close.svg" afterPath="$PROJECT_DIR$/public/css/images/close.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/journalup.css" afterPath="$PROJECT_DIR$/public/css/journalup.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sweetalert.css" afterPath="$PROJECT_DIR$/public/css/sweetalert.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" afterPath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" />
@@ -1586,31 +1587,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.handlebars" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58352405">
+            <state vertical-scroll-proportion="-10.625">
               <caret line="52" column="0" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sweetalert.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/sweetalert.css">
+      <file leaf-file-name="jquery.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/jquery.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.901961">
-              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.min.1.7.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/jquery.min.1.7.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journal.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/journal.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-38.125">
+              <caret line="117" column="58" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <file leaf-file-name="journalup.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.1372547">
-              <caret line="3235" column="22" selection-start-line="3235" selection-start-column="21" selection-end-line="3235" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.38215104">
+              <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -1677,8 +1702,8 @@
         <option value="$PROJECT_DIR$/models.js" />
         <option value="$PROJECT_DIR$/views/journal.handlebars" />
         <option value="$PROJECT_DIR$/public/css/sweetalert.css" />
-        <option value="$PROJECT_DIR$/public/css/journalup.css" />
         <option value="$PROJECT_DIR$/views/partials/header.handlebars" />
+        <option value="$PROJECT_DIR$/public/css/journalup.css" />
       </list>
     </option>
   </component>
@@ -1986,14 +2011,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/images/bars.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/ie/html5shiv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2188,16 +2205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.1.7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/gallery.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625">
@@ -2306,14 +2313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/journal.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.583332">
-          <caret line="117" column="58" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/footer.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2337,14 +2336,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.083333">
-          <caret line="247" column="21" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2398,8 +2389,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58352405">
+        <state vertical-scroll-proportion="-10.625">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.1.7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/journal.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.125">
+          <caret line="117" column="58" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38215104">
+          <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
           <folding />
         </state>
       </provider>
