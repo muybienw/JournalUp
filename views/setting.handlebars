@@ -35,7 +35,7 @@
 
             <div class="12u$">
                 <ul class="actions">
-                    <li><a href="#" class="button special">Save</a></li>
+                    <li><a href="#" class="button special" id="save_setting_changes">Save</a></li>
                     <li><a href="/myjournal" class="button">Cancel</a></li>
                 </ul>
             </div>
@@ -54,6 +54,17 @@
             <!--<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
         <!--</ul>-->
     <!--</footer>-->
+
+    <script>
+        $(document).on('ready', function() {
+            // $("#input-4").fileinput({showCaption: false});
+            $('#save_setting_changes').click(function(){
+                console.log("save_setting_changesclicked!");
+
+                swal("profile changes saved!");
+            });
+        });
+    </script>
 
 </body>
 </html>
