@@ -15,7 +15,7 @@
         <ul class="journal_options">
             <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
             </i></a></li>
-            <li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
+            <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
             <li><a href="/journal/{{id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
             <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
         </ul>
@@ -123,20 +123,18 @@
 
         $('#favorite_btn').click(function(e){
             e.preventDefault();
-            console.log("delete_btn clicked!");
+            console.log("favorite_btn clicked!");
 
 
             var fav = $('#favorite_btn i');
             console.log(fav);
-            if(fav.hasClass('.fa-heart-o')){
-                console.log("not hearted yet");
-            }
 
             fav.toggleClass('fa-heart fa-heart-o');
 
+            var journal_id = {{id}};
+            console.log("journal_id is:"+ journal_id);
+
         });
-
-
     });
 
 </script>

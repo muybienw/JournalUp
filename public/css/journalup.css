@@ -286,3 +286,21 @@ input[type="submit"] {
 .actions {
     text-align: center;
 }
+
+.thumbnail {
+    background-color: white;
+    font-family: inherit;
+    font-weight: 200;
+    border: none;
+    border-radius: 0.2em;
+    color: black;
+}
+
+.thumbnail p{
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnail h3{
+    color: black;
+}

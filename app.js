@@ -68,7 +68,6 @@ app.get('/setting', setting.viewSetting);
 
 app.get('/change_setting', setting.changeSetting);
 
-
 app.post('/journal/new_test_journal', journal.addTestJournal);
 
 // under construction

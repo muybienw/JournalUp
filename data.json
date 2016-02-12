@@ -32,6 +32,19 @@
         "/images/disney.jpg",
         "/images/bigben.jpg"
       ]
+    },
+    {
+      "id": "2",
+      "title": "Japan",
+      "time": "Aug 2013",
+      "collaborators": [
+        "Mubin"
+      ],
+      "description": "Japan is an island nation in the Pacific Ocean with high-rise-filled cities, imperial palaces, mountainous national parks and thousands of shrines and temples. Tokyo, the crowded capital, is known for its neon skyscrapers and pop culture. In contrast, Kyoto offers Buddhist temples, Shinto shrines, gardens and cherry blossoms. Sushi, the national dish, is served everywhere from casual pubs to gourmet restaurants.",
+      "coverImage": "/images/antlope.jpg",
+      "images": [
+        "/images/japan.jpg"
+      ]
     }
   ],
 
@@ -42,6 +55,7 @@
       "password": "password",
       "profilePicture": "/images/profilepic.png",
       "journalNum": "2",
-      "collaboratorNum": "2"
+      "collaboratorNum": "2",
+      "favorites": ["0","1"]
     }
 }
