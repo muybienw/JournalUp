@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    {{> html_head}}
+</head>
+<body>
+
+    <!-- Header -->
+    {{> header }}
+
+    <div class="container">
+        <h3> Profile <h3>
+
+            <form class="input-container" method="get" action="/change_setting">
+
+                <div class="12u 12u$(xsmall)">
+                    <input type="text" name="username" id="change_username" value="" placeholder="{{user
+                    .name}}" />
+                </div>
+                <div class="12u 12u$(xsmall)">
+                    <input type="email" name="email" id="change_email" value="" placeholder="{{user
+                    .email}}" />
+                </div>
+                <div class="12u 12u$(xsmall)">
+                    <input type=password name="password" id="change_password" value="" placeholder="new password" />
+                </div>
+
+                <label for="form-photo">Cover Photo</label>
+                <div class="col-xs-12">
+                    <div class="thumbnail">
+                        <img src="{{user.profilePicture}}" alt="...">
+                        <a href="#" class="button" role="button">Choose from library</a>
+                    </div>
+                </div>
+
+                <div class="12u 12u$(xsmall) actions">
+                    <input type="submit" class="12u$ button special submit_btn" value="Save" />
+                </div>
+
+                <div class="12u 12u$(xsmall) actions">
+                    <a href="/myjournal" class="button" value="Save" id="cancel_btn"/> Cancel </a>
+                </div>
+
+            </form>
+
+    </div>
+
+    <!-- Footer -->
+    <!--<footer id="footer">-->
+        <!--<ul class="icons">-->
+            <!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+            <!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
+            <!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+            <!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>-->
+            <!--<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>-->
+        <!--</ul>-->
+        <!--<ul class="copyright">-->
+            <!--<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+        <!--</ul>-->
+    <!--</footer>-->
+
+    <script>
+        $(document).on('ready', function() {
+            // $("#input-4").fileinput({showCaption: false});
+            $('#save_setting_changes').click(function(){
+                console.log("save_setting_changesclicked!");
+
+                var new_name = $('#change-user-name').value;
+                var new_email = $('#change-email').value;
+                var new_pwd = $('#change-password').value;
+
+                console.log("new name is:" + new_name);
+                console.log("new email is:" + new_email);
+                console.log("new pwd is:" + new_pwd);
+
+                swal("profile changes saved!");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).on('ready', function() {
+
+
+        });
+    </script>
+
+</body>
+</html>
