@@ -8,23 +8,20 @@
         <link rel="stylesheet" href="../public/css/bootstrap.css">
     </head>
     <body>
-        <div class="container">
-            <div class="hero-unit">
-                <input  type="text" placeholder="click to show datepicker"  id="example1">
-            </div>
-        </div>
-        <!-- Load jQuery and bootstrap datepicker scripts -->
-        <script src="../public/js/jquery-1.11.0.js"></script>
-        <script src="../public/js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript">
-            // When the document is ready
-            $(document).ready(function () {
-                
-                $('#example1').datepicker({
-                    format: "dd/mm/yyyy"
-                });  
-            
-            });
-        </script>
+        <label class="control-label">Planets and Satellites</label>
+    
+    <script>
+    $(document).on('ready', function() {
+        $("#input-24").fileinput({
+            initialPreview: [
+                '<img src="/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+                '<img src="/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+            ],
+            overwriteInitial: false,
+            maxFileSize: 100,
+            initialCaption: "The Moon and the Earth"
+        });
+    });
+    </script>
     </body>
 </html>
