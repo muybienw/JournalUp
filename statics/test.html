@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap datepicker examples</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Bootstrap CSS and bootstrap datepicker CSS used for styling the demo pages-->
+        <link rel="stylesheet" href="../public/css/datepicker.css">
+        <link rel="stylesheet" href="../public/css/bootstrap.css">
+    </head>
+    <body>
+        <label class="control-label">Planets and Satellites</label>
+    
+    <script>
+    $(document).on('ready', function() {
+        $("#input-24").fileinput({
+            initialPreview: [
+                '<img src="/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+                '<img src="/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+            ],
+            overwriteInitial: false,
+            maxFileSize: 100,
+            initialCaption: "The Moon and the Earth"
+        });
+    });
+    </script>
+    </body>
+</html>

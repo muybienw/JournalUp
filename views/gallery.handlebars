@@ -20,6 +20,7 @@
     {{> header}}
 
     <!-- Main -->
+    
     <div class="input-group search-box">
         <input type="text" class="form-control" placeholder="Search for journals" aria-describedby="basic-addon1">
 		<span class="input-group-btn">
@@ -30,17 +31,15 @@
     </div>
 
 
-
     <div class="container">
         <div class="row">
 
             {{#each journals}}
-                <div class="col-xs-4 media-container">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-xl-1 media-container">
                     <a href="journal/{{id}}" class="thumbnail media">
                         <img src="{{coverImage}}" alt="{{title}}">
                     </a>
                 </div>
-
             {{/each}}
 
         </div>

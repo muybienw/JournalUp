@@ -21,4 +21,9 @@ function initializePage() {
             window.location.href = '/myjournal'; // reload the page
         });
     });
+
+    $('.datepicker').datepicker({
+        format: "dd/mm/yyyy"
+    });
+
 }

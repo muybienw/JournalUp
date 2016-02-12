@@ -30,7 +30,6 @@ var favorite = require('./routes/favorite');
 var setting = require('./routes/setting');
 
 
-
 var app = express();
 
 // all environments
@@ -64,8 +63,8 @@ app.get('/newjournal', journal.addJournal);
 app.get('/journal/:id/edit', journal.editJournal);
 app.get('/journal/:id/share', journal.shareJournal);
 app.get('/journal/:id/media', journal.manageMedia);
+app.get('/createjournal', journal.createJournal)
 app.get('/setting', setting.viewSetting);
-
 app.get('/change_setting', setting.changeSetting);
 
 app.post('/journal/new_test_journal', journal.addTestJournal);
