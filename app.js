@@ -66,6 +66,9 @@ app.get('/journal/:id/share', journal.shareJournal);
 app.get('/journal/:id/media', journal.manageMedia);
 app.get('/setting', setting.viewSetting);
 
+app.get('/change_setting', setting.changeSetting);
+
+
 app.post('/journal/new_test_journal', journal.addTestJournal);
 
 // under construction

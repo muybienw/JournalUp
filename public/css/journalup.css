@@ -271,3 +271,18 @@ a, a:link, a:visited, a:active, a:hover {
     box-shadow: none !important;
     font-weight: 600;
 }
+
+input[type="submit"] {
+    width: 80%;
+    text-align: center;
+}
+
+#cancel_btn {
+    width: 80%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.actions {
+    text-align: center;
+}

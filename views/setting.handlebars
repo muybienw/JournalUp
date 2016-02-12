@@ -12,18 +12,20 @@
     <div class="container">
         <h3> Profile <h3>
 
-            <div class="12u 12u$(xsmall)">
-                <input type="text" name="change-user-name" id="change-user-name" value="" placeholder="{{user
-                .name}}" />
-            </div>
-            <div class="12u 12u$(xsmall)">
-                <input type="email" name="change-email" id="change-email" value="" placeholder="{{user.email}}" />
-            </div>
-            <div class="12u 12u$(xsmall)">
-                <input type="text" name="change-password" id="change-password" value="" placeholder="new password" />
-            </div>
+            <form class="input-container" method="get" action="/change_setting">
 
-            <div class="input-container">
+                <div class="12u 12u$(xsmall)">
+                    <input type="text" name="username" id="change_username" value="" placeholder="{{user
+                    .name}}" />
+                </div>
+                <div class="12u 12u$(xsmall)">
+                    <input type="email" name="email" id="change_email" value="" placeholder="{{user
+                    .email}}" />
+                </div>
+                <div class="12u 12u$(xsmall)">
+                    <input type=password name="password" id="change_password" value="" placeholder="new password" />
+                </div>
+
                 <label for="form-photo">Cover Photo</label>
                 <div class="col-xs-12">
                     <div class="thumbnail">
@@ -31,14 +33,17 @@
                         <a href="#" class="button" role="button">Choose from library</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="12u$">
-                <ul class="actions">
-                    <li><a href="#" class="button special" id="save_setting_changes">Save</a></li>
-                    <li><a href="/myjournal" class="button">Cancel</a></li>
-                </ul>
-            </div>
+                <div class="12u 12u$(xsmall) actions">
+                    <input type="submit" class="12u$ button special submit_btn" value="Save" />
+                </div>
+
+                <div class="12u 12u$(xsmall) actions">
+                    <a href="/myjournal" class="button" value="Save" id="cancel_btn"/> Cancel </a>
+                </div>
+
+            </form>
+
     </div>
 
     <!-- Footer -->
@@ -61,8 +66,23 @@
             $('#save_setting_changes').click(function(){
                 console.log("save_setting_changesclicked!");
 
+                var new_name = $('#change-user-name').value;
+                var new_email = $('#change-email').value;
+                var new_pwd = $('#change-password').value;
+
+                console.log("new name is:" + new_name);
+                console.log("new email is:" + new_email);
+                console.log("new pwd is:" + new_pwd);
+
                 swal("profile changes saved!");
             });
+        });
+    </script>
+
+    <script>
+        $(document).on('ready', function() {
+
+
         });
     </script>
 
