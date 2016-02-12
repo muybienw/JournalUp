@@ -306,3 +306,7 @@ input[type="submit"] {
 .thumbnail h3{
     color: black;
 }
+
+.select_picture_thumbnail {
+    text-align: center;
+}
