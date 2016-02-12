@@ -25,7 +25,7 @@ exports.viewJournal = function(req, res){
             break;
         }
     }
-    res.render('journal', data["journals"][index]);
+    res.render('journal_view', data["journals"][index]);
 };
 
 

@@ -3,99 +3,229 @@
 
 <html>
 <head>
-    <title>Journal Up</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
-    <!--<link rel="stylesheet" href="JournalUp/assets/css/main.css" />-->
-
-
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css" />
-    <link href="/css/journalup.css" type="text/css" rel="stylesheet">
-
-
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.scrollex.min.js"></script>
-    <script src="/js/jquery.scrolly.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/util.js"></script>
-    <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
-    <script src="/js/main.js"></script>
+    {{> html_head}}
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="/js/turn.min.js"></script>
+    <script type="text/javascript" src="/js/turn.js"></script>
+    <link href="/css/basic.css" type="text/css" rel="stylesheet">
 
 </head>
 
 <body>
-<!-- div class="header" >
-    <p> New York: a travel to the big apple </p>
-</div>
 
 {{> header }}
 
-<div class="empty"></div -->
-<div>
-    <div class="flipbook-viewport">
-        <div class="container">
-            <div class="flipbook">
-                <div style="background-image:url(/public/pages/ny.jpg)"></div>
-                <div style="background-image:url(/public/pages/word1.png)"></div>
-                <div style="background-image:url(/public/pages/empire.jpg)"></div>
-                <div style="background-image:url(/public/pages/word2.png)"></div>
-                <div style="background-image:url(/public/pages/times.jpeg)"></div>
+<div class="container">
+
+    <ul class="journal_options">
+        <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
+        </i></a></li>
+        <li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
+        <li><a href="/journal/{{id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
+        <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
+    </ul>
+
+
+    <!--&lt;!&ndash; Modal &ndash;&gt;-->
+    <!--<div id="myModal" class="modal fade custom" role="dialog">-->
+    <!--<div class="modal-dialog">-->
+    <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+    <!--<div class="modal-content">-->
+
+    <!--<div class="modal-body">-->
+    <!--<a href="http://www.facebook.com" class="btn btn-default"> Facebook </a>-->
+    <!--<a href="http://www.google.com" class="btn btn-default"> Google </a>-->
+    <!--</div>-->
+
+    <!--<div class="modal-footer">-->
+    <!--<button type="button" class="button special" data-dismiss="modal">Close</button>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="container">
+        <h2> {{title}} </h2>
+
+        <ul class="collaborator_list">
+            {{# each collaborators}}
+                <li> {{this}} </li>
+            {{/each}}
+        </ul>
+
+        <p>{{time}} </p>
+
+        <p>{{description}} </p>
+
+        <div class="t">
+            <div class="tc rel">
+                <div class="book" id="book">
+                    <div class="page"> <img src="{{coverImage}}"/> </div>
+                    {{#each images}}
+                        <div class="page"> <img src="{{this}}"/> </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
+
+        <!--div>
+        <img src="{{coverImage}}" width="200px">
+
+        {{#each images}}
+            <img src="{{this}}" width="200px">
+        {{/each}}
+        </div-->
     </div>
+
+
+
+    <script type="text/javascript">
+
+        (function () {
+            'use strict';
+
+            var module = {
+                ratio: 0.69, //1.38,
+                init: function (id) {
+                    var me = this;
+
+                    // if older browser then don't run javascript
+                    if (document.addEventListener) {
+                        this.el = document.getElementById(id);
+                        this.resize();
+                        this.plugins();
+
+                        // on window resize, update the plugin size
+                        window.addEventListener('resize', function (e) {
+                            var size = me.resize();
+                            $(me.el).turn('size', size.width, size.height);
+                        });
+                    }
+                },
+                resize: function () {
+                    // reset the width and height to the css defaults
+                    this.el.style.width = '';
+                    this.el.style.height = '';
+
+                    var width = this.el.clientWidth,
+                            height = Math.round(width / this.ratio),
+                            padded = Math.round(document.body.clientHeight * 0.9);
+
+                    // if the height is too big for the window, constrain it
+                    if (height > padded) {
+                        height = padded;
+                        width = Math.round(height * this.ratio);
+                    }
+
+                    // set the width and height matching the aspect ratio
+                    this.el.style.width = width + 'px';
+                    this.el.style.height = height + 'px';
+
+                    return {
+                        width: width,
+                        height: height
+                    };
+                },
+                plugins: function () {
+                    // run the plugin
+                    $(this.el).turn({
+                        display: "single",
+                        elevation: 50,
+                        gradients: true
+                        //acceleration: true
+                    });
+                    // hide the body overflow
+                    document.body.className = 'hide-overflow';
+                }
+            };
+
+            module.init('book');
+        }());
+
+    </script>
+
+
+    <!--dialog box test-->
+
+    <div id="somedialog" class="dialog">
+        <div class="dialog__overlay"></div>
+        <div class="dialog__content">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://journalup.herokuapp.com/journal/{{id}}"
+               class="button"> Facebook
+            </a>
+            <a href="http://twitter.com/home?status=https://journalup.herokuapp.com/journal/{{id}}"class="button"> Twitter </a>
+            <a href="https://plus.google.com/share?url=https://journalup.herokuapp.com/journal/{{id}}" class="button"> Google+ </a>
+
+            <div><button class="action" data-dialog-close>Close</button></div>
+        </div>
+    </div>
+
 </div>
 
-<script type="text/javascript">
+<script>
 
-    function loadApp() {
+    (function() {
 
-        // Create the flipbook
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+                somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+                dlg = new DialogFx( somedialog );
 
-        $('.flipbook').turn({
-            display: 'single',
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
-            // Width
+    })();
+</script>
 
-            width:922/2,
+<script>
+    $(document).on('ready', function() {
+        $('#delete_btn').click(function(e){
+            e.preventDefault();
+            console.log("delete_btn clicked!");
 
-            // Height
-
-            height:600,
-
-            // Elevation
-
-            elevation: 50,
-
-            // Enable gradients
-
-            gradients: true,
-
-            // Auto center this flipbook
-
-            autoCenter: true
+            swal({
+                title: "Are you sure to delete this journal?",
+                //text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Delete",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    // delete the journal
+                    swal("Deleted!", "Your journal has been deleted.", "success");
+                    //window.location.reload();
+                } else {
+                    console.log("clicked cancel button!");
+                }
+            });
 
         });
-    }
 
-    // Load the HTML4 version if there's not CSS transform
+        $('#favorite_btn').click(function(e){
+            e.preventDefault();
+            console.log("delete_btn clicked!");
 
-    yepnope({
-        test : Modernizr.csstransforms,
-        yep: ['../../lib/turn.js'],
-        nope: ['../../lib/turn.html4.min.js'],
-        both: ['css/basic.css'],
-        complete: loadApp
+
+            var fav = $('#favorite_btn i');
+            console.log(fav);
+            if(fav.hasClass('.fa-heart-o')){
+                console.log("not hearted yet");
+            }
+
+            fav.toggleClass('fa-heart fa-heart-o');
+
+        });
+
+
     });
 
 </script>
+
 </body>
+
 </html>
