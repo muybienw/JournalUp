@@ -21,14 +21,14 @@ body{
 }
 
 .flipbook-viewport .flipbook{
-	width:922/2px;
+	width:922px;
 	height:600px;
-	left:-251px;
+	left:-461px;
 	top:-300px;
 }
 
 .flipbook-viewport .page{
-	width:461/2px;
+	width:461px;
 	height:600px;
 	background-color:white;
 	background-repeat:no-repeat;
@@ -64,23 +64,4 @@ body{
 	-o-box-shadow:0 0 20px #ccc;
 	-ms-box-shadow:0 0 20px #ccc;
 	box-shadow:0 0 20px #ccc;
-}
-
-.header {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #2a6496;
-    color: white;
-    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
-    font-size: 3em;
-    text-align: center;
-    margin-top: auto;
-    padding: 0;
-    margin: 0;
-}
-
-.empty{
-    height: 200px;
 }
