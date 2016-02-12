@@ -98,6 +98,30 @@ exports.manageMedia = function(req, res){
     res.render('manage_media', data["journals"][index]);
 };
 
+exports.createJournal = function(req, res) {    
+    // Your code goes here
+    id = data["journals"].length;
+    title = req.query.title;
+    time = req.query.startdate;
+    collaborators = req.query.collaborators.split();
+    description = req.query.description;
+    
+    newJournal = {
+        "id" : id,
+        "title": title,
+        "time": time,
+        "collaborators" : collaborators,
+        "description": description,
+        "coverImage": "/images/jenny.jpg" ,
+        "images": [
+        "/images/ny.jpg",
+        "/images/jenny.jpg"
+    ]
+    }
+    data["journals"].push(newJournal);
+    res.render('my_journal', data);
+ }
+
 // add test journal
 exports.addTestJournal = function(req, res) {
 

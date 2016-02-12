@@ -141,6 +141,7 @@ body {
 .media{
     height: 120px;
     margin: 0;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .media img{
