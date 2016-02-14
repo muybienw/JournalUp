@@ -180,7 +180,7 @@
 
 <script>
     $(document).on('ready', function() {
-        $('#delete_btn').click(function(e){
+        $('#delete_btn').click(function (e) {
             e.preventDefault();
             console.log("delete_btn clicked!");
 
@@ -196,9 +196,10 @@
                 closeOnCancel: true
             }, function (isConfirm) {
                 if (isConfirm) {
-                    // delete the journal
-                    swal("Deleted!", "Your journal has been deleted.", "success");
-                    //window.location.reload();
+                    $.post(window.location.href +'/delete', function() {
+                        swal("Deleted!", "Your journal has been deleted.", "success");
+                        window.location.href = '/myjournal';
+                    });
                 } else {
                     console.log("clicked cancel button!");
                 }
@@ -206,14 +207,14 @@
 
         });
 
-        $('#favorite_btn').click(function(e){
+        $('#favorite_btn').click(function (e) {
             e.preventDefault();
             console.log("delete_btn clicked!");
 
 
             var fav = $('#favorite_btn i');
             console.log(fav);
-            if(fav.hasClass('.fa-heart-o')){
+            if (fav.hasClass('.fa-heart-o')) {
                 console.log("not hearted yet");
             }
 
@@ -221,7 +222,7 @@
 
         });
 
-
+        $('#back_btn').attr('href', '/myjournal');
     });
 
 </script>

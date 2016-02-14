@@ -68,9 +68,8 @@ app.get('/setting', setting.viewSetting);
 app.get('/change_setting', setting.changeSetting);
 
 app.post('/journal/new_test_journal', journal.addTestJournal);
+app.post('/journal/:id/delete', journal.deleteJournal);
 
-// under construction
-app.get('/journal/view', journal.viewJournalBook);
 
 
 http.createServer(app).listen(app.get('port'), function(){

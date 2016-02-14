@@ -71,24 +71,20 @@ body {
 .footer {
     z-index: 200;
     position: fixed;
-    bottom: 0;
+    bottom: -2em;
     width: 100%;
     display: inline;
     text-align: center;
-    color: white;
+    background-color: #2e3842;
+    padding-top: .5em;
+}
+
+.footer li{
+    margin: 0;
 }
 
 .empty{
     height: 80px;
-}
-
-.footer a{
-    z-index: 100;
-    font-family: "Nanum Pen Script", "Brush Script MT", Chalkboard;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 2em;
-    color: white;
 }
 
 #my_journals{
@@ -309,4 +305,8 @@ input[type="submit"] {
 
 .select_picture_thumbnail {
     text-align: center;
+}
+
+.logo_left{
+    left : 1.5em;
 }

@@ -3,7 +3,7 @@
  */
 
 var data = require('../data.json');
-
+var models = require('../models');
 
 // db models
 var models = require('../models');
@@ -11,21 +11,27 @@ var models = require('../models');
 exports.viewJournal = function(req, res){
 
     var id = req.params.id;
-    console.log(id);
+    models.Journal.findOne({'_id' : id}).exec(function(err, journal){
+        if(err) {console.log(err); res.send(500);}
+        res.render('journal_view', journal);
+    });
 
-    var index = 0;
 
-    for (var i in data["journals"]) {
-        console.log(i);
-        console.log(data["journals"][i]["id"]);
-
-        if (data["journals"][i]["id"] == id) {
-            index = i;
-            console.log("profile index is : " + i);
-            break;
-        }
-    }
-    res.render('journal_view', data["journals"][index]);
+    //console.log(id);
+    //
+    //var index = 0;
+    //
+    //for (var i in data["journals"]) {
+    //    console.log(i);
+    //    console.log(data["journals"][i]["id"]);
+    //
+    //    if (data["journals"][i]["id"] == id) {
+    //        index = i;
+    //        console.log("profile index is : " + i);
+    //        break;
+    //    }
+    //}
+    //res.render('journal_view', data["journals"][index]);
 };
 
 
@@ -100,13 +106,13 @@ exports.manageMedia = function(req, res){
 
 exports.createJournal = function(req, res) {    
     // Your code goes here
-    id = data["journals"].length;
-    title = req.query.title;
-    time = req.query.startdate;
-    collaborators = req.query.collaborators.split();
-    description = req.query.description;
+    var id = data["journals"].length;
+    var title = req.query.title;
+    var time = req.query.startdate;
+    var collaborators = req.query.collaborators.split();
+    var description = req.query.description;
     
-    newJournal = {
+    var newJournal_json = {
         "id" : id,
         "title": title,
         "time": time,
@@ -118,8 +124,26 @@ exports.createJournal = function(req, res) { 
         "/images/jenny.jpg"
     ]
     }
-    data["journals"].push(newJournal);
-    res.render('my_journal', data);
+
+    var newJournal = new models.Journal(newJournal_json);
+    newJournal.save(function(err){
+        if(err) {console.log(err); res.send(500);}
+        res.redirect('/myjournal');
+    });
+
+    //var JournalSchema = new Mongoose.Schema({
+    //    // fields are defined here
+    //    'id': String,
+    //    'title': String,
+    //    'time': String,
+    //    'description': String,
+    //    'coverImage': String,
+    //    'collaborators': [String],
+    //    'images': [String]
+    //});
+
+    //data["journals"].push(newJournal);
+    //res.render('my_journal', data);
  }
 
 // add test journal
@@ -149,4 +173,16 @@ exports.addTestJournal = function(req, res) {
         res.send(200);
     });
 
+}
+
+exports.deleteJournal = function(req, res){
+    var journalID = req.params.id;
+
+    // find the project and remove it
+    // YOU MUST send an OK response w/ res.send();
+
+    models.Journal.find({"_id" : journalID}).remove().exec(function(err){
+        if(err) console.log(err);
+        res.send(200);
+    });
 }

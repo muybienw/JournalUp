@@ -24,7 +24,7 @@
 
             {{#each favs}}
                 <div class="col-xs-4 media-container">
-                    <a href="/journal/{{id}}" class="thumbnail media">
+                    <a href="/journal/{{_id}}" class="thumbnail media">
                         <img src="{{coverImage}}" alt="{{title}}">
                     </a>
                 </div>
@@ -49,6 +49,12 @@
     <!--</footer>-->
 
 </div>
+
+<script>
+    $(document).on('ready', function() {
+        $('#back_btn').attr('href', '/myjournal');
+    });
+</script>
 
 </body>
 </html>
