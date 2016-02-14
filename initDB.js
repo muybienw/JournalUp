@@ -112,19 +112,24 @@ function createUser(err){
     "password" : user_data["password"],
     "profilePicture" : user_data["profilePicture"],
     "journals" : [],
-    "favorites" : []
+    "favorites" : [],
+    "collaborators" : [], // should be user_id, now
+    "collaboratorNum" : "2",
+    "journalNum": "0"
   }
 
   models.Journal.find(function(err, res){
     // console.log(user_json);
     for(var i=0; i<res.length; i++){
-      user_json["journals"].push(res[i]["_id"]);
-      console.log(res[i]["_id"]);
+      user_json["journals"].push(res[i]._id);
+      console.log(res[i]._id);
 
       if(i%2==0){
-        user_json["favorites"].push(res[i]["_id"]);
+        user_json["favorites"].push(res[i]._id);
       }
     }
+
+    user_json["journalNum"] = user_json["journals"].length;
 
     var user = new models.User(user_json);
     user.save(function(err){

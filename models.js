@@ -38,7 +38,10 @@ var UserSchema = new Mongoose.Schema({
     'password': String,
     'profilePicture': String,
     'journals': [{type: Schema.Types.ObjectId, ref: 'Journal'}], // a list of journal ids
-    'favorites': [{type: Schema.Types.ObjectId, ref: 'Journal'}] // a list of journal ids
+    'favorites': [{type: Schema.Types.ObjectId, ref: 'Journal'}], // a list of journal ids
+    'collaborator' : [{type: Schema.Types.ObjectId, ref: 'User'}],
+    'collaboratorNum': Number,
+    'journalNum': Number
 });
 
 exports.Journal = Mongoose.model('Journal', JournalSchema);

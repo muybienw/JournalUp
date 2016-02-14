@@ -7,18 +7,18 @@ var models = require('../models');
 
 exports.view = function(req, res){
 
-    models.User.find(function(err, users) {
-        if(err) return console.error(err);
-        else return console.log("find users:" + users);
-
-    });
-
-    models.Journal.find(function (err, journals) {
+    models.User.find().populate('journals').populate('favorites').exec(function(err, result){
         if (err) return console.error(err);
-
-        res.render('my_journal', {'journals': journals, 'user': data["user"]});
-        // console.log(journals);
+        res.render('my_journal', {'journals': result[0]['journals'], 'user':result[0]});
     });
+
 
    //res.render('my_journal', data);
+
+    //function tmp(err, res){
+    //
+    //    console.log(res);
+    //    console.log(res[0]["journals"]);
+    //    console.log(res[0]["name"]);
+    //}
 };
