@@ -34,11 +34,11 @@ var JournalSchema = new Mongoose.Schema({
 var UserSchema = new Mongoose.Schema({
     // fields are defined here
     'name': String,
-    'profilePicture': String,
     'email': String,
     'password': String,
-    'journals': [String], // a list of journal ids
-    'favorites': [String] // a list of journal ids
+    'profilePicture': String,
+    'journals': [{type: Schema.Types.ObjectId, ref: 'Journal'}], // a list of journal ids
+    'favorites': [{type: Schema.Types.ObjectId, ref: 'Journal'}] // a list of journal ids
 });
 
 exports.Journal = Mongoose.model('Journal', JournalSchema);

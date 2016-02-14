@@ -19,6 +19,7 @@ var models   = require('./models');
 var local_database_name = 'journalup';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
+
 mongoose.connect(database_uri);
 
 
@@ -54,19 +55,83 @@ function onceClear(err) {
 
       if(to_save_count <= 0) {
         console.log('DONE');
-        // The script won't terminate until the 
-        // connection to the database is closed
 
-        //models.Journal.find().exec(printJournal);
-        mongoose.connection.close()
+        //models.User
+        //    .find()
+        //    .remove()
+        //    .exec(createUser);
+
+       // mongoose.connection.close();
+       // res.send(200);
+
+        console.log("finished creating journals!");
+
+        models.User
+            .find()
+            .remove()
+            .exec(createUser);
+
       }
     });
   }
 }
 
-function printJournal(err, results){
-      console.log(results.length);
-      if(err) console.log(err);
-      console.log(results);
-}
+//mongoose.connect(database_uri);
 
+function createUser(err){
+  if(err) return console.error(err);
+
+
+  //"user":
+  //{
+  //  "name" : "Mubin",
+  //    "email" : "journalup@ucsd.edu",
+  //    "password": "password",
+  //    "profilePicture": "/images/profilepic.png",
+  //    "journalNum": "2",
+  //    "collaboratorNum": "2",
+  //    "favorites": ["0","1"]
+  //}
+
+  //var UserSchema = new Mongoose.Schema({
+  //  // fields are defined here
+  //  'name': String,
+  //  'email': String,
+  //  'password': String,
+  //  'profilePicture': String,
+  //  'journals': [{type: Schema.Types.ObjectId, ref: 'Journal'}], // a list of journal ids
+  //  'favorites': [{type: Schema.Types.ObjectId, ref: 'Journal'}] // a list of journal ids
+  //});
+
+
+
+  var user_data = data["user"];
+  var user_json = {
+    "name" : user_data["name"],
+    "email" : user_data["email"],
+    "password" : user_data["password"],
+    "profilePicture" : user_data["profilePicture"],
+    "journals" : [],
+    "favorites" : []
+  }
+
+  models.Journal.find(function(err, res){
+    // console.log(user_json);
+    for(var i=0; i<res.length; i++){
+      user_json["journals"].push(res[i]["_id"]);
+      console.log(res[i]["_id"]);
+
+      if(i%2==0){
+        user_json["favorites"].push(res[i]["_id"]);
+      }
+    }
+
+    var user = new models.User(user_json);
+    user.save(function(err){
+      if(err) console.error(err);
+      console.log(user);
+      mongoose.connection.close();
+    });
+
+    });
+}
