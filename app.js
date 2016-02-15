@@ -8,9 +8,8 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
-
-
-
+var fileUpload = require('express-fileupload');
+var multer = require('multer');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
@@ -47,11 +46,13 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(fileUpload);
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+
 
 // Add routes here
 app.get('/', signin.signIn);
@@ -72,7 +73,20 @@ app.post('/journal/new_test_journal', journal.addTestJournal);
 app.post('/journal/:id/delete', journal.deleteJournal);
 app.post('/journal/:id/favorite', journal.toggleFavorite);
 
+// upload a picture
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '.jpg') //Appending .jpg
+  }
+})
+
+var upload = multer({ storage: storage });
+
+app.post('/upload', upload.single('image'), setting.uploadProfilePic);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

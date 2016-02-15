@@ -225,7 +225,7 @@ exports.toggleFavorite = function(req, res){
             //console.log("test");
 
             if(index == -1) user[0]["favorites"].push(journal._id + "");
-            else delete user[0]["favorites"][index];
+            else user[0]["favorites"].splice(index, 1);
 
             //delete user[0]["_id"];
 

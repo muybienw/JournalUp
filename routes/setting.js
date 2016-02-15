@@ -53,3 +53,17 @@ exports.changeSetting = function (req, res) {
 
     res.render("setting", data);
 };
+
+exports.uploadProfilePic = function(req, res){
+
+    console.log(req);
+
+    if (!req.file) {
+        res.send('No files were uploaded.');
+        return;
+    }
+
+    console.log(req.file);
+    console.log(req.file.path);
+    res.send(200);
+}
