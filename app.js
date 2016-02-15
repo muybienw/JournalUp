@@ -77,7 +77,7 @@ app.post('/journal/:id/favorite', journal.toggleFavorite);
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    cb(null, 'public/images/uploads/')
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '.jpg') //Appending .jpg

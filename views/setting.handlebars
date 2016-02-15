@@ -10,17 +10,15 @@
     {{> header }}
 
     <div class="container">
-        <h3> Profile <h3>
+        <h3> Profile </h3>
 
             <form class="input-container" method="get" action="/change_setting">
 
                 <div class="12u 12u$(xsmall)">
-                    <input type="text" name="username" id="change_username" value="" placeholder="{{user
-                    .name}}" />
+                    <input type="text" name="username" id="change_username" value="" placeholder="{{name}}" />
                 </div>
                 <div class="12u 12u$(xsmall)">
-                    <input type="email" name="email" id="change_email" value="" placeholder="{{user
-                    .email}}" />
+                    <input type="email" name="email" id="change_email" value="" placeholder="{{email}}" />
                 </div>
                 <div class="12u 12u$(xsmall)">
                     <input type=password name="password" id="change_password" value="" placeholder="new password" />
@@ -29,8 +27,9 @@
                 <label for="form-photo">Cover Photo</label>
                 <div class="col-xs-12">
                     <div class="thumbnail select_picture_thumbnail">
-                        <img src="{{user.profilePicture}}" alt="...">
+                        <img src="{{profilePicture}}" alt="...">
                         <a href="#" class="btn-default btn select_file" role="button">Choose from library</a>
+                        <p>{{profilePicture}}</p>
                     </div>
                 </div>
 
@@ -43,8 +42,6 @@
                 </div>
 
             </form>
-
-
 
             <form action="/upload" method="POST" enctype="multipart/form-data">
                 Select an image to upload:
@@ -92,6 +89,18 @@
             $('#back_btn').attr('href', '/myjournal');
         });
     </script>
+
+    <!--<script type="text/javascript">-->
+        <!--$(function() {-->
+            <!--$('form').submit(function(){-->
+                <!--$.post('/upload', function(err) {-->
+                    <!--swal("profile changed!","success");-->
+                    <!--//window.location.reload();-->
+                <!--});-->
+                <!--return false;-->
+            <!--});-->
+        <!--});-->
+    <!--</script>-->
 
 </body>
 </html>

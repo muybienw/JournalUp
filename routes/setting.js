@@ -3,9 +3,16 @@
  */
 
 var data = require('../data.json');
+var models = require('../models.js');
+
+var search = {'name' : 'Mubin'};
 
 exports.viewSetting = function (req, res) {
-    res.render('setting', data);
+    models.User.findOne(search, function(err, result){
+        if(err) console.log(err);
+        console.log("find the user:" + result);
+        res.render('setting', result);
+    });
 };
 
 exports.changeSetting = function (req, res) {
@@ -63,7 +70,24 @@ exports.uploadProfilePic = function(req, res){
         return;
     }
 
-    console.log(req.file);
-    console.log(req.file.path);
-    res.send(200);
+
+    models.User.find(function(err, result){
+
+        var user = result[0];
+        var path = req.file.path;
+        // path.splice("public/".length);
+
+        // path = path.splice(7, path.length);
+        path = path.substring(6);
+        console.log(path);
+        console.log(typeof path);
+
+        models.User.findOneAndUpdate({_id: user._id}, {$set:{profilePicture: path}}, function(err){
+            if(err) {console.error(err); res.send(500);}
+            console.log("changed profile picture");
+            models.User.findOne(search, function(err, user){
+                res.render('setting', user);
+            });
+        });
+    });
 }
