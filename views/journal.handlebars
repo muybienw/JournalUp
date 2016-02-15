@@ -17,8 +17,11 @@
         <ul class="journal_options">
             <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
             </i></a></li>
+
+
             <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
-            <li><a href="/journal/{{id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
+            <li><a href="/journal/{{journal.id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit
+            </i></a></li>
             <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
         </ul>
 
@@ -44,17 +47,17 @@
 
 
     <div class="container">
-        <h2> {{title}} </h2>
+        <h2> {{journal.title}} </h2>
 
         <ul class="collaborator_list">
-        {{# each collaborators}}
+        {{# each journal.collaborators}}
             <li> {{this}} </li>
         {{/each}}
         </ul>
 
-        <p>{{time}} </p>
+        <p>{{journal.time}} </p>
 
-        <p>{{description}} </p>
+        <p>{{journal.description}} </p>
 
 
         <!--div class="flipbook-viewport">
@@ -72,9 +75,9 @@
             </div>
         </div-->
 
-        <img src="{{coverImage}}" width="200px">
+        <img src="{{journal.coverImage}}" width="200px">
 
-        {{#each images}}
+        {{#each journal.images}}
             <img src="{{this}}" width="200px">
         {{/each}}
     </div>
@@ -156,6 +159,12 @@ yepnope({
 
 <script>
     $(document).on('ready', function() {
+
+        console.log("initializing");
+
+        var favs = {{user.favorites}};
+        console.log(favs);
+
         $('#delete_btn').click(function(e){
             e.preventDefault();
             console.log("delete_btn clicked!");

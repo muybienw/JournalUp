@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 
 
 
+
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'journalup';
@@ -69,6 +70,7 @@ app.get('/change_setting', setting.changeSetting);
 
 app.post('/journal/new_test_journal', journal.addTestJournal);
 app.post('/journal/:id/delete', journal.deleteJournal);
+app.post('/journal/:id/favorite', journal.toggleFavorite);
 
 
 

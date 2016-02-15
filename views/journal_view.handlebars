@@ -21,8 +21,15 @@
     <ul class="journal_options">
         <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
         </i></a></li>
-        <li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
-        <li><a href="/journal/{{id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
+
+        {{#if isFav}}
+            <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart"> favorite </i></a></li>
+        {{else}}
+            <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
+        {{/if}}
+
+        <!--<li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>-->
+        <li><a href="/journal/{{journal.id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
         <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
     </ul>
 
@@ -48,23 +55,23 @@
 
 
     <div class="container">
-        <h2> {{title}} </h2>
+        <h2> {{journal.title}} </h2>
 
         <ul class="collaborator_list">
-            {{# each collaborators}}
+            {{# each journal.collaborators}}
                 <li> {{this}} </li>
             {{/each}}
         </ul>
 
-        <p>{{time}} </p>
+        <p>{{journal.time}} </p>
 
-        <p>{{description}} </p>
+        <p>{{journal.description}} </p>
 
         <div class="t">
             <div class="tc rel">
                 <div class="book" id="book">
-                    <div class="page"> <img src="{{coverImage}}"/> </div>
-                    {{#each images}}
+                    <div class="page"> <img src="{{journal.coverImage}}"/> </div>
+                    {{#each journal.images}}
                         <div class="page"> <img src="{{this}}"/> </div>
                     {{/each}}
                 </div>
@@ -179,7 +186,10 @@
 </script>
 
 <script>
+
+
     $(document).on('ready', function() {
+
         $('#delete_btn').click(function (e) {
             e.preventDefault();
             console.log("delete_btn clicked!");
@@ -209,16 +219,11 @@
 
         $('#favorite_btn').click(function (e) {
             e.preventDefault();
-            console.log("delete_btn clicked!");
+            console.log("favorite_btn clicked!");
 
-
-            var fav = $('#favorite_btn i');
-            console.log(fav);
-            if (fav.hasClass('.fa-heart-o')) {
-                console.log("not hearted yet");
-            }
-
-            fav.toggleClass('fa-heart fa-heart-o');
+            $.post(window.location.href +'/favorite', function(){
+                //window.location.reload();
+            });
 
         });
 

@@ -11,10 +11,30 @@ var models = require('../models');
 exports.viewJournal = function(req, res){
 
     var id = req.params.id;
-    models.Journal.findOne({'_id' : id}).exec(function(err, journal){
+    models.User.find(function(err, user){
         if(err) {console.log(err); res.send(500);}
-        res.render('journal_view', journal);
+
+        models.Journal.findOne({'_id' : id}).exec(function(err, journal){
+            if(err) {console.log(err); res.send(500);}
+            console.log(user);
+
+            var isFav = user[0]["favorites"].indexOf(journal["_id"])==-1? false : true;
+            console.log(isFav);
+
+            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav,
+                    helpers: {
+                        foo: function () { return 'foo.'; },
+                        ifIn: function(elem, list, options) {
+                            if(list.indexOf(elem) > -1) {
+                                return options.fn(this);
+                            }
+                            return options.inverse(this);
+                        }
+                    }
+            });
+        });
     });
+
 
 
     //console.log(id);
@@ -184,5 +204,39 @@ exports.deleteJournal = function(req, res){
     models.Journal.find({"_id" : journalID}).remove().exec(function(err){
         if(err) console.log(err);
         res.send(200);
+    });
+}
+
+exports.toggleFavorite = function(req, res){
+    var journalID = req.params.id;
+
+    models.User.find(function(err, user){
+        if(err) {console.error(err); res.send(500);}
+        models.Journal.findOne({"_id" : journalID}).exec(function(err, journal){
+            if(err) {console.error(err); res.send(500);}
+
+            console.log(user[0]["favorites"]);
+
+            var index = user[0]["favorites"].indexOf(journal._id);
+            console.log(index);
+            console.log(journal._id);
+
+            //delete user[0]["favorites"][index];
+            //console.log("test");
+
+            if(index == -1) user[0]["favorites"].push(journal._id + "");
+            else delete user[0]["favorites"][index];
+
+            delete user[0]["_id"];
+
+            console.log(user[0]);
+
+            models.User.findOneAndUpdate({_id: user[0]._id}, {$set:{favorites:user[0]["favorites"]}}, {upsert : true}, function(err, doc){
+                if(err) {console.error(err); res.send(500);}
+                console.log("success!");
+                res.send(500);
+            });
+
+        });
     });
 }
