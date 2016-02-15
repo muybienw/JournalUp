@@ -221,11 +221,14 @@
             e.preventDefault();
             console.log("favorite_btn clicked!");
 
-            $.post(window.location.href +'/favorite', function(){
-                //window.location.reload();
-            });
+            $.post(window.location.href +'/favorite',toggleFavorite());
 
         });
+
+        function toggleFavorite(err){
+            if(err) console.log(err);
+            $('#favorite_btn i').toggleClass("fa-heart fa-heart-o");
+        }
 
         $('#back_btn').attr('href', '/myjournal');
     });
