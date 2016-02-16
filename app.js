@@ -19,7 +19,7 @@ var multer = require('multer');
 //mongoose.connect(database_uri);
 
 var heroku_database_uri = 'mongodb://muybienw:w12341234@ds055565.mongolab.com:55565/heroku_bdgwnq5z'
-var database_uri = heroku_database_uri
+var database_uri = heroku_database_uri;
 
 mongoose.connect(heroku_database_uri);
 

@@ -14,9 +14,10 @@
   "dependencies": {
     "express": "3.x",
     "express3-handlebars": "*",
-    "mongodb": "^2.1.7",
-    "mongoose": "^2.1.7",
-    "multer": "^1.1.0"
+    "mongodb": "^3.0.0",
+    "mongoose": "^3.0.0",
+    "multer": "^1.1.0",
+    "update-mongo": "0.0.4"
   },
   "engines": {
     "node": "0.10.x"
