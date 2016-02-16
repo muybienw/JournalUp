@@ -4,15 +4,18 @@ var Schema = Mongoose.Schema;
 
 
 var JournalSchema = new Mongoose.Schema({
-    // fields are defined here
-    'id': String,
-    'title': String,
-    'time': String,
-    'description': String,
-    'coverImage': String,
-    'collaborators': [String],
-    'images': [String]
-});
+        // fields are defined here
+        'id': String,
+        'title': String,
+        'time': String,
+        'description': String,
+        'coverImage': String,
+        'collaborators': [String],
+        'images': [String],
+    },
+    {
+        timestamps: { }
+    });
 
 //{
 //    "id": "0",

@@ -5,8 +5,8 @@
 var data = require('../data.json');
 var models = require('../models');
 
-// db models
-var models = require('../models');
+// search option for only one user
+var search = {'name' : 'Mubin'};
 
 exports.viewJournal = function(req, res){
 
@@ -146,9 +146,26 @@ exports.createJournal = function(req, res) { 
     }
 
     var newJournal = new models.Journal(newJournal_json);
+
     newJournal.save(function(err){
         if(err) {console.log(err); res.send(500);}
-        res.redirect('/myjournal');
+
+        console.log(newJournal);
+
+        models.User.findOne(search, function(err, user){
+            if(err) console.log(err);
+            user.journals.push(newJournal._id);
+
+            console.log(newJournal._id);
+            console.log(user);
+
+            models.User.findOneAndUpdate({_id: user._id}, {$set:{journals: user.journals}}, {upsert : true}, function(err, doc){
+                if(err) {console.error(err); res.send(500);}
+                console.log("success!");
+                res.redirect('/myjournal');
+            });
+        });
+
     });
 
     //var JournalSchema = new Mongoose.Schema({
@@ -184,7 +201,6 @@ exports.addTestJournal = function(req, res) {
         'collaborators': ["Silvia", "Jenny"],
         'images': ["/images/tree.jpg"]
     });
-
 
 
     newTestJournal.save(function(err){

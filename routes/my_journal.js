@@ -7,8 +7,29 @@ var models = require('../models');
 
 exports.view = function(req, res){
 
-    models.User.find().populate('journals').populate('favorites').exec(function(err, result){
+    models.User.find().populate('journals').sort({createdAt: -1}).exec(function(err, result){
         if (err) return console.error(err);
+
+        var list = result[0]['journals'];
+        console.log(list);
+
+        function compare(a,b) {
+            //console.log("compare:" )
+            //console.log(a.createdAt);
+            //console.log(b.createdAt);
+            //console.log(b.createdAt - a.createdAt);
+            //console.log();
+
+            return b.createdAt - a.createdAt;
+        }
+
+        console.log();
+        console.log();
+        console.log();
+
+        list.sort(compare);
+        console.log(list);
+
         res.render('my_journal', {'journals': result[0]['journals'], 'user':result[0]});
     });
 

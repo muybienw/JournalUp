@@ -52,6 +52,7 @@ function onceClear(err) {
 
       to_save_count--;
       console.log(to_save_count + ' left to save');
+      console.log(jour);
 
       if(to_save_count <= 0) {
         console.log('DONE');
