@@ -86,7 +86,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-app.post('/upload', upload.single('image'), setting.uploadProfilePic);
+app.post('/change_setting', upload.single('image'), setting.changeSetting);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

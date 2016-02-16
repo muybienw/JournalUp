@@ -12,7 +12,8 @@
     <div class="container">
         <h3> Profile </h3>
 
-            <form class="input-container" method="get" action="/change_setting">
+            <form id="setting_form" class="input-container" action="/change_setting"
+                  method = "post" enctype="multipart/form-data">
 
                 <div class="12u 12u$(xsmall)">
                     <input type="text" name="username" id="change_username" value="" placeholder="{{name}}" />
@@ -33,20 +34,16 @@
                     </div>
                 </div>
 
+                <input type="file" name="image" accept="application/x-zip-compressed,image/*">
+
                 <div class="12u 12u$(xsmall) actions">
                     <input type="submit" class="12u$ button special submit_btn" value="Save" />
                 </div>
 
                 <div class="12u 12u$(xsmall) actions">
-                    <a href="/myjournal" class="button" value="Save" id="cancel_btn"/> Cancel </a>
+                    <a href="/myjournal" class="button" value="cancel" id="cancel_btn"/> Cancel </a>
                 </div>
 
-            </form>
-
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-                Select an image to upload:
-                <input type="file" name="image" accept="application/x-zip-compressed,image/*">
-                <input type="submit" value="Upload Image">
             </form>
 
     </div>
@@ -64,25 +61,6 @@
             <!--<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
         <!--</ul>-->
     <!--</footer>-->
-
-    <script>
-        $(document).on('ready', function() {
-            // $("#input-4").fileinput({showCaption: false});
-            $('#save_setting_changes').click(function(){
-                console.log("save_setting_changesclicked!");
-
-                var new_name = $('#change-user-name').value;
-                var new_email = $('#change-email').value;
-                var new_pwd = $('#change-password').value;
-
-                console.log("new name is:" + new_name);
-                console.log("new email is:" + new_email);
-                console.log("new pwd is:" + new_pwd);
-
-                swal("profile changes saved!");
-            });
-        });
-    </script>
 
     <script>
         $(document).on('ready', function() {

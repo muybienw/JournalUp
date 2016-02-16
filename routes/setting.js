@@ -8,7 +8,7 @@ var models = require('../models.js');
 var search = {'name' : 'Mubin'};
 
 exports.viewSetting = function (req, res) {
-    models.User.findOne(search, function(err, result){
+    models.User.findOne(function(err, result){
         if(err) console.log(err);
         console.log("find the user:" + result);
         res.render('setting', result);
@@ -17,48 +17,39 @@ exports.viewSetting = function (req, res) {
 
 exports.changeSetting = function (req, res) {
     console.log("in the change setting function");
+    console.log(req.body);
+    console.log(req.file);
 
-    if (req.query.length == 0) ;
-    else {
+    models.User.findOne(search, function(err, result){
+        var new_name = req.body.username ? req.body.username: result.name;
+        var new_email = req.body.email ? req.body.email: result.email;
+        var new_password = req.body.password ? req.body.password : result.password ;
+        var new_propic = req.file ? req.file.path.substring(6) : result.profilePicture;
 
-        var new_name = req.query.username;
-        var new_email = req.query.email;
-        var new_password = req.query.password;
-        var new_profilePicture = '/images/jenny.jpg';
-
-        if (new_name.length == 0) {
-            new_name = "Mubin";
-            new_profilePicture = "/images/profilepic.png";
+        var update = {
+            name : new_name,
+            email : new_email,
+            password : new_password,
+            profilePicture : new_propic
         }
-        if (new_email.length == 0) new_email = "journalup@ucsd.edu";
-        if (new_password.length == 0) new_password = "password";
 
+        console.log(update);
 
-        //"user":
-        //{
-        //    "name" : "Mubin",
-        //    "email" : "journalup@ucsd.edu",
-        //    "password": "password",
-        //    "profilePicture": "/images/profilepic.png",
-        //    "journalNum": "2",
-        //    "collaboratorNum": "2"
-        //}
+        models.User.findOneAndUpdate({_id: result._id}, {$set: update}, function(err, user){
+            if(err) {console.error(err); res.send(500);}
+            console.log("profile info updated");
+            console.log(user);
 
-        data["user"].name = new_name;
-        data["user"].email = new_email;
-        data["user"].password = new_password;
-        data["user"].profilePicture = new_profilePicture;
-        data["user"].journalNum = 1;
-        data["user"].collaboratorNum = 2;
+            res.redirect('/setting');
 
-        console.log(new_name);
-        console.log(new_email);
-        console.log(new_password);
+            //models.User.find(function(err, result){
+            //    if(err) console.log(err);
+            //    console.log("find the user:" + result);
+            //    res.render('setting', result);
+            //});
+        });
 
-        console.log(data["user"]);
-    }
-
-    res.render("setting", data);
+    });
 };
 
 exports.uploadProfilePic = function(req, res){
