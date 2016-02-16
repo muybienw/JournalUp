@@ -24,7 +24,7 @@ var local_database_name = 'journalup';
 var heroku_database_uri = 'mongodb://muybienw:w12341234@ds055565.mongolab.com:55565/heroku_bdgwnq5z'
 var database_uri = heroku_database_uri
 
-var conn = mongoose.connect(heroku_database_uri);
+mongoose.connect(heroku_database_uri);
 
 // Do the initialization here
 
