@@ -16,9 +16,14 @@ var models   = require('./models');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
+
 var local_database_name = 'journalup';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
+// var local_database_uri  = 'mongodb://localhost/' + local_database_name
+// var database_uri = process.env.MONGOLAB_URI || local_database_uri
+
+var heroku_database_uri = 'mongodb://heroku_bdgwnq5z:winnie1234@ds055565.mongolab.com:55565/heroku_bdgwnq5z'
+
+var database_uri = process.env.MONGOLAB_URI || heroku_database_uri
 
 mongoose.connect(database_uri);
 
