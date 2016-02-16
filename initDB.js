@@ -69,7 +69,7 @@ function onceClear(err) {
 
         models.User
             .find()
-            .remove()
+        //    .remove()
             .exec(createUser);
 
       }
