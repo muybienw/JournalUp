@@ -16,7 +16,7 @@
     "express3-handlebars": "*",
     "mongodb": "^2.1.7",
     "mongoose": "*",
-    "multer": "2.14.12"
+    "multer": "*"
   },
   "engines": {
     "node": "0.10.x"
