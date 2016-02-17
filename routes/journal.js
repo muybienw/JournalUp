@@ -163,32 +163,32 @@ exports.createJournal = function(req, res) { 
  }
 
 // add test journal
-exports.addTestJournal = function(req, res) {
-
-    //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-    //console.log(form_data);
-    //console.log(form_data['project_title']);
-
-    // make a new Project and save it to the DB
-    // YOU MUST send an OK response w/ res.send();
-
-    var newTestJournal = new models.Journal({
-        'title': "San Diego",
-        'date': new Date("Feb 2016"),
-        'summary': "where UCSD is located",
-        'coverImage': "/images/antlope.jpg",
-        'collaborators': ["Silvia", "Jenny"],
-        'images': ["/images/tree.jpg"]
-    });
-
-
-    newTestJournal.save(function(err){
-        if(err) console.log(err);
-        console.log("Success! new journal added");
-        res.send(200);
-    });
-
-}
+//exports.addTestJournal = function(req, res) {
+//
+//    //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+//    //console.log(form_data);
+//    //console.log(form_data['project_title']);
+//
+//    // make a new Project and save it to the DB
+//    // YOU MUST send an OK response w/ res.send();
+//
+//    var newTestJournal = new models.Journal({
+//        'title': "San Diego",
+//        'date': new Date("Feb 2016"),
+//        'summary': "where UCSD is located",
+//        'coverImage': "/images/antlope.jpg",
+//        'collaborators': ["Silvia", "Jenny"],
+//        'images': ["/images/tree.jpg"]
+//    });
+//
+//
+//    newTestJournal.save(function(err){
+//        if(err) console.log(err);
+//        console.log("Success! new journal added");
+//        res.send(200);
+//    });
+//
+//}
 
 exports.deleteJournal = function(req, res){
     var journalID = req.params.id;
@@ -260,13 +260,14 @@ exports.saveEditChanges = function(req, res){
         models.Journal.findOneAndUpdate({_id: journal._id}, {$set: update}, function(err){
             if(err) console.log(err);
             console.log("after update:" + journal);
-            res.redirect('/journal/' + journal._id);
+            res.json({success: true});
         });
     });
 }
 
 exports.addImageToJournal = function(req, res){
     console.log(req.body);
+    console.log(req.file);
     console.log("journal id is :" + req.body.journal_id);
 
     models.Journal.findOne({_id: req.body.journal_id}, function(err, journal){
@@ -279,7 +280,8 @@ exports.addImageToJournal = function(req, res){
 
         models.Journal.findOneAndUpdate({_id: journal._id}, {$set: {"images" : journal.images}}, function(err){
             if(err) console.log(err);
-            res.redirect('/journal/' + req.body.journal_id + '/media');
+            //res.redirect('/journal/' + req.body.journal_id + '/media');
+            res.json({success: true});
         });
 
     });

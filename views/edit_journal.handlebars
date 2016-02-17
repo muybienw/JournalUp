@@ -10,7 +10,7 @@
 
 {{> header }}
 
-<form id="edit_journal_form" role="form" action="/journal/save_edit_changes" class="input-container"
+<form id="edit_journal_form" role="form" action="javascript:;" class="input-container"
       method ="post" enctype="multipart/form-data">
 
     <input type="hidden" name="journal_id" value="{{_id}}">
@@ -73,6 +73,43 @@
 <script>
     $(document).on('ready', function() {
         $('#back_btn').attr('href', '/myjournal');
+
+        $("#edit_journal_form").submit(function (event) {
+
+            //disable the default form submission
+            event.preventDefault();
+            //grab all form data
+
+//            var formData = $(this).serialize();
+            var formData = new FormData($(this)[0]);
+
+            console.log("formData:" + formData);
+
+            //loading effect (to be added)
+
+            //AJAX REQUEST HERE
+            $.ajax({
+                url: '/journal/save_edit_changes',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                                title: "Changes Saved!",
+                            },
+                            function(){
+                                window.location.reload();
+                            });
+                },
+                error: function(){
+
+                    swal("Met some problems, please try again :P");
+                }
+            });
+        });
     });
 </script>
 

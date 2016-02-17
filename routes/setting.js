@@ -40,7 +40,7 @@ exports.changeSetting = function (req, res) {
             console.log("profile info updated");
             console.log(user);
 
-            res.redirect('/setting');
+            res.json({success: true});
 
             //models.User.find(function(err, result){
             //    if(err) console.log(err);
@@ -77,7 +77,8 @@ exports.uploadProfilePic = function(req, res){
             if(err) {console.error(err); res.send(500);}
             console.log("changed profile picture");
             models.User.findOne(search, function(err, user){
-                res.render('setting', user);
+                if(err) console.log(err);
+                res.json({success: true});
             });
         });
     });

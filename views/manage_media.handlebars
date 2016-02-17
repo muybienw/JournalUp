@@ -43,7 +43,11 @@
             <!--</a>-->
         <!--</div>-->
 
-        <form id="add_image" class="input-container" action="/add_image"
+        <!--<form id="add_image" class="input-container" action="/add_image"-->
+              <!--method = "post" enctype="multipart/form-data"-->
+                <!--onsubmit="alert('thank you!')">-->
+
+        <form id="add_image" class="input-container" action="javascript:;"
               method = "post" enctype="multipart/form-data">
 
             <input type="hidden" name="journal_id" value="{{_id}}">
@@ -55,34 +59,72 @@
                 <input type="submit" class="button" value="Add a picture!">
             </div>
 
+            <!--<div id="button-create">-->
+                <!--<input id="anotherAddBtn" type="submit" class="button" value="Another add!">-->
+            <!--</div>-->
+
         </form>
 
     </div>
 
-    <footer class="footer">
-        <div class="12u$">
-            <ul class="actions">
-                <li><a href="/journal/{{_id}}" class="button special">View Journal</a></li>
-            </ul>
-        </div>
-    </footer>
+    <div clss="empty" style="height:10em"> </div>
 
 </div>
 
+<!--loading effect-->
+<div class="modal"><!-- Place at bottom of page --></div>
+
+<footer class="footer">
+    <div class="12u$">
+        <ul class="actions">
+            <li><a href="/journal/{{_id}}" class="button special">View Journal</a></li>
+        </ul>
+    </div>
+</footer>
+
+
 <script>
     $(document).on('ready', function() {
-        // $("#input-4").fileinput({showCaption: false});
-        $('#add_media_btn').click(function(){
-            console.log("add_media_btn clicked!");
 
-            swal("add new media here!");
-        });
-    });
-</script>
-
-<script>
-    $(document).on('ready', function() {
         $('#back_btn').attr('href', '/myjournal');
+
+        $("#add_image").submit(function (event) {
+
+            //disable the default form submission
+            event.preventDefault();
+            //grab all form data
+
+//            var formData = $(this).serialize();
+            var formData = new FormData($(this)[0]);
+
+            console.log("formData:" + formData);
+
+            //loading effect (to be added)
+
+            //AJAX REQUEST HERE
+            $.ajax({
+                url: '/add_image',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                                title: "Picture added!",
+                            },
+                            function(){
+                                window.location.reload();
+                            });
+                },
+                error: function(){
+
+                    swal("Met some problems, please try again :P");
+                }
+            });
+        });
+
     });
 </script>
 
