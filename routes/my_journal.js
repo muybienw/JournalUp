@@ -30,7 +30,23 @@ exports.view = function(req, res){
         list.sort(compare);
         console.log(list);
 
-        res.render('my_journal', {'journals': result[0]['journals'], 'user':result[0]});
+        res.render('my_journal', {'journals': result[0]['journals'], 'user':result[0],
+            helpers: {
+                formatDate: function (datetime) {
+                    var date = new Date(datetime);
+                    var options = {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                        //hour: "2-digit",
+                        //minute: "2-digit"
+                    };
+
+                    return date.toLocaleDateString("en-US", options);
+                }
+            }
+        });
     });
 
 

@@ -37,35 +37,48 @@
             </div>
         {{/each}}
 
-        <div class="col-xs-4 media-container">
-            <a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">
-                <img src="/images/add.png" alt="...">
-            </a>
+        <!--<div class="col-xs-4 media-container">-->
+            <!--<a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">-->
+                <!--<img src="/images/add.png" alt="...">-->
+            <!--</a>-->
+        <!--</div>-->
+
+        <form id="add_image" class="input-container" action="/add_image"
+              method = "post" enctype="multipart/form-data">
+
+            <input type="hidden" name="journal_id" value="{{_id}}">
+            <input type="file" name="image" class="12u$ button upload_btn"
+                   accept="application/x-zip-compressed,image/*"
+                   title="Add a picture!">
+
+            <div id="button-create">
+                <input type="submit" class="button" value="Add a picture!">
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer class="footer">
+        <div class="12u$">
+            <ul class="actions">
+                <li><a href="/journal/{{_id}}" class="button special">View Journal</a></li>
+            </ul>
         </div>
-
-        <input id="input-4" name="input4[]" type="file" multiple class="file-loading">
-        <script>
-            $(document).on('ready', function() {
-                // $("#input-4").fileinput({showCaption: false});
-                $('#add_media_btn').click(function(){
-                    console.log("add_media_btn clicked!");
-
-                    swal("add new media here!");
-                });
-            });
-        </script>
-
-    </div>
-
-    <div class="empty"> </div>
-
-    <div class="12u$">
-        <ul class="actions">
-            <li><a href="/journal/{{id}}" class="button special">View Journal</a></li>
-        </ul>
-    </div>
+    </footer>
 
 </div>
+
+<script>
+    $(document).on('ready', function() {
+        // $("#input-4").fileinput({showCaption: false});
+        $('#add_media_btn').click(function(){
+            console.log("add_media_btn clicked!");
+
+            swal("add new media here!");
+        });
+    });
+</script>
 
 <script>
     $(document).on('ready', function() {

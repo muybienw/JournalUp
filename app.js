@@ -68,17 +68,18 @@ app.get('/favorite', favorite.view);
 app.get('/journal/:id', journal.viewJournal);
 app.get('/newjournal', journal.addJournal);
 app.get('/journal/:id/edit', journal.editJournal);
-app.get('/journal/:id/share', journal.shareJournal);
+//app.get('/journal/:id/share', journal.shareJournal);
 app.get('/journal/:id/media', journal.manageMedia);
 
 // create a new journal
-app.get('/createjournal', journal.createJournal)
+//app.get('/createjournal', journal.createJournal)
 app.get('/setting', setting.viewSetting);
 app.get('/change_setting', setting.changeSetting);
 
 app.post('/journal/new_test_journal', journal.addTestJournal);
 app.post('/journal/:id/delete', journal.deleteJournal);
 app.post('/journal/:id/favorite', journal.toggleFavorite);
+
 
 // upload a picture
 
@@ -94,6 +95,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 app.post('/change_setting', upload.single('image'), setting.changeSetting);
+app.post('/createjournal', upload.single('image'), journal.createJournal);
+app.post('/journal/save_edit_changes', upload.single('image'), journal.saveEditChanges);
+app.post('/add_image', upload.single('image'), journal.addImageToJournal);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -10,74 +10,65 @@
 
 {{> header }}
 
-<div class="input-container">
-    <label for="form-title">Title</label>
-    <div class="input-group col-xs-12">
-        <input type="text" class="form-control" id="form-title" placeholder="Title">
-    </div>
-</div>
+<form id="edit_journal_form" role="form" action="/journal/save_edit_changes" class="input-container"
+      method ="post" enctype="multipart/form-data">
 
-<div class="input-container">
-    <label for="form-collaborator">Collaborators</label>
-    <div class="input-group">
-        <input type="text" class="form-control" id="form-collaborator" placeholder="Enter username">
-		  <span class="input-group-btn">
-			<button class="btn btn-default" type="button">Search</button>
-		  </span>
-    </div>
-</div>
+    <input type="hidden" name="journal_id" value="{{_id}}">
 
-<div class="input-container">
-    <div class="row">
-        <div class="form-group col-xs-6">
-            <label for="datetimepicker-start">Start Date</label>
-            <div class='input-group date' id='datetimepicker'>
-                <input data-format="yyyy-MM-dd" type='text' class="form-control" />
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-calendar"></span>
-					</span>
+    <div class="input-container form-group">
+        <label for="title">Title</label>
+        <div class="input-group col-xs-12">
+            <input type="text" name="title" class="form-control" id="title" placeholder="{{title}}">
+        </div>
+    </div>
+
+    <div class="input-container form-group">
+        <label for="form-collaborator">Collaborators</label>
+        <div class="input-group">
+            <input type="text" name="collaborators" class="form-control" id="collaborator" placeholder="Enter username">
+    		  <span class="input-group-btn">
+    			<button class="btn" type="button">Search</button>
+    		  </span>
+        </div>
+    </div>
+
+
+    <div class="input-container">
+        <label for="description">Description</label>
+        <div class="input-group col-xs-12">
+            <input type="text" name="description" class="form-control" id="description" placeholder="{{description}}">
+        </div>
+    </div>
+
+
+    <div class="input-container" >
+        <!--<label for="form-photo">Cover Photo</label>-->
+        <!--<div class="col-xs-12">-->
+        <!--<div class="thumbnail select_picture_thumbnail">-->
+        <!--<img src="" alt="...">-->
+        <!--<a href="#" class="btn btn-default select_file" role="button">Choose from library</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <label for="form-photo">Cover Photo</label>
+        <div class="col-xs-12">
+            <div class="thumbnail select_picture_thumbnail">
+                <img src="{{coverImage}}" alt="...">
+                <input type="file" name="image" class="12u$ button upload_btn"
+                       accept="application/x-zip-compressed,image/*"
+                       title="">
             </div>
         </div>
-        <div class="form-group col-xs-6">
-            <label for="datetimepicker-end">End Date</label>
-            <div class='input-group date' id='datetimepicker'>
-                <input data-format="yyyy-MM-dd" type='text' class="form-control" />
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-calendar"></span>
-					</span>
-            </div>
-        </div>
     </div>
-</div>
 
-<div class="input-container">
-    <label for="form-location">Location</label>
-    <div class="input-group">
-        <input type="text" class="form-control" id="form-location" placeholder="Select where you are">
-		  <span class="input-group-btn">
-			<button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-map-marker"></span>
-            </button>
-		  </span>
+    <div id="button-create">
+        <input type="submit" class="button special" value="Save">
     </div>
-</div>
 
-<div class="input-container">
-    <label for="form-photo">Cover Photo</label>
-    <div class="col-xs-12">
-        <div class="thumbnail">
-            <img src="{{coverImage}}" alt="...">
-            <a href="#" class="btn btn-default" role="button">Choose from library</a>
-        </div>
+    <div class="12u 12u$(xsmall) actions">
+        <a href="/journal/{{_id}}" class="button" value="cancel" id="cancel_btn"/> Cancel </a>
     </div>
-</div>
 
-
-<div class="12u$">
-    <ul class="actions">
-        <li><a href="/journal/{{id}}/media" class="button special">Manage Media</a></li>
-    </ul>
-</div>
+</form>
 
 <script>
     $(document).on('ready', function() {

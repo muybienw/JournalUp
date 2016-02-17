@@ -68,81 +68,60 @@ exports.editJournal = function(req, res){
     var id = req.params.id;
     console.log(id);
 
-    var index = 0;
-
-    for (var i in data["journals"]) {
-        console.log(i);
-        console.log(data["journals"][i]["id"]);
-
-        if (data["journals"][i]["id"] == id) {
-            index = i;
-            console.log("profile index is : " + i);
-            break;
-        }
-    }
-
-    res.render('edit_journal', data["journals"][index]);
+    models.Journal.findOne({_id : req.params.id}, function(err, journal){
+        if(err) console.log(err);
+        res.render('edit_journal', journal);
+    });
 };
-
-exports.shareJournal = function(req, res){
-    var id = req.params.id;
-    console.log(id);
-
-    var index = 0;
-
-    for (var i in data["journals"]) {
-        console.log(i);
-        console.log(data["journals"][i]["id"]);
-
-        if (data["journals"][i]["id"] == id) {
-            index = i;
-            console.log("profile index is : " + i);
-            break;
-        }
-    }
-
-    res.render('share', data["journals"][index]);
-};
+//
+//exports.shareJournal = function(req, res){
+//    var id = req.params.id;
+//    console.log(id);
+//
+//    var index = 0;
+//
+//    for (var i in data["journals"]) {
+//        console.log(i);
+//        console.log(data["journals"][i]["id"]);
+//
+//        if (data["journals"][i]["id"] == id) {
+//            index = i;
+//            console.log("profile index is : " + i);
+//            break;
+//        }
+//    }
+//
+//    res.render('share', data["journals"][index]);
+//};
 
 exports.manageMedia = function(req, res){
     var id = req.params.id;
-    console.log(id);
-
-    var index = 0;
-
-    for (var i in data["journals"]) {
-        console.log(i);
-        console.log(data["journals"][i]["id"]);
-
-        if (data["journals"][i]["id"] == id) {
-            index = i;
-            console.log("profile index is : " + i);
-            break;
-        }
-    }
-
-    res.render('manage_media', data["journals"][index]);
+    models.Journal.findOne({_id : req.params.id}, function(err, journal){
+        if(err) console.log(err);
+        res.render('manage_media', journal);
+    });
 };
 
 exports.createJournal = function(req, res) {    
     // Your code goes here
-    var id = data["journals"].length;
-    var title = req.query.title;
-    var time = req.query.startdate;
-    var collaborators = req.query.collaborators.split();
-    var description = req.query.description;
+    //var id = data["journals"].length;
+    var title = req.body.title;
+    //var time = req.body.startdate;
+    var collaborators = req.body.collaborators.split();
+    var description = req.body.description;
+    var coverImage = req.file ? req.file.path.substring(6) : "/images/jenny.jpg";
     
     var newJournal_json = {
-        "id" : id,
+        //"id" : id,
         "title": title,
-        "time": time,
+        //"time": time,
         "collaborators" : collaborators,
         "description": description,
-        "coverImage": "/images/jenny.jpg" ,
+        "coverImage": coverImage,
         "images": [
         "/images/ny.jpg",
         "/images/jenny.jpg"
-    ]
+        ]
     }
 
     var newJournal = new models.Journal(newJournal_json);
@@ -254,5 +233,54 @@ exports.toggleFavorite = function(req, res){
             });
 
         });
+    });
+}
+
+exports.saveEditChanges = function(req, res){
+
+    console.log(req.body);
+
+    console.log(req.file);
+    console.log("journal id is :" + req.body.journal_id);
+
+    models.Journal.findOne({_id : req.body.journal_id}, function(err, journal){
+        if(err) console.log(err);
+        var title = req.body.title ?  req.body.title : journal.title;
+        var collaborators = req.body.collaborators ? req.body.collaborators.split() : journal.collaborators;
+        var description = req.body.description? req.body.description : journal.description;
+        var coverImage = req.file ? req.file.path.substring(6) : journal.coverImage;
+
+        var update = {
+            "title": title,
+            "collaborators" : collaborators,
+            "description": description,
+            "coverImage": coverImage,
+        }
+
+        models.Journal.findOneAndUpdate({_id: journal._id}, {$set: update}, function(err){
+            if(err) console.log(err);
+            console.log("after update:" + journal);
+            res.redirect('/journal/' + journal._id);
+        });
+    });
+}
+
+exports.addImageToJournal = function(req, res){
+    console.log(req.body);
+    console.log("journal id is :" + req.body.journal_id);
+
+    models.Journal.findOne({_id: req.body.journal_id}, function(err, journal){
+        if(err) console.log(err);
+        if(!req.file) res.redirect('/journal/' + req.body.journal_id + '/media');
+
+        console.log(journal);
+
+        journal.images.push(req.file.path.substring(6));
+
+        models.Journal.findOneAndUpdate({_id: journal._id}, {$set: {"images" : journal.images}}, function(err){
+            if(err) console.log(err);
+            res.redirect('/journal/' + req.body.journal_id + '/media');
+        });
+
     });
 }

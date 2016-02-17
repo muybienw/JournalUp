@@ -18,7 +18,8 @@
 <!--<div class="empty"></div>-->
 {{> header}}
 
-<form id="create-journal-form" role="form" method="get" action="/createjournal">
+<form id="create_journal_form" role="form" action="/createjournal" class="input-container" method = "post"
+      enctype="multipart/form-data">
     
     <div class="input-container form-group">
         <label for="title">Title</label>
@@ -38,29 +39,29 @@
     </div>
 
 
-    <div class="input-container">
-        <div class="row">
-            <div class="form-group col-xs-6">
-                <label>Start Date</label>
-                <div class='input-group' id='startdate' >
-                    <input type='text' name='startdate' class="form-control datepicker" />
-    					<span class="input-group-addon">
-    						<span class="glyphicon glyphicon-calendar "></span>
-    					</span>
-                </div>
-            </div>
-            
-            <div class="form-group col-xs-6">
-                <label>End Date</label>
-                <div class='input-group' id='enddate'>
-                    <input type='text' name='enddate' class="form-control datepicker" />
-    					<span class="input-group-addon">
-    						<span class="glyphicon glyphicon-calendar"></span>
-    					</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="input-container">-->
+        <!--<div class="row">-->
+            <!--<div class="form-group col-xs-6">-->
+                <!--<label>Start Date</label>-->
+                <!--<div class='input-group' id='startdate' >-->
+                    <!--<input type='text' name='startdate' class="form-control datepicker" />-->
+    					<!--<span class="input-group-addon">-->
+    						<!--<span class="glyphicon glyphicon-calendar "></span>-->
+    					<!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!---->
+            <!--<div class="form-group col-xs-6">-->
+                <!--<label>End Date</label>-->
+                <!--<div class='input-group' id='enddate'>-->
+                    <!--<input type='text' name='enddate' class="form-control datepicker" />-->
+    					<!--<span class="input-group-addon">-->
+    						<!--<span class="glyphicon glyphicon-calendar"></span>-->
+    					<!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="input-container">
         <label for="description">Description</label>
@@ -71,11 +72,20 @@
 
 
     <div class="input-container" >
+        <!--<label for="form-photo">Cover Photo</label>-->
+        <!--<div class="col-xs-12">-->
+            <!--<div class="thumbnail select_picture_thumbnail">-->
+                <!--<img src="" alt="...">-->
+                <!--<a href="#" class="btn btn-default select_file" role="button">Choose from library</a>-->
+            <!--</div>-->
+        <!--</div>-->
         <label for="form-photo">Cover Photo</label>
         <div class="col-xs-12">
             <div class="thumbnail select_picture_thumbnail">
                 <img src="" alt="...">
-                <a href="#" class="btn btn-default select_file" role="button">Choose from library</a>
+                <input type="file" name="image" class="12u$ button upload_btn"
+                       accept="application/x-zip-compressed,image/*"
+                       title="">
             </div>
         </div>
     </div>
@@ -83,6 +93,11 @@
     <div id="button-create">
         <input type="submit" class="button special" value="Create New Journal">
     </div>
+
+    <div class="12u 12u$(xsmall) actions">
+        <a href="/myjournal" class="button" value="cancel" id="cancel_btn"/> Cancel </a>
+    </div>
+
     <!--div class="12u$">
         <ul class="actions">
             <li><a href="/myjournal" class="button special" id="create_journal">Create New Journal</a></li>
