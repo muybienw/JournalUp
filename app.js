@@ -125,7 +125,7 @@ var passport = require('passport')
 passport.use(new FacebookStrategy({
     clientID: 184120325287137,
     clientSecret: "68bbd4ff48fbd535166dabe8536bf330",
-    callbackURL: "http://localhost:3000/myjournal"
+    callbackURL: "http://journalup.herokuapp.com/myjournal"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate(function(err, user) {
