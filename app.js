@@ -91,6 +91,11 @@ app.get('/myjournal',
   passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
 
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 //app.post('/journal/new_test_journal', journal.addTestJournal);
 app.post('/journal/:id/delete', journal.deleteJournal);
 app.post('/journal/:id/favorite', journal.toggleFavorite);
