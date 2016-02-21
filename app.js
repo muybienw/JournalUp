@@ -92,7 +92,8 @@ app.get('/myjournal',
                                       failureRedirect: '/login' }));
 
 app.get('/logout', function(req, res){
-  req.logout();
+  //req.logout();
+  req.session.destroy(); 
   res.redirect('/');
 });
 
