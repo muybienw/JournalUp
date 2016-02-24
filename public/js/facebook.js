@@ -18,8 +18,8 @@ function statusChangeCallback(response) {
 }
 
 function getUserInfo(response) {
-  e.preventDefault();
-  
+  response.preventDefault();
+
   console.log(response);
   console.log("id: " + response.id);
   console.log("name: " + response.name);
