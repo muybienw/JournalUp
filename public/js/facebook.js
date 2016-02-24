@@ -22,4 +22,5 @@ function getUserInfo(response) {
   console.log("id: " + response.id);
   console.log("name: " + response.name);
   //$('#photo').attr('src', response.picture.data.url);
+  $(location).attr('href', 'https://journalup.herokuapp.com/myjournal')
 }
