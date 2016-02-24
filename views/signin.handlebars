@@ -31,7 +31,11 @@
 
             <div class="12u$">
                 <ul class="actions">
-                    <li><a href="/login/facebook" class="button special">Login with Facebook</a></li>
+                    <!--li><a href="/login/facebook" class="button special">Login with Facebook</a></li-->
+                    <li><p class="facebookLogin">Login with Facebook
+                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                        </fb:login-button>
+                    </p></li>
                     <li><a href="/myjournal" class="button special">Sign In</a></li>
                     <li><a href="/signup" class="button">Sign Up</a></li>
                 </ul>
@@ -45,6 +49,8 @@
         $('#header').hide();
     });
 </script>
+{{> facebook}}
+<script src="/js/facebook.js"></script>
 
 </body>
 </html>

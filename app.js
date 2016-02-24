@@ -81,7 +81,7 @@ app.get('/change_setting', setting.changeSetting);
 // Redirect the user to Facebook for authentication.  When complete,
 // Facebook will redirect the user back to the application at
 //     /auth/facebook/callback
-app.get('/login/facebook', passport.authenticate('facebook', { scope : ['email'] }));
+//app.get('/login/facebook', passport.authenticate('facebook', { scope : ['email'] }));
 
 // Facebook will redirect the user to this URL after approval.  Finish the
 // authentication process by attempting to obtain an access token.  If
@@ -90,12 +90,13 @@ app.get('/login/facebook', passport.authenticate('facebook', { scope : ['email']
 app.get('/myjournal',
   passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
-
+/*
 app.get('/logout', function(req, res){
   //req.logout();
   req.session.destroy(); 
   res.redirect('/');
 });
+*/
 
 //app.post('/journal/new_test_journal', journal.addTestJournal);
 app.post('/journal/:id/delete', journal.deleteJournal);
@@ -123,7 +124,7 @@ app.post('/add_image', upload.single('image'), journal.addImageToJournal);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-
+/*
 //authenticate requests
 var passport = require('passport')
   , FacebookStrategy = require('passport-facebook').Strategy;
@@ -144,3 +145,4 @@ passport.use(new FacebookStrategy({
     });
   }
 ));
+*/
