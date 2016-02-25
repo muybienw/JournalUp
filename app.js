@@ -93,6 +93,9 @@ function authentication(req, res, next) {
 app.get('/', signin.signIn);
 app.get('/signup', signin.signUp);
 
+app.post('/fbsignin', signin.FBsignin);
+app.get('/adminsignin', signin.Adminsignin);
+
 app.get('/myjournal', authentication);
 app.get('/myjournal', myjournal.view);
 

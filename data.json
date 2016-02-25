@@ -7,7 +7,7 @@
       "collaborators": [
         "Silvia",
         "Jenny",
-        "Mubin"
+        "MuyBien"
       ],
       "description": "Are you ready to go on a vacation to one of the largest cities in the United States?  There are so many different things to do and sites to see in New York City.  In this activity, you will discover many of the things that NYC offers to tourists and design a five day trip to the Big Apple.  Maybe you will even uncover the truth to how it got it's nickname.   Enjoy exploring one of the most amazing places in the US! ",
       "coverImage": "/images/cover.jpg",
@@ -23,7 +23,7 @@
       "collaborators": [
         "Silvia",
         "Jenny",
-        "Mubin"
+        "MuyBien"
       ],
       "description": "Lingering over pain au chocolat in a sidewalk café, relaxing after a day of strolling along the Seine and marveling at icons like the Eiffel Tower and the Arc de Triomphe… the perfect Paris experience combines leisure and liveliness with enough time to savor both an exquisite meal and exhibits at the Louvre. Awaken your spirit at Notre Dame, bargain hunt at the Marché aux Puces de Montreuil or for goodies at the Marché Biologique Raspail, then cap it all off with a risqué show at the Moulin Rouge.",
       "coverImage": "/images/paris.jpg",
@@ -38,7 +38,7 @@
       "title": "Japan",
       "time": "Aug 2013",
       "collaborators": [
-        "Mubin"
+        "MuyBien"
       ],
       "description": "Japan is an island nation in the Pacific Ocean with high-rise-filled cities, imperial palaces, mountainous national parks and thousands of shrines and temples. Tokyo, the crowded capital, is known for its neon skyscrapers and pop culture. In contrast, Kyoto offers Buddhist temples, Shinto shrines, gardens and cherry blossoms. Sushi, the national dish, is served everywhere from casual pubs to gourmet restaurants.",
       "coverImage": "/images/antlope.jpg",
@@ -50,7 +50,7 @@
 
   "user":
     {
-      "name" : "Mubin",
+      "name" : "MuyBien",
       "email" : "journalup@ucsd.edu",
       "password": "password",
       "profilePicture": "/images/profilepic.png",

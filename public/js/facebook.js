@@ -1,3 +1,5 @@
+var models = require('../models');
+
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -18,9 +20,20 @@ function statusChangeCallback(response) {
 }
 
 function getUserInfo(response) {
-  console.log(response);
+  console.log("AFTER FB LOGIN:");
   console.log("id: " + response.id);
   console.log("name: " + response.name);
-  //$('#photo').attr('src', response.picture.data.url);
-  $(location).attr('href', 'https://journalup.herokuapp.com/myjournal')
+  console.log("first name: " + response.first_name);
+  console.log(response.picture.data.url);
+
+  var data = {
+    "id": response.id,
+    "name" : response.name,
+    "first_name" : response.first_name,
+    "profilePicUrl" : response.picture.data.url
+  };
+
+  $.post('/fbsignin', data , function(){
+    window.location.replace('/myjournal');
+  });
 }
