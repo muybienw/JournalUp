@@ -1,10 +1,18 @@
 {
-  "name": "Journal Up",
+//  "name": "Journal Up",
+//  "version": "0.0.1",
+//  "author": "Mubin, Silvia, Jenny",
+//  "repository": {
+//    "type": "git",
+//    "url": "https://github.com/muybienw/JournalUp"
+//  },
+  "name": "IntroHCI",
   "version": "0.0.1",
-  "author": "Mubin, Silvia, Jenny",
+  "author": "Intro HCI Staff",
+
   "repository": {
     "type": "git",
-    "url": "https://github.com/muybienw/JournalUp"
+    "url": "https://github.com/IntroHCI/lab5"
   },
   "license": "MIT",
   "private": true,
