@@ -36,8 +36,9 @@
                         <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                         </fb:login-button>
                     </p></li>
-                    <!--li><a href="/myjournal" class="button special">Sign In</a></li>
-                    <li><a href="/signup" class="button">Sign Up</a></li-->
+
+                    <li><a href="/myjournal" class="button special" id="signIn">Sign In</a></li>
+                    <!--<li><a href="/signup" class="button">Sign Up</a></li&ndash;&gt;-->
                 </ul>
             </div>
         </div>
@@ -49,6 +50,7 @@
         $('#header').hide();
     });
 </script>
+
 {{> facebook}}
 <script src="/js/facebook.js"></script>
 

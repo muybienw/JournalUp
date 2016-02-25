@@ -13,6 +13,13 @@ var multer = require('multer');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
+// mongoose session
+SessionStore = require("session-mongoose")(express);
+var store = new SessionStore({
+  url: "mongodb://muybienw:w1234@ds055565.mongolab.com:55565/heroku_bdgwnq5z/session?authMode=scram-sha1",
+  interval: 3600000
+});
+
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 //var local_database_name = 'journalup';
@@ -55,27 +62,65 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload);
 
+// session setting
+app.use(express.cookieParser());
+app.use(express.cookieSession({secret : '1234567'}));
+app.use(express.session({
+  secret : '1234567',
+  store: store,
+  cookie: { maxAge: 3600000 }
+}));
+app.use(function(req, res, next){
+  res.locals.user = req.session.user;
+  next();
+});
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// check whether the user has signed in
+function authentication(req, res, next) {
+  if (!req.session.user) {
+    req.session.error='please signin first';
+    return res.redirect('/');
+  }
+  next();
+}
 
 // Add routes here
 app.get('/', signin.signIn);
 app.get('/signup', signin.signUp);
+
+app.get('/myjournal', authentication);
 app.get('/myjournal', myjournal.view);
+
 app.get('/gallery', gallery.view);
+
+app.get('/favorite', authentication);
 app.get('/favorite', favorite.view);
+
+app.get('/journal/:id', authentication);
 app.get('/journal/:id', journal.viewJournal);
+
+app.get('/newjournal', authentication);
 app.get('/newjournal', journal.addJournal);
+
+app.get('/journal/:id/edit', authentication);
 app.get('/journal/:id/edit', journal.editJournal);
 //app.get('/journal/:id/share', journal.shareJournal);
+
+app.get('/journal/:id/media', authentication);
 app.get('/journal/:id/media', journal.manageMedia);
 
-// create a new journal
-app.get('/createjournal', journal.createJournal)
+app.get('/setting', authentication);
 app.get('/setting', setting.viewSetting);
+
+// create a new journal
+app.get('/createjournal', authentication);
+app.get('/createjournal', journal.createJournal)
+
 app.get('/change_setting', setting.changeSetting);
 
 // Redirect the user to Facebook for authentication.  When complete,

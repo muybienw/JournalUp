@@ -1,10 +1,10 @@
 {
-  "name": "IntroHCI",
+  "name": "Journal Up",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "author": "Mubin, Silvia, Jenny",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab5"
+    "url": "https://github.com/muybienw/JournalUp"
   },
   "license": "MIT",
   "private": true,
@@ -17,7 +17,9 @@
     "mongodb": "*",
     "mongoose": "*",
     "multer": "^1.1.0",
-    "update-mongo": "0.0.4"
+    "update-mongo": "0.0.4",
+    "session-mongoose": "0.5.2"
+
   },
   "engines": {
     "node": "0.10.x"

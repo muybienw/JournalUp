@@ -8,6 +8,9 @@ var models = require('../models.js');
 var search = {'name' : 'Mubin'};
 
 exports.viewSetting = function (req, res) {
+
+    console.log(req.session.user);
+
     models.User.findOne(function(err, result){
         if(err) console.log(err);
         console.log("find the user:" + result);

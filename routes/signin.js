@@ -3,6 +3,15 @@
  */
 
 exports.signIn = function(req, res){
+    var user = {
+        id : 0,
+        name : "Mubin",
+        password : 1234
+    }
+
+    req.session.user = user;
+    console.log(req.session);
+
     res.render('signin');
 };
 

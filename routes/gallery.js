@@ -6,9 +6,17 @@ var data = require('../data.json');
 var models = require('../models');
 
 exports.view = function(req, res){
-    models.Journal.find(function(err, journals){
-        if(err) {console.log(err); res.send(500);}
-        console.log(journals);
-        res.render('gallery', {'journals' : journals});
-    })
+    if(!req.session.user) {
+        res.redirect('/');
+    }
+    else {
+        models.Journal.find(function (err, journals) {
+            if (err) {
+                console.log(err);
+                res.send(500);
+            }
+            console.log(journals);
+            res.render('gallery', {'journals': journals});
+        })
+    }
 };

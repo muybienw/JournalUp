@@ -6,12 +6,21 @@ var data = require('../data.json');
 var models = require('../models');
 
 
-exports.view = function(req, res){
+exports.view = function(req, res) {
+    if (!req.session.user) {
+        res.redirect('/');
+    }
+    else{
+        console.log(req.session.user);
 
-    models.User.find().populate('journals').populate('favorites').exec(function(err, result){
-        if (err) return console.error(err);
-        res.render('my_favorite', {'favs': result[0]["favorites"]});
-    });
+        var searchOption = {"name": req.session.user.name}
+        console.log(searchOption);
+
+        models.User.findOne(searchOption).populate('journals').populate('favorites').exec(function (err, result) {
+            if (err) return console.error(err);
+            res.render('my_favorite', {'favs': result["favorites"]});
+        });
+    }
 
     //var favs = data["user"]["favorites"];
     //console.log(favs);

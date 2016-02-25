@@ -10,18 +10,26 @@ var search = {'name' : 'Mubin'};
 
 exports.viewJournal = function(req, res){
 
+    console.log(req.session.user);
+
+    var searchOption = {"name": req.session.user.name}
+    console.log(searchOption);
+
     var id = req.params.id;
-    models.User.find(function(err, user){
+    models.User.findOne(searchOption, function(err, user){
         if(err) {console.log(err); res.send(500);}
 
         models.Journal.findOne({'_id' : id}).exec(function(err, journal){
             if(err) {console.log(err); res.send(500);}
             console.log(user);
 
-            var isFav = user[0]["favorites"].indexOf(journal["_id"])==-1? false : true;
+            var isFav = user["favorites"].indexOf(journal["_id"])==-1? false : true;
             console.log("this article is of favorite:" + isFav);
 
-            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav,
+            var isCollaborator = journal.collaborators.indexOf(user.name)==-1? false : true;
+            console.log("is creator: " + isCollaborator);
+
+            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
                     helpers: {
                         foo: function () { return 'foo.'; },
                         ifIn: function(elem, list, options) {
@@ -55,10 +63,10 @@ exports.viewJournal = function(req, res){
 };
 
 
-exports.viewJournalBook = function(req, res){
-    console.log("render journal_view");
-    res.render('journal_view');
-};
+//exports.viewJournalBook = function(req, res){
+//    console.log("render journal_view");
+//    res.render('journal_view');
+//};
 
 exports.addJournal = function(req, res){
     res.render('new_journal');
@@ -107,7 +115,12 @@ exports.createJournal = function(req, res) { 
     //var id = data["journals"].length;
     var title = req.body.title;
     //var time = req.body.startdate;
+
+    console.log(req.session.user.name);
     var collaborators = req.body.collaborators.split();
+    collaborators.push(req.session.user.name);
+
+
     var description = req.body.description;
     var coverImage = req.file ? req.file.path.substring(6) : "/images/jenny.jpg";
     
@@ -205,28 +218,33 @@ exports.deleteJournal = function(req, res){
 exports.toggleFavorite = function(req, res){
     var journalID = req.params.id;
 
-    models.User.find(function(err, user){
+    console.log(req.session.user);
+
+    var searchOption = {"name": req.session.user.name}
+    console.log(searchOption);
+
+    models.User.findOne(searchOption, function(err, user){
         if(err) {console.error(err); res.send(500);}
         models.Journal.findOne({"_id" : journalID}).exec(function(err, journal){
             if(err) {console.error(err); res.send(500);}
 
             // console.log(user[0]["favorites"]);
 
-            var index = user[0]["favorites"].indexOf(journal._id);
+            var index = user["favorites"].indexOf(journal._id);
             // console.log(index);
             // console.log(journal._id);
 
             //delete user[0]["favorites"][index];
             //console.log("test");
 
-            if(index == -1) user[0]["favorites"].push(journal._id + "");
-            else user[0]["favorites"].splice(index, 1);
+            if(index == -1) user["favorites"].push(journal._id + "");
+            else user["favorites"].splice(index, 1);
 
             //delete user[0]["_id"];
 
             //console.log(user[0]);
 
-            models.User.findOneAndUpdate({_id: user[0]._id}, {$set:{favorites:user[0]["favorites"]}}, {upsert : true}, function(err, doc){
+            models.User.findOneAndUpdate({_id: user._id}, {$set:{favorites:user["favorites"]}}, {upsert : true}, function(err, doc){
                 if(err) {console.error(err); res.send(500);}
                 console.log("success!");
                 res.send(200);
