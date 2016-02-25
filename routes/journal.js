@@ -9,6 +9,7 @@ var models = require('../models');
 
 
 exports.viewJournal = function(req, res){
+    data["slideshow"] = false;
 
     console.log(req.session.user);
 
@@ -62,6 +63,62 @@ exports.viewJournal = function(req, res){
     //}
     //res.render('journal_view', data["journals"][index]);
 };
+
+exports.viewJournalSlide = function(req, res){
+    data["slideshow"] = true;
+    
+    console.log(req.session.user);
+
+    var searchOption = {"name": req.session.user.name}
+    console.log(searchOption);
+
+    var id = req.params.id;
+    models.User.findOne(searchOption, function(err, user){
+        if(err) {console.log(err); res.send(500);}
+
+        models.Journal.findOne({'_id' : id}).exec(function(err, journal){
+            if(err) {console.log(err); res.send(500);}
+            console.log(user);
+
+            var isFav = user["favorites"].indexOf(journal["_id"])==-1? false : true;
+            console.log("this article is of favorite:" + isFav);
+
+            var isCollaborator = journal.collaborators.indexOf(user.name)==-1? false : true;
+            console.log("is creator: " + isCollaborator);
+
+            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+                    helpers: {
+                        foo: function () { return 'foo.'; },
+                        ifIn: function(elem, list, options) {
+                            if(list.indexOf(elem) > -1) {
+                                return options.fn(this);
+                            }
+                            return options.inverse(this);
+                        }
+                    }
+            });
+        });
+    });
+
+
+
+    //console.log(id);
+    //
+    //var index = 0;
+    //
+    //for (var i in data["journals"]) {
+    //    console.log(i);
+    //    console.log(data["journals"][i]["id"]);
+    //
+    //    if (data["journals"][i]["id"] == id) {
+    //        index = i;
+    //        console.log("profile index is : " + i);
+    //        break;
+    //    }
+    //}
+    //res.render('journal_view', data["journals"][index]);
+};
+
 
 
 //exports.viewJournalBook = function(req, res){

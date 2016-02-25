@@ -109,6 +109,10 @@ app.get('/favorite', favorite.view);
 app.get('/journal/:id', authentication);
 app.get('/journal/:id', journal.viewJournal);
 
+//for A/B test
+app.get('/journal/slideshow/:id', authentication);
+app.get('/journal/slideshow/:id', journal.viewJournalSlide);
+
 app.get('/newjournal', authentication);
 app.get('/newjournal', journal.addJournal);
 
