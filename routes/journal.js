@@ -6,7 +6,7 @@ var data = require('../data.json');
 var models = require('../models');
 
 // search option for only one user
-var search = {'name' : 'Mubin'};
+
 
 exports.viewJournal = function(req, res){
 
@@ -16,6 +16,7 @@ exports.viewJournal = function(req, res){
     console.log(searchOption);
 
     var id = req.params.id;
+
     models.User.findOne(searchOption, function(err, user){
         if(err) {console.log(err); res.send(500);}
 
@@ -116,10 +117,15 @@ exports.createJournal = function(req, res) { 
     var title = req.body.title;
     //var time = req.body.startdate;
 
-    console.log(req.session.user.name);
-    var collaborators = req.body.collaborators.split();
-    collaborators.push(req.session.user.name);
+    var searchOption = {name : req.session.user.name};
 
+    console.log("check create journal data");
+    console.log(req.body);
+    console.log(req.session.user.name);
+    var collaborators = req.body.collaborators.split(',');
+    console.log(typeof collaborators);
+
+    if(collaborators.indexOf(req.session.user.name)==-1) collaborators.push(req.session.user.name);
 
     var description = req.body.description;
     var coverImage = req.file ? req.file.path.substring(6) : "/images/jenny.jpg";
@@ -131,10 +137,7 @@ exports.createJournal = function(req, res) { 
         "collaborators" : collaborators,
         "description": description,
         "coverImage": coverImage,
-        "images": [
-        "/images/ny.jpg",
-        "/images/jenny.jpg"
-        ]
+        "images": []
     }
 
     var newJournal = new models.Journal(newJournal_json);
@@ -144,7 +147,7 @@ exports.createJournal = function(req, res) { 
 
         console.log(newJournal);
 
-        models.User.findOne(search, function(err, user){
+        models.User.findOne(searchOption, function(err, user){
             if(err) console.log(err);
             user.journals.push(newJournal._id);
 
@@ -263,10 +266,13 @@ exports.saveEditChanges = function(req, res){
 
     models.Journal.findOne({_id : req.body.journal_id}, function(err, journal){
         if(err) console.log(err);
+
         var title = req.body.title ?  req.body.title : journal.title;
-        var collaborators = req.body.collaborators ? req.body.collaborators.split() : journal.collaborators;
+        var collaborators = req.body.collaborators ? req.body.collaborators.split(',') : journal.collaborators;
         var description = req.body.description? req.body.description : journal.description;
         var coverImage = req.file ? req.file.path.substring(6) : journal.coverImage;
+
+        console.log(collaborators);
 
         var update = {
             "title": title,

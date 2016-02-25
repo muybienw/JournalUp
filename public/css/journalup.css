@@ -407,3 +407,8 @@ input[type="submit"] {
 #custom-search-input .glyphicon-search{
     font-size: 23px;
 }
+
+div .collaborator {
+    border-style: solid;
+    display: inline;
+}

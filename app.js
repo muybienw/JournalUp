@@ -42,6 +42,7 @@ var gallery = require('./routes/gallery');
 var journal = require('./routes/journal');
 var favorite = require('./routes/favorite');
 var setting = require('./routes/setting');
+var user = require('./routes/user');
 
 
 var app = express();
@@ -128,7 +129,11 @@ app.get('/setting', setting.viewSetting);
 app.get('/createjournal', authentication);
 app.get('/createjournal', journal.createJournal)
 
+app.get('/change_setting', authentication);
 app.get('/change_setting', setting.changeSetting);
+
+app.post('/checkuser', authentication);
+app.post('/checkuser', user.checkUser);
 
 // Redirect the user to Facebook for authentication.  When complete,
 // Facebook will redirect the user back to the application at

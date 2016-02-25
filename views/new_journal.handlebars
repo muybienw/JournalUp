@@ -28,16 +28,39 @@
         </div>
     </div>
 
-    <div class="input-container form-group">
-        <label for="form-collaborator">Collaborators</label>
-        <div class="input-group">
-            <input type="text" name="collaborators" class="form-control" id="collaborator" placeholder="Enter username">
-    		  <span class="input-group-btn">
-    			<button class="btn" type="button">Search</button>
-    		  </span>
+    <!--<div class="input-container form-group">-->
+        <!--<label for="form-collaborator">Collaborators</label>-->
+        <!--<div class="input-group">-->
+            <!--<input type="text" name="collaborators" class="form-control" id="collaborator" placeholder="Enter username">-->
+    		  <!--<span class="input-group-btn">-->
+    			<!--<button class="btn" type="button">Search</button>-->
+    		  <!--</span>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--search bar-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input id="search_users" type="text" class="form-control input-lg" placeholder="type user name" />
+                    <span class="input-group-btn">
+                        <a href='/' id="user_search_btn" class="btn btn-info btn-lg">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+
+    <div class="container">
+        <div class="row" id="collaborator_list">
+        </div>
+    </div>
 
     <!--<div class="input-container">-->
         <!--<div class="row">-->
@@ -119,7 +142,49 @@
     });
 
     $(document).on('ready', function() {
+
+        var col_list = [];
+
         $('#back_btn').attr('href', '/myjournal');
+
+        $('#user_search_btn').click(function(e){
+            e.preventDefault();
+            console.log('user search btn clicked!');
+
+            var name = $('#search_users').val();
+            console.log(name);
+
+//            $.post('/checkuser', {name : name}, function(res){
+//                console.log(res);
+//                console.log(typeof res);
+//            });
+
+            var data = {name : name};
+            console.log(data);
+
+            if(col_list.indexOf(name)!=-1){
+                swal(name + " is already a collaborator");
+            }
+            else {
+
+                $.post('/checkuser', data).success(function () {
+//                swal({
+//                                title: "Success!",
+//                            },
+//                            function(){
+//
+//                            });
+                    col_list.push(name);
+                    console.log("current collaborators: " + col_list);
+                    generateCollaboratorList(col_list);
+
+                }).fail(function () {
+                    swal("invalid user name, please check");
+                });
+            }
+
+
+        });
 
         $("#create_journal_form").submit(function (event) {
 
@@ -131,6 +196,7 @@
             var formData = new FormData($(this)[0]);
 
             console.log("formData: " + formData);
+            formData.append('collaborators', col_list);
 
             //loading effect (to be added)
 
@@ -158,6 +224,34 @@
                     swal("Met some problems, please try again :P");
                 }
             });
+        });
+
+        function generateCollaboratorList(list){
+            var s = "";
+            for(index in list){
+                s += "<div id='" + list[index] + "'+ class='collaborator'><p>" + list[index] +"</p> <a " +
+                        " href='/myjournal' class='remove_user_btn'><i class='fa fa-times'></i></a></div>";
+            }
+            $('#collaborator_list').html(s);
+        }
+
+//        $('.remove_user_btn').click(function(e){
+//            e.preventDefault();
+//            console.log('remove user btn clicked');
+//            //var name = this.parent();
+//            //console.log(name);
+//        });
+
+        $('body').on("click", '.remove_user_btn', function(e){
+            e.preventDefault();
+            console.log('remove user btn clicked');
+
+            var parent = $(this).parent();
+            console.log(parent.val());
+            console.log(parent.attr('id'));
+
+            col_list.splice(col_list.indexOf(parent.attr('id')), 1);
+            generateCollaboratorList(col_list);
         });
 
     });
