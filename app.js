@@ -100,6 +100,7 @@ app.get('/myjournal', authentication);
 app.get('/myjournal', myjournal.view);
 
 app.get('/gallery', gallery.view);
+app.get('/gallery/:search', gallery.viewSearch);
 
 app.get('/favorite', authentication);
 app.get('/favorite', favorite.view);

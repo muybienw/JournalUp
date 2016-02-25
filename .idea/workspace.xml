@@ -301,6 +301,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456381159344.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456381159344.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456381176510.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456381176510.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456420336929.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456420336929.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456426578147.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456426578147.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/empire.jpg" afterPath="$PROJECT_DIR$/public/pages/empire.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/times.jpeg" afterPath="$PROJECT_DIR$/public/pages/times.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/word1.png" afterPath="$PROJECT_DIR$/public/pages/word1.png" />
@@ -3467,6 +3468,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/arrow.svg" afterPath="$PROJECT_DIR$/public/css/images/arrow.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/bars.svg" afterPath="$PROJECT_DIR$/public/css/images/bars.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/close.svg" afterPath="$PROJECT_DIR$/public/css/images/close.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/journalup.css" afterPath="$PROJECT_DIR$/public/css/journalup.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sweetalert.css" afterPath="$PROJECT_DIR$/public/css/sweetalert.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" afterPath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" />
@@ -3499,7 +3501,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/main.scss" afterPath="$PROJECT_DIR$/public/sass/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/favorite.js" afterPath="$PROJECT_DIR$/routes/favorite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/gallery.js" afterPath="$PROJECT_DIR$/routes/gallery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/journal.js" afterPath="$PROJECT_DIR$/routes/journal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/main.js" afterPath="$PROJECT_DIR$/routes/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/my_journal.js" afterPath="$PROJECT_DIR$/routes/my_journal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/setting.js" afterPath="$PROJECT_DIR$/routes/setting.js" />
@@ -3508,6 +3509,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/gallery.html" afterPath="$PROJECT_DIR$/statics/gallery.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/manage_media.html" afterPath="$PROJECT_DIR$/statics/manage_media.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/edit_journal.handlebars" afterPath="$PROJECT_DIR$/views/edit_journal.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gallery.handlebars" afterPath="$PROJECT_DIR$/views/gallery.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/journal_view.handlebars" afterPath="$PROJECT_DIR$/views/journal_view.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/manage_media.handlebars" afterPath="$PROJECT_DIR$/views/manage_media.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my_favorite.handlebars" afterPath="$PROJECT_DIR$/views/my_favorite.handlebars" />
@@ -3558,11 +3560,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_media.handlebars" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_media.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/manage_media.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5081967">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="-20.916666">
+              <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journal_view.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="118.458336">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gallery.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/gallery.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7892272">
+              <caret line="105" column="56" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journalup.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.7916665">
+              <caret line="372" column="17" selection-start-line="372" selection-start-column="17" selection-end-line="372" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -3572,17 +3614,7 @@
         <entry file="file://$PROJECT_DIR$/routes/gallery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4444447">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -3591,8 +3623,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9259257">
-              <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
+            <state vertical-scroll-proportion="-8.481482">
+              <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -3603,36 +3635,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.541666">
               <caret line="141" column="32" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_journal.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/my_journal.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.166667">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signin.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/signin.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1666665">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -3675,7 +3677,6 @@
         <option value="$PROJECT_DIR$/views/partials/profile_info.handlebars" />
         <option value="$PROJECT_DIR$/views/share.handlebars" />
         <option value="$PROJECT_DIR$/views/my_favorite.handlebars" />
-        <option value="$PROJECT_DIR$/views/gallery.handlebars" />
         <option value="$PROJECT_DIR$/views/partials/footer.handlebars" />
         <option value="$PROJECT_DIR$/views/my_journal.handlebars" />
         <option value="$PROJECT_DIR$/public/js/journalup.js" />
@@ -3685,16 +3686,13 @@
         <option value="$PROJECT_DIR$/views/partials/journal_block.handlebars" />
         <option value="$PROJECT_DIR$/public/js/jquery.blockUI.js" />
         <option value="$PROJECT_DIR$/views/partials/html_head.handlebars" />
-        <option value="$PROJECT_DIR$/public/css/journalup.css" />
         <option value="$PROJECT_DIR$/views/edit_journal.handlebars" />
         <option value="$PROJECT_DIR$/views/new_journal.handlebars" />
         <option value="$PROJECT_DIR$/views/partials/loader.handlebars" />
         <option value="$PROJECT_DIR$/views/setting.handlebars" />
         <option value="$PROJECT_DIR$/routes/setting.js" />
-        <option value="$PROJECT_DIR$/routes/gallery.js" />
         <option value="$PROJECT_DIR$/routes/my_journal.js" />
         <option value="$PROJECT_DIR$/routes/favorite.js" />
-        <option value="$PROJECT_DIR$/views/journal_view.handlebars" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/public/js/facebook.js" />
         <option value="$PROJECT_DIR$/views/partials/header.handlebars" />
@@ -3703,9 +3701,13 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/signin.handlebars" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/journal.js" />
         <option value="$PROJECT_DIR$/views/manage_media.handlebars" />
+        <option value="$PROJECT_DIR$/views/journal_view.handlebars" />
+        <option value="$PROJECT_DIR$/public/css/journalup.css" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/gallery.js" />
+        <option value="$PROJECT_DIR$/views/gallery.handlebars" />
       </list>
     </option>
   </component>
@@ -4139,14 +4141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/gallery.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.625">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.blockUI.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4172,14 +4166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.625">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.9411764">
-          <caret line="364" column="13" selection-start-line="364" selection-start-column="13" selection-end-line="364" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -4256,14 +4242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/my_journal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4312,14 +4290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.8039217">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.416667">
@@ -4360,26 +4330,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/gallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/signin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9259257">
-          <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -4400,10 +4354,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7916665">
+          <caret line="372" column="17" selection-start-line="372" selection-start-column="17" selection-end-line="372" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/manage_media.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5081967">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="-20.916666">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.481482">
+          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/gallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="118.458336">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gallery.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7892272">
+          <caret line="105" column="56" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
           <folding />
         </state>
       </provider>

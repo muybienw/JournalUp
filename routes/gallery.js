@@ -20,3 +20,24 @@ exports.view = function(req, res){
         })
     }
 };
+
+exports.viewSearch = function(req, res){
+
+    var search = req.params.search;
+
+    console.log(search);
+
+    if(search.length==0) res.redirect('/gallery');
+    else{
+        var searchOption = {title: new RegExp(search, "i")};
+        models.Journal.find(searchOption, function (err, journals) {
+            if (err) {
+                console.log(err);
+                res.send(500);
+            }
+            console.log(journals);
+            res.render('gallery', {'journals': journals});
+        })
+    }
+
+};

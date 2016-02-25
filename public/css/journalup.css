@@ -367,3 +367,43 @@ input[type="submit"] {
     heigh: 5em!important;
     width: 5em!important;
 }
+
+/*search bar*/
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+
+    margin-bottom: 2em;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+    height: 3em;
+    color: black;
+}
+
+#custom-search-input button{
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    border-left: solid 1px #ccc;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: auto;
+
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
