@@ -18,7 +18,7 @@
     "mongoose": "*",
     "multer": "^1.1.0",
     "update-mongo": "0.0.4",
-    "session-mongoose": "0.5.2"
+    "session-mongoose": "*"
 
   },
   "engines": {
