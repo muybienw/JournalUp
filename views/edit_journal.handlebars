@@ -70,8 +70,21 @@
 
 </form>
 
+{{> loader}}
+
 <script>
+
+    $(document).ajaxStart(function(){
+        console.log("loader triggered!");
+        $("#loader").show();
+    });
+    $(document).ajaxComplete(function(){
+        console.log("loader hided!");
+        $("#loader").hide();
+    });
+
     $(document).on('ready', function() {
+        $('#loading').hide()
         $('#back_btn').attr('href', '/myjournal');
 
         $("#edit_journal_form").submit(function (event) {
@@ -82,8 +95,10 @@
 
 //            var formData = $(this).serialize();
             var formData = new FormData($(this)[0]);
+            var jour_id = formData["journal_id"];
 
-            console.log("formData:" + formData);
+            console.log("formData: " + formData);
+            console.log("journal_id: " + jour_id) ;
 
             //loading effect (to be added)
 
@@ -92,16 +107,22 @@
                 url: '/journal/save_edit_changes',
                 type: 'POST',
                 data: formData,
-                async: false,
+                // async: false,
                 cache: false,
                 contentType: false,
                 processData: false,
                 success: function () {
+
                     swal({
                                 title: "Changes Saved!",
                             },
                             function(){
-                                window.location.reload();
+                                var path = window.location.href;
+                                //console.log("path is:" + path + typeof(path));
+                                path = path.substring(0, path.length-5);
+                                //console.log("path is:" + path);
+                                window.location.replace(path);
+
                             });
                 },
                 error: function(){

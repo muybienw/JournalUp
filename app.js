@@ -74,7 +74,7 @@ app.get('/journal/:id/edit', journal.editJournal);
 app.get('/journal/:id/media', journal.manageMedia);
 
 // create a new journal
-//app.get('/createjournal', journal.createJournal)
+app.get('/createjournal', journal.createJournal)
 app.get('/setting', setting.viewSetting);
 app.get('/change_setting', setting.changeSetting);
 

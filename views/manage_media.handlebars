@@ -69,10 +69,11 @@
 
     <div clss="empty" style="height:10em"> </div>
 
+    {{> loader}}
+
 </div>
 
 <!--loading effect-->
-<div class="modal"><!-- Place at bottom of page --></div>
 
 <footer class="footer">
     <div class="12u$">
@@ -84,6 +85,16 @@
 
 
 <script>
+
+    $(document).ajaxStart(function(){
+        console.log("loader triggered!");
+        $("#loader").show();
+    });
+    $(document).ajaxComplete(function(){
+        console.log("loader hided!");
+        $("#loader").hide();
+    });
+
     $(document).on('ready', function() {
 
         $('#back_btn').attr('href', '/myjournal');
@@ -106,10 +117,17 @@
                 url: '/add_image',
                 type: 'POST',
                 data: formData,
-                async: false,
+                //async: false,
                 cache: false,
                 contentType: false,
                 processData: false,
+//                beforeSend: function(){
+//                    console.log("trying to block the UI");
+//                    $("#loader").show();
+//                },
+//                complete: function(){
+//                    $("#loader").hide();
+//                },
                 success: function () {
                     swal({
                                 title: "Picture added!",
@@ -119,8 +137,7 @@
                                 window.location.reload();
                             });
                 },
-                error: function(){
-
+                error: function(res){
                     swal("Met some problems, please try again :P");
                 }
             });

@@ -105,9 +105,60 @@
     </div-->
 </form>
 
+{{> loader}}
+
 <script>
+
+    $(document).ajaxStart(function(){
+        console.log("loader triggered!");
+        $("#loader").show();
+    });
+    $(document).ajaxComplete(function(){
+        console.log("loader hided!");
+        $("#loader").hide();
+    });
+
     $(document).on('ready', function() {
         $('#back_btn').attr('href', '/myjournal');
+
+        $("#create_journal_form").submit(function (event) {
+
+            //disable the default form submission
+            event.preventDefault();
+            //grab all form data
+
+//            var formData = $(this).serialize();
+            var formData = new FormData($(this)[0]);
+
+            console.log("formData: " + formData);
+
+            //loading effect (to be added)
+
+            //AJAX REQUEST HERE
+            $.ajax({
+                url: '/createjournal',
+                type: 'POST',
+                data: formData,
+                // async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function () {
+
+                    swal({
+                            title: "Success!",
+                            },
+                            function(){
+                                window.location.replace('/myjournal');
+
+                            });
+                },
+                error: function(){
+
+                    swal("Met some problems, please try again :P");
+                }
+            });
+        });
 
     });
 </script>

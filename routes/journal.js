@@ -238,10 +238,10 @@ exports.toggleFavorite = function(req, res){
 
 exports.saveEditChanges = function(req, res){
 
-    console.log(req.body);
+//    console.log(req.body);
 
-    console.log(req.file);
-    console.log("journal id is :" + req.body.journal_id);
+//    console.log(req.file);
+//    console.log("journal id is :" + req.body.journal_id);
 
     models.Journal.findOne({_id : req.body.journal_id}, function(err, journal){
         if(err) console.log(err);
@@ -259,30 +259,35 @@ exports.saveEditChanges = function(req, res){
 
         models.Journal.findOneAndUpdate({_id: journal._id}, {$set: update}, function(err){
             if(err) console.log(err);
-            console.log("after update:" + journal);
+//            console.log("after update:" + journal);
             res.json({success: true});
         });
     });
 }
 
-exports.addImageToJournal = function(req, res){
+exports.addImageToJournal = function(req, res) {
     console.log(req.body);
     console.log(req.file);
     console.log("journal id is :" + req.body.journal_id);
 
-    models.Journal.findOne({_id: req.body.journal_id}, function(err, journal){
-        if(err) console.log(err);
-        if(!req.file) res.redirect('/journal/' + req.body.journal_id + '/media');
+    if (!req.file) {
+        console.log("no file attached!");
+        res.json({error: "please select a file!"});
+    }
+    else {
+        models.Journal.findOne({_id: req.body.journal_id}, function (err, journal) {
+            if (err) console.log(err);
 
-        console.log(journal);
+            console.log(journal);
 
-        journal.images.push(req.file.path.substring(6));
+            journal.images.push(req.file.path.substring(6));
 
-        models.Journal.findOneAndUpdate({_id: journal._id}, {$set: {"images" : journal.images}}, function(err){
-            if(err) console.log(err);
-            //res.redirect('/journal/' + req.body.journal_id + '/media');
-            res.json({success: true});
+            models.Journal.findOneAndUpdate({_id: journal._id}, {$set: {"images": journal.images}}, function (err) {
+                if (err) console.log(err);
+                //res.redirect('/journal/' + req.body.journal_id + '/media');
+                res.json({success: true});
+            });
+
         });
-
-    });
+    }
 }
