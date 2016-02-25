@@ -23,17 +23,19 @@
     <div class="row">
 
 
-        <div class="col-xs-4 media-container">
-            <a href="#" class="thumbnail media">
-                <img src="{{coverImage}}">
-            </a>
-        </div>
+        <!--<div class="col-xs-4 media-container">-->
+            <!--<a href="#" class="thumbnail media">-->
+                <!--<img src="{{coverImage}}">-->
+                <!--<a id="{{coverImage}}" class="btn btn-default delete_btn"> delete </a>-->
+            <!--</a>-->
+        <!--</div>-->
 
         {{#each images}}
             <div class="col-xs-4 media-container">
                 <a href="#" class="thumbnail media">
                     <img src={{this}} alt="...">
                 </a>
+                <a id="{{this}}" class="btn btn-default delete_btn"> delete </a>
             </div>
         {{/each}}
 
@@ -96,6 +98,23 @@
     });
 
     $(document).on('ready', function() {
+
+        $('.delete_btn').click(function(e){
+            e.preventDefault();
+            var url = this.id;
+            var path = window.location.href;
+            var segs = path.split('/');
+            var journal_id = segs[segs.length - 2];
+
+            var data = {
+                journal_id : journal_id,
+                imageUrl : url
+            }
+
+            $.post(path + "/deleteImage", data, function(){
+                window.location.reload();
+            });
+        });
 
         $('#back_btn').attr('href', '/myjournal');
 

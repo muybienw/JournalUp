@@ -117,6 +117,9 @@ app.get('/journal/:id/edit', journal.editJournal);
 app.get('/journal/:id/media', authentication);
 app.get('/journal/:id/media', journal.manageMedia);
 
+app.post('/journal/:id/media/:url', authentication);
+app.post('/journal/:id/media/deleteImage', journal.deleteImage);
+
 app.get('/setting', authentication);
 app.get('/setting', setting.viewSetting);
 

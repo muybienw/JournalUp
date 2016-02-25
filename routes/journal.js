@@ -309,3 +309,23 @@ exports.addImageToJournal = function(req, res) {
         });
     }
 }
+
+exports.deleteImage = function(req, res){
+
+    console.log("inside deleteImage function call");
+
+    console.log(req.body);
+
+    models.Journal.findOne({_id : req.body.journal_id}, function(err, journal){
+        if(err || !journal) res.send(500);
+
+        console.log(journal.images);
+        journal.images.remove(req.body.imageUrl);
+        console.log(journal.images);
+
+        models.Journal.findOneAndUpdate({_id : req.body.journal_id}, {$set: {"images": journal.images}}, function(err){
+            res.send(200);
+        });
+
+    })
+}
