@@ -8,7 +8,7 @@ var models = require('../models');
 // search option for only one user
 
 
-exports.viewJournal = function(req, res){
+exports.viewJournalSlide = function(req, res){
 
     console.log(req.session.user);
 
@@ -30,7 +30,7 @@ exports.viewJournal = function(req, res){
             var isCollaborator = journal.collaborators.indexOf(user.name)==-1? false : true;
             console.log("is creator: " + isCollaborator);
 
-            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+            res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
                     helpers: {
                         foo: function () { return 'foo.'; },
                         ifIn: function(elem, list, options) {

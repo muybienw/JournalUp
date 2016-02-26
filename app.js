@@ -40,6 +40,7 @@ var myjournal = require('./routes/my_journal');
 var signin = require('./routes/signin');
 var gallery = require('./routes/gallery');
 var journal = require('./routes/journal');
+var journal2 = require('./routes/journal2');
 var favorite = require('./routes/favorite');
 var setting = require('./routes/setting');
 var user = require('./routes/user');
@@ -110,8 +111,8 @@ app.get('/journal/:id', authentication);
 app.get('/journal/:id', journal.viewJournal);
 
 //for A/B test
-app.get('/journal/slideshow/:id', authentication);
-app.get('/journal/slideshow/:id', journal.viewJournalSlide);
+app.get('/journal2/:id', authentication);
+app.get('/journal2/:id', journal2.viewJournalSlide);
 
 app.get('/newjournal', authentication);
 app.get('/newjournal', journal.addJournal);
