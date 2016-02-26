@@ -42,6 +42,11 @@ body {
     padding-top: 70px;
 }
 
+.facebook {
+  width:300px;
+  height:100px;
+}
+
 #user_name {
     font-weight: bold;
 }
@@ -411,4 +416,28 @@ input[type="submit"] {
 div .collaborator {
     border-style: solid;
     display: inline;
+}
+
+
+/*gallery page*/
+.journals-container{
+    padding: 0.5em;
+    margin-bottom: 10px;
+}
+
+.journal{
+    height: 120px;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 0.3);
+    border-radius: 5px;
+}
+
+.journal img{
+    height: 100%;
+    border-radius: 5px;
+}
+.journal h5{
+    text-align: center;
+    margin-top: 3px;
+
 }

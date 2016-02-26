@@ -32,10 +32,11 @@
             <div class="12u$">
                 <ul class="actions">
                     <!--li><a href="/login/facebook" class="button special">Login with Facebook</a></li-->
-                    <li><p class="facebookLogin">Login with Facebook
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    <li><p class="facebookLogin">
+                        <fb:login-button size="xlarge" scope="public_profile,email" onlogin="checkLoginState();"> Login with Facebook
                         </fb:login-button>
                     </p></li>
+
 
                     <li><a href="/adminsignin" class="button special" id="signIn">Sign In as Admin</a></li>
                     <!--<li><a href="/signup" class="button">Sign Up</a></li&ndash;&gt;-->
@@ -48,6 +49,7 @@
 <script>
     $(document).on('ready', function() {
         $('#header').hide();
+        //$('#facebook').click(fbLogin);
     });
 </script>
 
