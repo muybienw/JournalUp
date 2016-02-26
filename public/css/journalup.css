@@ -212,6 +212,10 @@ body {
     margin-left: 1em;
 }
 
+.journal_options{
+    margin-bottom: 0.8em;
+}
+
 .journal_options li{
      display: inline;
      text-decoration: none;
@@ -440,4 +444,13 @@ div .collaborator {
     text-align: center;
     margin-top: 3px;
 
+}
+
+hr {
+    border: none;
+    height: 1px;
+    margin: 1em;
+    /* Set the hr color */
+    color: whitesmoke; /* old IE */
+    background-color: whitesmoke; /* Modern Browsers */
 }

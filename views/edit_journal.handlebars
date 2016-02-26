@@ -34,6 +34,7 @@
 
     <!--search bar-->
     <div class="container">
+        <label for="title">Collaborators</label>
         <div class="row">
             <div class="col-md-6">
                 <div id="custom-search-input">
@@ -56,7 +57,7 @@
                 <div id="{{this}}" class='collaborator'>
                     <p> {{this}}</p>
                     <a href='/myjournal' class='remove_user_btn'><i class='fa fa-times'></i></a>
-                </div>;
+                </div>
             {{/each}}
         </div>
     </div>
@@ -166,10 +167,11 @@
 
         function generateCollaboratorList(list){
             var s = "";
-            for(index in list){
+            for(var index in list){
                 s += "<div id='" + list[index] + "'+ class='collaborator'><p>" + list[index] +"</p> <a " +
                         " href='/myjournal' class='remove_user_btn'><i class='fa fa-times'></i></a></div>";
             }
+            console.log(s);
             $('#collaborator_list').html(s);
         }
 
