@@ -51,9 +51,19 @@ exports.view = function(req, res){
                             day: "numeric",
                             //hour: "2-digit",
                             //minute: "2-digit"
-                        };
+                        }
 
                         return date.toLocaleDateString("en-US", options);
+                    },
+
+                    countJournals: function (journals) {
+                        console.log(journals);
+                        console.log(typeof journals);
+                        return journals.length;
+                    },
+                    countCollaborators: function (collaborators) {
+                        console.log(collaborators);
+                        return collaborators.length;
                     }
                 }
             });
@@ -61,8 +71,7 @@ exports.view = function(req, res){
     }
 
 
-   //res.render('my_journal', data);
-
+   //res.render('my_journal', data);;
     //function tmp(err, res){
     //
     //    console.log(res);

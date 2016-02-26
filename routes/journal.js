@@ -206,7 +206,7 @@ exports.createJournal = function(req, res) { 
 
         for(var i=0; i<collaborators.length; i++){
             var user_name = collaborators[i];
-            console.log(user_name);
+            console.log("current user to add journal is:" + user_name);
 
             models.User.findOne({name: user_name}, function(err, user){
                 console.log(user);
@@ -292,6 +292,7 @@ exports.deleteJournal = function(req, res){
     // YOU MUST send an OK response w/ res.send();
 
     models.Journal.find({"_id" : journalID}).remove().exec(function(err){
+        console.log("journal removed");
         if(err) console.log(err);
         res.send(200);
     });
