@@ -174,8 +174,6 @@ exports.createJournal = function(req, res) { 
     var title = req.body.title;
     //var time = req.body.startdate;
 
-    var searchOption = {name : req.session.user.name};
-
     console.log("check create journal data");
     console.log(req.body);
     console.log(req.session.user.name);
@@ -204,19 +202,43 @@ exports.createJournal = function(req, res) { 
 
         console.log(newJournal);
 
-        models.User.findOne(searchOption, function(err, user){
-            if(err) console.log(err);
-            user.journals.push(newJournal._id);
+        var userLeft = collaborators.length;
 
-            console.log(newJournal._id);
-            console.log(user);
+        for(var i=0; i<collaborators.length; i++){
+            var user_name = collaborators[i];
+            console.log(user_name);
 
-            models.User.findOneAndUpdate({_id: user._id}, {$set:{journals: user.journals}}, {upsert : true}, function(err, doc){
-                if(err) {console.error(err); res.send(500);}
-                console.log("success!");
-                res.redirect('/myjournal');
+            models.User.findOne({name: user_name}, function(err, user){
+                console.log(user);
+
+                user.journals.push(newJournal._id);
+
+                models.User.findOneAndUpdate({_id: user._id}, {$set:{journals: user.journals}}, {upsert : true}, function(err, doc){
+                    if(err) {console.error(err); res.send(500);}
+                    console.log("success!" + userLeft + " to go");
+                    userLeft--;
+
+                    if(userLeft<=0) res.redirect('/myjournal');
+                });
+
             });
-        });
+        }
+
+        //var searchOption = {name : req.session.user.name};
+        //
+        //models.User.findOne(searchOption, function(err, user){
+        //    if(err) console.log(err);
+        //    user.journals.push(newJournal._id);
+        //
+        //    console.log(newJournal._id);
+        //    console.log(user);
+        //
+        //    models.User.findOneAndUpdate({_id: user._id}, {$set:{journals: user.journals}}, {upsert : true}, function(err, doc){
+        //        if(err) {console.error(err); res.send(500);}
+        //        console.log("success!");
+        //        res.redirect('/myjournal');
+        //    });
+        //});
 
     });
 
@@ -338,10 +360,52 @@ exports.saveEditChanges = function(req, res){
             "coverImage": coverImage,
         }
 
-        models.Journal.findOneAndUpdate({_id: journal._id}, {$set: update}, function(err){
-            if(err) console.log(err);
-//            console.log("after update:" + journal);
-            res.json({success: true});
+        models.Journal.findOneAndUpdate({_id: journal._id}, {$set: update}, function(err, journal){
+
+            var userChange = [];
+
+            for(var i=0; i<collaborators.length; i++) {
+                var user_name = collaborators[i];
+                if (journal.collaborators.indexOf(user_name) == -1) userChange.push(user_name);
+            }
+
+            for(var i=0; i<journal.collaborators.length; i++) {
+                var user_name = journal.collaborators[i];
+                if (collaborators.indexOf(user_name) == -1) userChange.push(user_name);
+            }
+
+            var userToChange = userChange.length;
+
+            console.log("to change users:" + userChange);
+
+            if(userToChange == 0 ) res.json({success : true});
+            else {
+
+                for (var i = 0; i < userChange.length; i++) {
+                    console.log(userChange[i]);
+
+                    models.User.findOne({name: userChange[i]}, function (err, user) {
+                        console.log(user)
+
+                        if (user.journals.indexOf(journal._id)==-1) user.journals.push(journal._id);
+                        else user.journals.splice(user.journals.indexOf(journal._id), 1);
+
+                        models.User.findOneAndUpdate({name: user.name}, {$set: {journals: user.journals}},
+                            function (err, journal) {
+                                userToChange--;
+                                console.log("changed a new collaborator, " + userToChange + "to go");
+
+                                if (userToChange <= 0) {
+                                    res.json({success: true});
+                                }
+                            });
+                    })
+                }
+            }
+
+//            if(err) console.log(err);
+////            console.log("after update:" + journal);
+//            res.json({success: true});
         });
     });
 }
