@@ -19,8 +19,8 @@
 </section>
 
 <div class="container">
-    <form method="post" action="#">
-        <div class="row uniform">
+    <!--<form method="post" action="#">-->
+        <!--<div class="row uniform">-->
 
             <!--div class="12u 12u$(xsmall)">
                 <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
@@ -32,17 +32,20 @@
             <div class="12u$">
                 <ul class="actions">
                     <!--li><a href="/login/facebook" class="button special">Login with Facebook</a></li-->
-                    <li><p class="facebookLogin">Login with Facebook
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    <li><p class="facebookLogin">
+                        <fb:login-button size="large" scope="public_profile,email" onlogin="checkLoginState();">
+                            Login with Facebook
                         </fb:login-button>
                     </p></li>
 
-                    <li><a href="/adminsignin" class="button special" id="signIn">Sign In as Admin</a></li>
+                    <!--<li><a href="/" class="button special" id="signIn">Login with Facebook</a></li>-->
+
+                    <!--<li><a href="/adminsignin" class="button special" id="signIn">Sign In as Admin</a></li>-->
                     <!--<li><a href="/signup" class="button">Sign Up</a></li&ndash;&gt;-->
                 </ul>
             </div>
-        </div>
-    </form>
+        <!--</div>-->
+    <!--</form>-->
 </div>
 
 <script>
