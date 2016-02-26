@@ -88,11 +88,11 @@
                 </div>
                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
                     <div data-p="112.50" style="display: none;">
-                        <img data-u="image" src="{{journal.coverImage}}" />
+                        <img src="{{journal.coverImage}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
                     </div>
                     {{#each journal.images}}
                     <div data-p="112.50" style="display: none;">
-                        <img data-u="image" src="{{this}}" />
+                        <img src="{{this}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
                     </div>
                     {{/each}}
                 </div>
