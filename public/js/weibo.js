@@ -19,6 +19,10 @@ function login(response){	//登录后的回调函数
     console.log(response);
     console.log('weibo loged in');
 
+
+    var wb_logout = $('a.login_a.loginout');
+    console.log(wb_logout);
+
     //var data = {
     //    "id": response.id,
     //    "name" : response.name,
@@ -34,4 +38,10 @@ function login(response){	//登录后的回调函数
 
 function logout(){	//退出后的回调函数
     console.log('weibo loged out');
+}
+
+function onloadfun(){	//退出后的回调函数
+    console.log('loaded');
+    var wb_logout = $('a.login_a.loginout');
+    console.log(wb_logout);
 }
