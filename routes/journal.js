@@ -184,15 +184,21 @@ exports.createJournal = function(req, res) { 
             models.User.findOne({name: user_name}, function(err, user){
                 console.log(user);
 
-                user.journals.push(newJournal._id);
+                if(!user) userLeft--;
+                else {
+                    user.journals.push(newJournal._id);
 
-                models.User.findOneAndUpdate({_id: user._id}, {$set:{journals: user.journals}}, {upsert : true}, function(err, doc){
-                    if(err) {console.error(err); res.send(500);}
-                    console.log("success!" + userLeft + " to go");
-                    userLeft--;
+                    models.User.findOneAndUpdate({_id: user._id}, {$set: {journals: user.journals}}, {upsert: true}, function (err, doc) {
+                        if (err) {
+                            console.error(err);
+                            res.send(500);
+                        }
+                        console.log("success!" + userLeft + " to go");
+                        userLeft--;
 
-                    if(userLeft<=0) res.redirect('/myjournal');
-                });
+                        if (userLeft <= 0) res.redirect('/myjournal');
+                    });
+                }
 
             });
         }
