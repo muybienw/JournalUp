@@ -7,6 +7,7 @@ var models = require('../models');
 
 exports.view = function(req, res){
 
+    console.log('in my_journal js')
 
     console.log(req.session.user);
 

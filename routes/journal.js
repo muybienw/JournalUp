@@ -365,7 +365,7 @@ exports.saveEditChanges = function(req, res){
                     console.log(userChange[i]);
 
                     models.User.findOne({name: userChange[i]}, function (err, user) {
-                        if(!user) res.send(200);
+                        if(!user || user==null) res.send(200);
 
                         console.log(user)
 
