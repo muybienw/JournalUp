@@ -26,6 +26,8 @@ function getUserInfo(response) {
   console.log("first name: " + response.first_name);
   console.log(response.picture.data.url);
 
+  console.log(response);
+
   var data = {
     "id": response.id,
     "name" : response.name,
