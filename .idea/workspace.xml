@@ -3526,6 +3526,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/loader.handlebars" afterPath="$PROJECT_DIR$/views/partials/loader.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/profile_info.handlebars" afterPath="$PROJECT_DIR$/views/partials/profile_info.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/setting.handlebars" afterPath="$PROJECT_DIR$/views/setting.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signin.handlebars" afterPath="$PROJECT_DIR$/views/signin.handlebars" />
     </list>
     <ignored path="JournalUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -3559,8 +3560,8 @@
       <file leaf-file-name="signin.handlebars" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/signin.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4730679">
-              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.6487119">
+              <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -3933,7 +3934,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1276" height="777" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2492163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3941,7 +3942,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32344633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32344633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -4366,8 +4367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/signin.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4730679">
-          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.6487119">
+          <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
           <folding />
         </state>
       </provider>
