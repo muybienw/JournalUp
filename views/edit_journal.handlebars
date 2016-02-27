@@ -123,7 +123,11 @@
             col_list.push($(this).attr('id'));
         });
 
-        $('#back_btn').attr('href', '/myjournal');
+        var backpath = window.location.href;
+        backpath = backpath.substring(0, backpath.length-5);
+        console.log(backpath);
+
+        $('#back_btn').attr('href', backpath);
 
         $('#user_search_btn').click(function(e){
             e.preventDefault();

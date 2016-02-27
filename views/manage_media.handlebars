@@ -116,7 +116,12 @@
             });
         });
 
-        $('#back_btn').attr('href', '/myjournal');
+
+        var backpath = window.location.href;
+        backpath = backpath.substring(0, backpath.length-6);
+        console.log(backpath);
+
+        $('#back_btn').attr('href', backpath);
 
         $("#add_image").submit(function (event) {
 
