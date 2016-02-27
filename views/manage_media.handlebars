@@ -35,10 +35,12 @@
                 <a href="#" class="thumbnail media">
                     <img src={{this}} alt="...">
                 </a>
-                <a id="{{this}}" class="btn btn-default delete_btn"> delete </a>
+                <a id="{{this}}" class="btn btn-default delete_btn"> <i class="fa fa-times"></i> </a>
             </div>
         {{/each}}
+    </div>
 
+    <div class="container">
         <!--<div class="col-xs-4 media-container">-->
             <!--<a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">-->
                 <!--<img src="/images/add.png" alt="...">-->
@@ -53,20 +55,28 @@
               method = "post" enctype="multipart/form-data">
 
             <input type="hidden" name="journal_id" value="{{_id}}">
-            <input type="file" name="image" class="12u$ button upload_btn"
-                   accept="application/x-zip-compressed,image/*"
-                   title="Add a picture!">
 
-            <div id="button-create">
-                <input type="submit" class="button" value="Add a picture!">
+
+            <div class="fileUpload">
+                <div class="row">
+                    <span>Upload</span>
+                    <input type="file" name="image" class="12u$ button upload_btn upload"
+                       accept="application/x-zip-compressed,image/*"
+                       title="Add a picture!">
+
+                    <div id="button-create">
+                        <input type="submit" class="button" value="Add a picture!">
+                    </div>
+                </div>
+
             </div>
+
 
             <!--<div id="button-create">-->
                 <!--<input id="anotherAddBtn" type="submit" class="button" value="Another add!">-->
             <!--</div>-->
 
         </form>
-
     </div>
 
     <div clss="empty" style="height:10em"> </div>
