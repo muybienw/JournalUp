@@ -64,6 +64,10 @@ exports.FBsignin = function(req, res){
                 }
 
                 var user = new models.User(user_json);
+
+                console.log("new user data:");
+                console.log(user);
+
                 user.save(function(err){
                     if(err) console.error(err);
                     console.log("created a new user" + user);
@@ -71,6 +75,7 @@ exports.FBsignin = function(req, res){
                     console.log(user);
 
                     var tmp = {name: user_json.name, id: user_json.id};
+                    console.log(tmp);
                     req.session.user = tmp;
                     res.send(200);
                 });
