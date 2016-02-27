@@ -10,17 +10,13 @@ var models = require('../models');
 
 exports.viewJournalSlide = function(req, res){
 
-    console.log(req.session.user);
-
-    var searchOption = {"name": req.session.user.name}
+    var searchOption = {name: "MuyBien"}
     console.log(searchOption);
-
-    var id = req.params.id;
 
     models.User.findOne(searchOption, function(err, user){
         if(err) {console.log(err); res.send(500);}
 
-        models.Journal.findOne({'_id' : id}).exec(function(err, journal){
+        models.Journal.findOne({title : "Paris"}).exec(function(err, journal){
             if(err) {console.log(err); res.send(500);}
             console.log(user);
 
