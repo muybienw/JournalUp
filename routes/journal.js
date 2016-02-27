@@ -36,6 +36,9 @@ exports.viewJournal = function(req, res){
 
             //render version A
             if(lastBit % 2 == 0){
+
+                console.log("render journal view version A");
+
                 res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
                     helpers: {
                         foo: function () { return 'foo.'; },
@@ -51,6 +54,8 @@ exports.viewJournal = function(req, res){
 
             //render version B
             else{
+                console.log("render journal view version B");
+
                 res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
                     helpers: {
                         foo: function () { return 'foo.'; },
