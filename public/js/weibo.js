@@ -23,19 +23,6 @@ function login(response){	//登录后的回调函数
     var wb_logout = $('#wb_btn');
     console.log(wb_logout);
 
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-    }
-    console.log(aString);
-
-
-    wb_logout.logout;
-    console.log("wb-btn logout");
-
-
-
     //var data = {
     //    "id": response.id,
     //    "name" : response.name,

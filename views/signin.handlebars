@@ -60,7 +60,23 @@
         $('#header').hide();
         //$('#facebook').click(fbLogin);
 
+        var theCookies = document.cookie.split(';');
+        var aString = '';
+        for (var i = 1 ; i <= theCookies.length; i++) {
+            aString += i + ' ' + theCookies[i-1] + "\n";
+        }
+
+        console.log(document.cookie);
+
         $.cookie("name", null, { path: '/' });
+
+        console.log("after erasing the cookie");
+        var theCookies = document.cookie.split(';');
+        var aString = '';
+        for (var i = 1 ; i <= theCookies.length; i++) {
+            aString += i + ' ' + theCookies[i-1] + "\n";
+        }
+        console.log(aString);
 
         var wb_btn = $('wb_btn');
         console.log(wb.btn);
