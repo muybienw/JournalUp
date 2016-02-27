@@ -148,8 +148,10 @@ exports.createJournal = function(req, res) { 
     console.log("check create journal data");
     console.log(req.body);
     console.log(req.session.user.name);
-    var collaborators = req.body.collaborators.split(',');
-    console.log(typeof collaborators);
+
+    var collaborators = req.body.collaborators.length==0 ? [] : req.body.collaborators.split(',');
+
+    console.log("create a new jouranl with collaborators:" + collaborators);
 
     if(collaborators.indexOf(req.session.user.name)==-1) collaborators.push(req.session.user.name);
 
