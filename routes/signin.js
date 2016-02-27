@@ -51,7 +51,7 @@ exports.FBsignin = function(req, res){
                 if(users) count += users.length;
 
                 var user_json = {
-                    "name" : req.body.first_name + count,
+                    "name" : req.body.first_name + ((count==0) ? "" : count),
                     "id" : req.body.id,
                     "email" : "",
                     "password" : "",
@@ -68,7 +68,7 @@ exports.FBsignin = function(req, res){
                     if(err) console.error(err);
                     console.log("created a new user" + user);
 
-                    var tmp = {name: req.body.first_name};
+                    var tmp = {name: user_json.name};
                     req.session.user = tmp;
                     res.send(200);
                 });
