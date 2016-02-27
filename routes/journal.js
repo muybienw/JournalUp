@@ -105,7 +105,6 @@ exports.addJournal = function(req, res){
 exports.editJournal = function(req, res){
     var id = req.params.id;
     console.log(id);
-
     models.Journal.findOne({_id : req.params.id}, function(err, journal){
         if(err) console.log(err);
         res.render('edit_journal', journal);
@@ -358,6 +357,8 @@ exports.saveEditChanges = function(req, res){
                     console.log(userChange[i]);
 
                     models.User.findOne({name: userChange[i]}, function (err, user) {
+                        if(!user) res.send(200);
+
                         console.log(user)
 
                         if (user.journals.indexOf(journal._id)==-1) user.journals.push(journal._id);
