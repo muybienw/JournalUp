@@ -60,29 +60,17 @@
         $('#header').hide();
         //$('#facebook').click(fbLogin);
 
-        var theCookies = document.cookie.split(';');
-        var aString = '';
-        for (var i = 0 ; i < theCookies.length; i++) {
-            console.log(theCookies[i]);
-            var cname = theCookies[i].substring(0, theCookies[i].indexOf('='));
-            console.log(cname);
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++){
+            var spcook =  cookies[i].split("=");
+            document.cookie = spcook[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;";
         }
 
-        document.cookie = 'weibojs_2745435722' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-//        document.cookie = '_ga' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-//
         console.log("after erasing the cookie");
         var theCookies = document.cookie.split(';');
-        var aString = '';
         for (var i = 1 ; i <= theCookies.length; i++) {
-            aString += i + ' ' + theCookies[i-1] + "\n";
+            console.log(i + ' ' + theCookies[i-1] + "\n");
         }
-        console.log(aString);
-
-        var wb_btn = $('wb_btn');
-        console.log(wb.btn);
-        wb_btn.logout;
-
     });
 </script>
 
