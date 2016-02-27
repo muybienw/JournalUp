@@ -19,6 +19,19 @@ function login(response){	//登录后的回调函数
     console.log(response);
     console.log('weibo loged in');
 
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++){
+        var spcook =  cookies[i].split("=");
+        console.log(spcook[0]);
+        document.cookie = spcook[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;";
+    }
+
+    console.log("after erasing the cookie");
+    var theCookies = document.cookie.split(';');
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        console.log(i + ' ' + theCookies[i-1] + "\n");
+    }
+
 
     var wb_logout = $('#wb_btn');
     console.log(wb_logout);

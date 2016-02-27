@@ -60,17 +60,6 @@
         $('#header').hide();
         //$('#facebook').click(fbLogin);
 
-        var cookies = document.cookie.split(";");
-        for (var i = 0; i < cookies.length; i++){
-            var spcook =  cookies[i].split("=");
-            document.cookie = spcook[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;";
-        }
-
-        console.log("after erasing the cookie");
-        var theCookies = document.cookie.split(';');
-        for (var i = 1 ; i <= theCookies.length; i++) {
-            console.log(i + ' ' + theCookies[i-1] + "\n");
-        }
     });
 </script>
 
