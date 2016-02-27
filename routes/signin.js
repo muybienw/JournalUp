@@ -8,11 +8,6 @@ exports.signIn = function(req, res){
     req.session.user = null;
     console.log(req.session);
 
-    req.session.destroy();
-
-    console.log("after destorying the session");
-    console.log(req.session);
-
     res.render('signin');
 };
 
