@@ -30,7 +30,13 @@ exports.viewJournal = function(req, res){
             var isCollaborator = journal.collaborators.indexOf(user.name)==-1? false : true;
             console.log("is creator: " + isCollaborator);
 
-            res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+            console.log(req.session.user.id);
+            var id = req.session.user.id;
+            var lastBit = id.charAt(id.length-1) - '0';
+
+            //render version A
+            if(lastBit % 2 == 0){
+                res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
                     helpers: {
                         foo: function () { return 'foo.'; },
                         ifIn: function(elem, list, options) {
@@ -40,7 +46,25 @@ exports.viewJournal = function(req, res){
                             return options.inverse(this);
                         }
                     }
-            });
+                });
+            }
+
+            //render version B
+            else{
+                res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+                    helpers: {
+                        foo: function () { return 'foo.'; },
+                        ifIn: function(elem, list, options) {
+                            if(list.indexOf(elem) > -1) {
+                                return options.fn(this);
+                            }
+                            return options.inverse(this);
+                        }
+                    }
+                });
+            }
+
+
         });
     });
 

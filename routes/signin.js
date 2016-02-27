@@ -37,7 +37,7 @@ exports.FBsignin = function(req, res){
             console.log(result);
             console.log("existing user");
 
-            var user = {name: result.name};
+            var user = {name: result.name, id: result.id};
             req.session.user = user;
             res.send(200);
         }
@@ -68,7 +68,7 @@ exports.FBsignin = function(req, res){
                     if(err) console.error(err);
                     console.log("created a new user" + user);
 
-                    var tmp = {name: user_json.name};
+                    var tmp = {name: user_json.name, id: user_json.id};
                     req.session.user = tmp;
                     res.send(200);
                 });
