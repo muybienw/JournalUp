@@ -45,7 +45,7 @@
 
                     <!--sign in with weibo-->
                     <li>
-                        <wb:login-button type="3,2" onlogin="login" onlogout="logout" onload="onloadfun">Login with
+                        <wb:login-button id="wb_btn" type="3,2" onlogin="login" onlogout="logout">Login with
                             weibo</wb:login-button>
                     </li>
 
@@ -59,6 +59,10 @@
     $(document).on('ready', function() {
         $('#header').hide();
         //$('#facebook').click(fbLogin);
+
+        var wb_btn = $('wb_btn');
+        console.log(wb.btn);
+        wb_btn.logout;
 
     });
 </script>
