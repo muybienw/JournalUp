@@ -19,6 +19,9 @@ function login(response){	//登录后的回调函数
     console.log(response);
     console.log('weibo loged in');
 
+    var status = WB2.checkLogin();
+    alert(status);
+
 
     var wb_logout = $('#wb_btn');
     console.log(wb_logout);
