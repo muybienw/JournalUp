@@ -17,9 +17,21 @@
 //    });
 //});
 
-function login(o){	//登录后的回调函数
-    console.log(o);
+function login(response){	//登录后的回调函数
+    console.log(response);
     console.log('weibo loged in');
+
+    //var data = {
+    //    "id": response.id,
+    //    "name" : response.name,
+    //    "first_name" : response.first_name,
+    //    "profilePicUrl" : response.picture.data.url
+    //};
+
+    //$.post('/wbsignin', data , function(){
+    //    window.location.replace('/myjournal');
+    //});
+
 }
 
 function logout(){	//退出后的回调函数
