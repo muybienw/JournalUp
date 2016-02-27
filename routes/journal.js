@@ -331,7 +331,7 @@ exports.saveEditChanges = function(req, res){
         var description = req.body.description? req.body.description : journal.description;
         var coverImage = req.file ? req.file.path.substring(6) : journal.coverImage;
 
-        console.log(collaborators);
+        console.log("collaborators after change:" + collaborators);
 
         var update = {
             "title": title,
@@ -362,12 +362,13 @@ exports.saveEditChanges = function(req, res){
             else {
 
                 for (var i = 0; i < userChange.length; i++) {
-                    console.log(userChange[i]);
+                    console.log("editing this user's journal list:" + userChange[i]);
 
                     models.User.findOne({name: userChange[i]}, function (err, user) {
+                        if(err) console.log(err);
                         if(!user || user==null) res.send(200);
 
-                        console.log(user)
+                        console.log("find a user:" + user + "with user name " + userChange[i]);
 
                         if (user.journals.indexOf(journal._id)==-1) user.journals.push(journal._id);
                         else user.journals.splice(user.journals.indexOf(journal._id), 1);
