@@ -23,6 +23,11 @@ function login(response){	//登录后的回调函数
     var wb_logout = $('#wb_btn');
     console.log(wb_logout);
 
+    console.log( $('#wb_btn .loginout') );
+
+    wb_logout.logout;
+    wb_logout.logout();
+
     //var data = {
     //    "id": response.id,
     //    "name" : response.name,
