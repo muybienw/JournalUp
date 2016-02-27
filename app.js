@@ -111,8 +111,8 @@ app.get('/journal/:id', authentication);
 app.get('/journal/:id', journal.viewJournal);
 
 //for A/B test
-app.get('/journal2/:id', authentication);
-app.get('/journal2/:id', journal2.viewJournalSlide);
+//app.get('/journal2/:id', authentication);
+//app.get('/journal2/:id', journal2.viewJournalSlide);
 
 app.get('/newjournal', authentication);
 app.get('/newjournal', journal.addJournal);
