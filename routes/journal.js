@@ -166,6 +166,8 @@ exports.createJournal = function(req, res) { 
         "images": []
     }
 
+    console.log(jewJournal_json);
+
     var newJournal = new models.Journal(newJournal_json);
 
     newJournal.save(function(err){

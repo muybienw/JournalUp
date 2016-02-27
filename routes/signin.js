@@ -68,6 +68,8 @@ exports.FBsignin = function(req, res){
                     if(err) console.error(err);
                     console.log("created a new user" + user);
 
+                    console.log(user);
+
                     var tmp = {name: user_json.name, id: user_json.id};
                     req.session.user = tmp;
                     res.send(200);
