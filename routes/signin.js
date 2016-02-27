@@ -27,7 +27,7 @@ exports.FBsignin = function(req, res){
     console.log(req.body);
 
     var searchById = {
-        name : req.body.id
+        id : req.body.id
     };
 
     models.User.findOne(searchById, function(err, result){
@@ -37,7 +37,7 @@ exports.FBsignin = function(req, res){
             console.log(result);
             console.log("existing user");
 
-            var user = {name: req.body.first_name};
+            var user = {name: result.name};
             req.session.user = user;
             res.send(200);
         }
