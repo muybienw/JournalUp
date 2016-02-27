@@ -3566,16 +3566,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="journal_view.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.041666">
-              <caret line="34" column="110" selection-start-line="34" selection-start-column="110" selection-end-line="34" selection-end-column="110" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="gallery.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/gallery.handlebars">
           <provider selected="true" editor-type-id="text-editor">
@@ -3589,8 +3579,18 @@
       <file leaf-file-name="signin.handlebars" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/signin.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5784543">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.4028103">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="12.208333">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -3610,8 +3610,10 @@
         <entry file="file://$PROJECT_DIR$/public/js/weibo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3711,8 +3713,8 @@
         <option value="$PROJECT_DIR$/views/journal_view.handlebars" />
         <option value="$PROJECT_DIR$/public/css/journalup.css" />
         <option value="$PROJECT_DIR$/views/manage_media.handlebars" />
-        <option value="$PROJECT_DIR$/public/js/weibo.js" />
         <option value="$PROJECT_DIR$/public/js/facebook.js" />
+        <option value="$PROJECT_DIR$/public/js/weibo.js" />
         <option value="$PROJECT_DIR$/views/signin.handlebars" />
       </list>
     </option>
@@ -3961,7 +3963,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1276" height="777" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2492163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3969,7 +3971,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32344633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32344633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -4285,14 +4287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/edit_journal.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.041667">
@@ -4357,14 +4351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/my_journal.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/journalup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4384,15 +4370,33 @@
     <entry file="file://$PROJECT_DIR$/public/js/weibo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my_journal.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.25">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/header.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="12.208333">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/signin.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5784543">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.4028103">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
           <folding />
         </state>
       </provider>
