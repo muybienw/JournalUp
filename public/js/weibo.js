@@ -22,6 +22,9 @@ function login(response){	//登录后的回调函数
     var status = WB2.checkLogin();
     alert(status);
 
+    WB2.logout(function(){
+        alert("logged out!");
+    });
 
     var wb_logout = $('#wb_btn');
     console.log(wb_logout);
