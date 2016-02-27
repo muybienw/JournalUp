@@ -60,6 +60,8 @@
         $('#header').hide();
         //$('#facebook').click(fbLogin);
 
+        $.cookie("name", null, { path: '/' });
+
         var wb_btn = $('wb_btn');
         console.log(wb.btn);
         wb_btn.logout;
