@@ -37,6 +37,7 @@ var JournalSchema = new Mongoose.Schema({
 var UserSchema = new Mongoose.Schema({
     // fields are defined here
     'name': String,
+    'id': String,
     'email': String,
     'password': String,
     'profilePicture': String,

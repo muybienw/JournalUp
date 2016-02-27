@@ -51,6 +51,7 @@
   "user":
     {
       "name" : "MuyBien",
+      "id": "2333",
       "email" : "journalup@ucsd.edu",
       "password": "password",
       "profilePicture": "/images/profilepic.png",

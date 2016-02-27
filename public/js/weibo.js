@@ -19,15 +19,26 @@ function login(response){	//登录后的回调函数
     console.log(response);
     console.log('weibo loged in');
 
-    var status = WB2.checkLogin();
-    alert(status);
+    //var status = WB2.checkLogin();
+    //alert(status);
+    //
+    //WB2.logout(function(){
+    //    alert("logged out!");
+    //});
 
-    WB2.logout(function(){
-        alert("logged out!");
+
+    var data = {
+        "id": response.id,
+        "name" : response.name,
+        "first_name" : response.name,
+        "profilePicUrl" : response.avatar_large
+    };
+
+    console.log(data);
+
+    $.post('/fbsignin', data , function(){
+        window.location.replace('/myjournal');
     });
-
-    var wb_logout = $('#wb_btn');
-    console.log(wb_logout);
 
     //var data = {
     //    "id": response.id,
