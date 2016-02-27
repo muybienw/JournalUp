@@ -62,21 +62,22 @@
 
         var theCookies = document.cookie.split(';');
         var aString = '';
-        for (var i = 1 ; i <= theCookies.length; i++) {
-            aString += i + ' ' + theCookies[i-1] + "\n";
+        for (var i = 0 ; i < theCookies.length; i++) {
+            console.log(theCookies[i]);
+            var cname = theCookies[i].substring(0, theCookies[i].indexOf('='));
+            console.log(cname);
         }
 
-        console.log(document.cookie);
-
-        $.cookie("name", null, { path: '/' });
-
-        console.log("after erasing the cookie");
-        var theCookies = document.cookie.split(';');
-        var aString = '';
-        for (var i = 1 ; i <= theCookies.length; i++) {
-            aString += i + ' ' + theCookies[i-1] + "\n";
-        }
-        console.log(aString);
+//        document.cookie = 'CNZZDATA950900' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+//        document.cookie = '_ga' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+//
+//        console.log("after erasing the cookie");
+//        var theCookies = document.cookie.split(';');
+//        var aString = '';
+//        for (var i = 1 ; i <= theCookies.length; i++) {
+//            aString += i + ' ' + theCookies[i-1] + "\n";
+//        }
+//        console.log(aString);
 
         var wb_btn = $('wb_btn');
         console.log(wb.btn);
