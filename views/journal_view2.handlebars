@@ -31,10 +31,12 @@
         {{else}}
             <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
         {{/if}}
-
+    </ul>
+    <ul class="journal_options">
         {{#if isCollaborator}}
             <!--<li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>-->
-            <li><a href="/journal/{{journal._id}}/edit" class="option"><i class="fa fa-pencil-square-o"> edit </i></a></li>
+            <li><a href="/journal/{{journal._id}}/edit " class="option"><i class="fa fa-pencil-square-o"> edit&nbsp;&nbsp;
+            </i></a></li>
             <li><a href="/journal/{{journal._id}}/media" class="option" id="add_btn"><i class="fa fa-picture-o">
                 manage images
             </i></a></li>

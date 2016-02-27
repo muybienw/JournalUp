@@ -16,7 +16,7 @@ exports.signUp = function(req, res){
 };
 
 exports.Adminsignin = function(req, res){
-    var user = {name: "MuyBien"};
+    var user = {name: "MuyBien", id: "2333"};
     req.session.user = user;
     res.redirect('/myjournal');
 };
