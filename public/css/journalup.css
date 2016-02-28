@@ -132,7 +132,8 @@ body {
 }
 
 #button-create{
-    margin: auto;
+    margin-left: 1em;
+    padding: 0;
     text-align: center
 }
 
@@ -280,7 +281,7 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 input[type="submit"] {
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
@@ -456,23 +457,29 @@ hr {
 }
 
 /*image upload button and styling*/
-.fileUpload {
+.btn-file {
     position: relative;
     overflow: hidden;
-    margin: 10px;
 }
-
-.fileUpload input.upload {
+.btn-file input[type=file] {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
     filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
 }
+input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
+}
+
 
 /*put image delete button at top right corner*/
 .delete_btn {

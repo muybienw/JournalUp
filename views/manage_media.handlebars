@@ -3,16 +3,29 @@
 
 <html>
 <head>
+
+
+    <!--<link rel="stylesheet" type="text/css" href="/css/normalize.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="/css/demo.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="/css/component.css" />-->
+
     {{> html_head}}
+
+    <!--<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>-->
+
+    <!--<script src="/js/custom-file-input.js"></script>-->
+    <!--<script src="/js/jquery-v1.min.js"></script>-->
+    <!--<script src="/js/jquery.custom-file-input.js"></script>-->
+
 </head>
 
 <body>
 
 <!--<div class="header">-->
-    <!--<a href="/journal/edit">-->
-        <!--<img src="/images/back_btn.png">-->
-    <!--</a>-->
-    <!--<p> Manage Content </p>-->
+<!--<a href="/journal/edit">-->
+<!--<img src="/images/back_btn.png">-->
+<!--</a>-->
+<!--<p> Manage Content </p>-->
 <!--</div>-->
 
 <!--<div class="empty"></div>-->
@@ -20,14 +33,64 @@
 {{> header}}
 
 <div class="container">
+
+    <div class="container">
+        <!--<div class="col-xs-4 media-container">-->
+        <!--<a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">-->
+        <!--<img src="/images/add.png" alt="...">-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<form id="add_image" class="input-container" action="/add_image"-->
+        <!--method = "post" enctype="multipart/form-data"-->
+        <!--onsubmit="alert('thank you!')">-->
+
+        <form id="add_image" class="input-container" action="javascript:;"
+              method="post" enctype="multipart/form-data">
+
+            <input type="hidden" name="journal_id" value="{{_id}}">
+
+
+            <div class="fileUpload">
+                <div class="row">
+                    <!--<span>Upload</span>-->
+                    <!--<input type="file" name="image" class="12u$ button upload_btn upload"-->
+                    <!--accept="application/x-zip-compressed,image/*"-->
+                    <!--title="Add a picture!">-->
+
+                    <button class="8u button">
+                    <input type="file" name="image" class="file-input" accept="application/x-zip-compressed,image/*">
+                    </button>
+
+
+                    <!--<div class="box">-->
+                        <!--<input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />-->
+                        <!--<label for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>-->
+                    <!--</div>-->
+
+                    <div id="button-create" class="3u">
+                        <input type="submit" class="button special" value="add">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--<div id="button-create">-->
+            <!--<input id="anotherAddBtn" type="submit" class="button" value="Another add!">-->
+            <!--</div>-->
+
+        </form>
+    </div>
+
     <div class="row">
 
 
         <!--<div class="col-xs-4 media-container">-->
-            <!--<a href="#" class="thumbnail media">-->
-                <!--<img src="{{coverImage}}">-->
-                <!--<a id="{{coverImage}}" class="btn btn-default delete_btn"> delete </a>-->
-            <!--</a>-->
+        <!--<a href="#" class="thumbnail media">-->
+        <!--<img src="{{coverImage}}">-->
+        <!--<a id="{{coverImage}}" class="btn btn-default delete_btn"> delete </a>-->
+        <!--</a>-->
         <!--</div>-->
 
         {{#each images}}
@@ -40,46 +103,7 @@
         {{/each}}
     </div>
 
-    <div class="container">
-        <!--<div class="col-xs-4 media-container">-->
-            <!--<a href="#" class="thumbnail media fileloading" id="add_media_btn" type="file">-->
-                <!--<img src="/images/add.png" alt="...">-->
-            <!--</a>-->
-        <!--</div>-->
-
-        <!--<form id="add_image" class="input-container" action="/add_image"-->
-              <!--method = "post" enctype="multipart/form-data"-->
-                <!--onsubmit="alert('thank you!')">-->
-
-        <form id="add_image" class="input-container" action="javascript:;"
-              method = "post" enctype="multipart/form-data">
-
-            <input type="hidden" name="journal_id" value="{{_id}}">
-
-
-            <div class="fileUpload">
-                <div class="row">
-                    <span>Upload</span>
-                    <input type="file" name="image" class="12u$ button upload_btn upload"
-                       accept="application/x-zip-compressed,image/*"
-                       title="Add a picture!">
-
-                    <div id="button-create">
-                        <input type="submit" class="button" value="Add a picture!">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!--<div id="button-create">-->
-                <!--<input id="anotherAddBtn" type="submit" class="button" value="Another add!">-->
-            <!--</div>-->
-
-        </form>
-    </div>
-
-    <div clss="empty" style="height:10em"> </div>
+    <div clss="empty" style="height:10em"></div>
 
     {{> loader}}
 
@@ -98,37 +122,64 @@
 
 <script>
 
-    $(document).ajaxStart(function(){
+    $(document).ajaxStart(function () {
         console.log("loader triggered!");
         $("#loader").show();
     });
-    $(document).ajaxComplete(function(){
+    $(document).ajaxComplete(function () {
         console.log("loader hided!");
         $("#loader").hide();
     });
 
-    $(document).on('ready', function() {
+    $(document).on('ready', function () {
 
-        $('.delete_btn').click(function(e){
+        $('.delete_btn').click(function (e) {
             e.preventDefault();
+
             var url = this.id;
             var path = window.location.href;
             var segs = path.split('/');
             var journal_id = segs[segs.length - 2];
 
             var data = {
-                journal_id : journal_id,
-                imageUrl : url
+                journal_id: journal_id,
+                imageUrl: url
             }
 
-            $.post(path + "/deleteImage", data, function(){
-                window.location.reload();
+            console.log(data);
+
+            swal({
+                title: "Are you sure to delete this photo?",
+                //text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Delete",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+
+                    $.post(path + "/deleteImage", data, function () {
+                        swal({
+                            title: "Photo deleted!",
+                            timer: 1000,
+                            showConfirmButton: false
+                        });
+                        window.location.reload();
+                    });
+
+                } else {
+                    console.log("clicked cancel button!");
+                }
             });
+
         });
 
 
         var backpath = window.location.href;
-        backpath = backpath.substring(0, backpath.length-6);
+        backpath = backpath.substring(0, backpath.length - 6);
         console.log(backpath);
 
         $('#back_btn').attr('href', backpath);
@@ -166,12 +217,12 @@
                     swal({
                                 title: "Picture added!",
                             },
-                            function(){
+                            function () {
                                 swal("Please wait...");
                                 window.location.reload();
                             });
                 },
-                error: function(res){
+                error: function (res) {
                     swal("Met some problems, please try again :P");
                 }
             });

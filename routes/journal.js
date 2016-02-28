@@ -432,6 +432,7 @@ exports.deleteImage = function(req, res){
         if(err || !journal) res.send(500);
 
         console.log(journal.images);
+
         journal.images.remove(req.body.imageUrl);
         console.log(journal.images);
 
