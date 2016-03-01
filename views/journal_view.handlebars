@@ -79,7 +79,7 @@
         <p>{{journal.description}} </p>
 
 
-
+        <img id="hint" src = "/images/hint.png"/> 
         <div class="t">
             <div class="tc rel">
                 <div class="book" id="book">
@@ -289,6 +289,15 @@
         }
 
         $('#back_btn').attr('href', '/myjournal');
+
+        book_width = $('.page-wrapper').width() +  $('.page-wrapper').offset().left-90;
+        //book_top = $('.page-wrapper').offset().top-10;
+        $('#hint').css({"margin-left":book_width, "margin-top": "-50px"});
+
+        $('#book').click(function(e){
+            $('#hint').hide();
+
+        });
     });
 
 </script>

@@ -488,3 +488,9 @@ input[readonly] {
     right: 0px;
     border-radius: 100%;
 }
+
+
+/* hint on journal view page*/
+#hint{
+    position: absolute;
+}
