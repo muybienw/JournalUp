@@ -3,6 +3,7 @@
 
 <html>
 <head>
+    {{> experiment}}
     {{> html_head}}
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.min.1.7.js"></script>
@@ -247,7 +248,29 @@
 
 
     $(document).on('ready', function() {
+        //add GA
+        var startTime = new Date().getTime();
+        var firstTimeClick = 0;
 
+        #('#book').click(function(e){
+            console.log("clicked book!!");
+        }); 
+    /*    
+        $('#jssor_1').click(function(e){
+            console.log(firstTimeClick);
+            e.preventDefault();
+            console.log("slideshow clicked!");
+            firstTimeClick = 1;
+
+            if(firstTimeClick == 0) {
+                ga('send', 'event', 'book', 'click');
+                var endTime = new Date().getTime();
+                var timeSpent = endTime - startTime;
+
+                ga('send', 'timing', 'time_spent', 'hit', timeSpent);
+            }
+        });
+    */
         $('#delete_btn').click(function (e) {
             e.preventDefault();
             console.log("delete_btn clicked!");
