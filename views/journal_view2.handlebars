@@ -220,22 +220,22 @@
         //add GA
         var startTime = new Date().getTime();
         var firstTimeClick = 0;
- /*       
+        
         $('#jssor_1').click(function(e){
-            console.log(firstTimeClick);
+            //console.log(firstTimeClick);
             e.preventDefault();
-            console.log("slideshow clicked!");
+            //console.log("slideshow clicked!");
             firstTimeClick = 1;
 
             if(firstTimeClick == 0) {
-                ga('send', 'event', 'book', 'click');
+                ga("send", "event", 'book', 'click');
                 var endTime = new Date().getTime();
                 var timeSpent = endTime - startTime;
 
                 ga('send', 'timing', 'time_spent', 'hit', timeSpent);
             }
         });
-*/
+
             //slide show
             var jssor_1_SlideshowTransitions = [
               {$Duration:1200,$Opacity:2}

@@ -252,22 +252,22 @@
         var startTime = new Date().getTime();
         var firstTimeClick = 0;
 
-    /*    
-        $('#jssor_1').click(function(e){
-            console.log(firstTimeClick);
+        $('#book').click(function(e){
+            $('#hint').hide();
+            //console.log(firstTimeClick);
             e.preventDefault();
-            console.log("slideshow clicked!");
+            //console.log("journal clicked!");
             firstTimeClick = 1;
 
             if(firstTimeClick == 0) {
-                ga('send', 'event', 'book', 'click');
+                ga("send", "event", 'book', 'click');
                 var endTime = new Date().getTime();
                 var timeSpent = endTime - startTime;
 
                 ga('send', 'timing', 'time_spent', 'hit', timeSpent);
             }
         });
-    */
+ 
         $('#delete_btn').click(function (e) {
             e.preventDefault();
             console.log("delete_btn clicked!");
@@ -314,10 +314,6 @@
         //book_top = $('.page-wrapper').offset().top-10;
         $('#hint').css({"margin-left":book_width, "margin-top": "-50px"});
 
-        $('#book').click(function(e){
-            $('#hint').hide();
-
-        });
     });
 
 </script>
