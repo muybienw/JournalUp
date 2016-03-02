@@ -24,7 +24,7 @@
 <div class="container">
 
     <ul class="journal_options">
-        <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
+        <li><a id="share_btn" data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
         </i></a></li>
 
         {{#if isFav}}
@@ -225,14 +225,16 @@
             //console.log(firstTimeClick);
             e.preventDefault();
             //console.log("slideshow clicked!");
-            firstTimeClick = 1;
+//            ga("send", "event", 'slide', 'click');
 
             if(firstTimeClick == 0) {
-                ga("send", "event", 'book', 'click');
+
+                firstTimeClick = 1;
+
                 var endTime = new Date().getTime();
                 var timeSpent = endTime - startTime;
 
-                ga('send', 'timing', 'time_spent', 'hit', timeSpent);
+                ga('send', 'timing', 'slide_time_spent', 'hit', timeSpent);
             }
         });
 
@@ -257,6 +259,11 @@
             };
             
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            jssor_1_slider.$On($JssorSlider$.$EVT_PARK, function(e){
+                console.log('jssor clicked!');
+                ga("send", "event", 'slide', 'click');
+            });
             
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizing
@@ -317,6 +324,12 @@
         }
 
         $('#back_btn').attr('href', '/myjournal');
+
+        $('#share_btn').click(function(e){
+            ga('send', 'event', 'slide_share', 'click');
+        });
+
+
     });
 
 </script>

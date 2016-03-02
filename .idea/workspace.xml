@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52fcebc5-704e-4a8a-a708-05e5f358d6ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/custom-file-input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-v1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.custom-file-input.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" />
@@ -257,63 +251,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/ny.jpg" afterPath="$PROJECT_DIR$/public/images/ny.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/profilepic.png" afterPath="$PROJECT_DIR$/public/images/profilepic.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tree.jpg" afterPath="$PROJECT_DIR$/public/images/tree.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456370548842.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456370548842.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456370856688.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456370856688.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456370924622.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456370924622.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371306568.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371306568.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371339483.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371339483.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371441655.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371441655.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371653469.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371653469.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371860690.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371860690.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456371864606.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456371864606.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372098363.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372098363.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372102851.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372102851.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372391457.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372391457.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372403174.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372403174.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372437688.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372437688.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372447440.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372447440.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372463195.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372463195.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372471887.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372471887.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372642378.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372642378.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372736683.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372736683.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372750204.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372750204.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456372760963.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456372760963.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456377593304.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456377593304.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456377693395.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456377693395.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456377722900.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456377722900.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456377806413.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456377806413.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456377842090.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456377842090.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378008782.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378008782.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378052765.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378052765.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378103577.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378103577.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378250353.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378250353.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378568249.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378568249.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378753074.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378753074.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378796117.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378796117.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456378966875.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456378966875.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379074629.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379074629.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379218838.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379218838.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379292353.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379292353.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379356727.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379356727.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379544016.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379544016.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379805471.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379805471.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456379862231.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456379862231.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456380152989.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456380152989.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456380195451.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456380195451.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456380719448.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456380719448.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456380740209.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456380740209.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456380895664.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456380895664.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456381135193.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456381135193.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456381159344.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456381159344.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456381176510.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456381176510.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456420336929.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456420336929.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456426578147.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456426578147.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456438952531.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456438952531.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456439141163.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456439141163.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456443606384.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456443606384.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456445543698.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456445543698.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456445774207.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456445774207.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/uploads/1456445848756.jpg" afterPath="$PROJECT_DIR$/public/images/uploads/1456445848756.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/empire.jpg" afterPath="$PROJECT_DIR$/public/pages/empire.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/times.jpeg" afterPath="$PROJECT_DIR$/public/pages/times.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/word1.png" afterPath="$PROJECT_DIR$/public/pages/word1.png" />
@@ -3480,7 +3417,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/arrow.svg" afterPath="$PROJECT_DIR$/public/css/images/arrow.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/bars.svg" afterPath="$PROJECT_DIR$/public/css/images/bars.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/images/close.svg" afterPath="$PROJECT_DIR$/public/css/images/close.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/journalup.css" afterPath="$PROJECT_DIR$/public/css/journalup.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sweetalert.css" afterPath="$PROJECT_DIR$/public/css/sweetalert.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" afterPath="$PROJECT_DIR$/public/fonts/codropsicons/codropsicons.svg" />
@@ -3495,6 +3431,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ie/html5shiv.js" afterPath="$PROJECT_DIR$/public/js/ie/html5shiv.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ie/respond.min.js" afterPath="$PROJECT_DIR$/public/js/ie/respond.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-1.11.0.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-v1.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-v1.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.blockUI.js" afterPath="$PROJECT_DIR$/public/js/jquery.blockUI.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/public/js/jquery.cookie.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.min.js" />
@@ -3515,27 +3452,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/main.scss" afterPath="$PROJECT_DIR$/public/sass/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/favorite.js" afterPath="$PROJECT_DIR$/routes/favorite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/gallery.js" afterPath="$PROJECT_DIR$/routes/gallery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/journal.js" afterPath="$PROJECT_DIR$/routes/journal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/main.js" afterPath="$PROJECT_DIR$/routes/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/my_journal.js" afterPath="$PROJECT_DIR$/routes/my_journal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/setting.js" afterPath="$PROJECT_DIR$/routes/setting.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/signin.js" afterPath="$PROJECT_DIR$/routes/signin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/edit_journal.html" afterPath="$PROJECT_DIR$/statics/edit_journal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/gallery.html" afterPath="$PROJECT_DIR$/statics/gallery.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/manage_media.html" afterPath="$PROJECT_DIR$/statics/manage_media.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/edit_journal.handlebars" afterPath="$PROJECT_DIR$/views/edit_journal.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/journal_view.handlebars" afterPath="$PROJECT_DIR$/views/journal_view.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/journal_view2.handlebars" afterPath="$PROJECT_DIR$/views/journal_view2.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/manage_media.handlebars" afterPath="$PROJECT_DIR$/views/manage_media.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my_favorite.handlebars" afterPath="$PROJECT_DIR$/views/my_favorite.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/my_journal.handlebars" afterPath="$PROJECT_DIR$/views/my_journal.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/footer.handlebars" afterPath="$PROJECT_DIR$/views/partials/footer.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/journal.handlebars" afterPath="$PROJECT_DIR$/views/partials/journal.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/journal_block.handlebars" afterPath="$PROJECT_DIR$/views/partials/journal_block.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/loader.handlebars" afterPath="$PROJECT_DIR$/views/partials/loader.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/profile_info.handlebars" afterPath="$PROJECT_DIR$/views/partials/profile_info.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/setting.handlebars" afterPath="$PROJECT_DIR$/views/setting.handlebars" />
     </list>
     <ignored path="JournalUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -3559,20 +3484,48 @@
       <file leaf-file-name="journal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/journal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-83.77778">
-              <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
-              <folding>
-                <marker date="1456614753000" expanded="true" signature="192:194" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_media.handlebars" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_media.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/manage_media.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5">
+            <state vertical-scroll-proportion="-13.666667">
               <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journal_view2.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/journal_view2.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.071428575">
+              <caret line="264" column="54" selection-start-line="264" selection-start-column="54" selection-end-line="264" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journal_view.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.5882354">
+              <caret line="322" column="11" selection-start-line="319" selection-start-column="8" selection-end-line="322" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="turn.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/turn.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-243.61111">
+              <caret line="877" column="12" selection-start-line="877" selection-start-column="12" selection-end-line="877" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -3581,7 +3534,7 @@
       <file leaf-file-name="component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding />
             </state>
@@ -3601,7 +3554,7 @@
       <file leaf-file-name="journalup.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.862745">
+            <state vertical-scroll-proportion="0.0">
               <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
               <folding />
             </state>
@@ -3625,7 +3578,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/css/journal-up.css" />
         <option value="$PROJECT_DIR$/static/index.html" />
         <option value="$PROJECT_DIR$/views/myjournal.handlebars" />
         <option value="$PROJECT_DIR$/routes/main.js" />
@@ -3671,11 +3623,12 @@
         <option value="$PROJECT_DIR$/routes/signin.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/routes/my_journal.js" />
-        <option value="$PROJECT_DIR$/views/journal_view2.handlebars" />
-        <option value="$PROJECT_DIR$/views/journal_view.handlebars" />
-        <option value="$PROJECT_DIR$/routes/journal.js" />
         <option value="$PROJECT_DIR$/public/css/journalup.css" />
         <option value="$PROJECT_DIR$/views/manage_media.handlebars" />
+        <option value="$PROJECT_DIR$/public/js/turn.js" />
+        <option value="$PROJECT_DIR$/views/journal_view.handlebars" />
+        <option value="$PROJECT_DIR$/routes/journal.js" />
+        <option value="$PROJECT_DIR$/views/journal_view2.handlebars" />
       </list>
     </option>
   </component>
@@ -3715,6 +3668,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3846,7 +3800,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3941,16 +3894,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1276" height="777" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2492163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3958,6 +3910,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -3977,13 +3930,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/sweetalert.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6551724">
-          <caret line="863" column="35" selection-start-line="863" selection-start-column="35" selection-end-line="863" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/journal.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -3995,7 +3941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4024,7 +3969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.625">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4032,7 +3976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4040,7 +3983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4048,7 +3990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7649667">
           <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4056,7 +3997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4064,7 +4004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4072,7 +4011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4444447">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4080,7 +4018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4088,7 +4025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4096,7 +4032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4104,7 +4039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4112,7 +4046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.75">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4120,7 +4053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4128,7 +4060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4136,7 +4067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.041667">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4144,7 +4074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4152,7 +4081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4160,7 +4088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
           <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4168,7 +4095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4176,7 +4102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4184,7 +4109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.592592">
           <caret line="33" column="39" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4192,7 +4116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="40" selection-start-line="49" selection-start-column="4" selection-end-line="50" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4200,7 +4123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4208,7 +4130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.916667">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4216,7 +4137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75">
           <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4224,7 +4144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.291667">
           <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4232,7 +4151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.875">
           <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4240,7 +4158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.625">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4256,7 +4173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-32.5">
           <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4272,7 +4188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="127" column="30" selection-start-line="125" selection-start-column="8" selection-end-line="127" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4280,7 +4195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4288,7 +4202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.25">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4296,9 +4209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4314,7 +4224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4322,29 +4231,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="108.75">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/journal_view2.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="39" column="119" selection-start-line="39" selection-start-column="119" selection-end-line="39" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82951653">
-          <caret line="264" column="37" selection-start-line="264" selection-start-column="37" selection-end-line="264" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/journalup.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.862745">
+        <state vertical-scroll-proportion="0.0">
           <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
           <folding />
         </state>
@@ -4360,26 +4252,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/turn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-243.61111">
+          <caret line="877" column="12" selection-start-line="877" selection-start-column="12" selection-end-line="877" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/manage_media.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.666667">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/journal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-83.77778">
-          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
-          <folding>
-            <marker date="1456614753000" expanded="true" signature="192:194" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/manage_media.handlebars">
+    <entry file="file://$PROJECT_DIR$/views/journal_view.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.5882354">
+          <caret line="322" column="11" selection-start-line="319" selection-start-column="8" selection-end-line="322" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/journal_view2.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.071428575">
+          <caret line="264" column="54" selection-start-line="264" selection-start-column="54" selection-end-line="264" selection-end-column="54" />
           <folding />
         </state>
       </provider>

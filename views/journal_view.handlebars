@@ -21,7 +21,7 @@
 <div class="container">
 
     <ul class="journal_options">
-        <li><a data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
+        <li><a id="share_btn" data-dialog="somedialog" class="trigger option"><i class="fa fa-share-alt-square"> share
         </i></a></li>
 
         {{#if isFav}}
@@ -91,14 +91,7 @@
                 </div>
             </div>
         </div>
-        
-        <!--div>
-        <img src="{{coverImage}}" width="200px">
 
-        {{#each images}}
-            <img src="{{this}}" width="200px">
-        {{/each}}
-        </div-->
     </div>
 
     <div class="empty"></div>
@@ -253,16 +246,18 @@
         var firstTimeClick = 0;
 
         $('#book').click(function(e){
-            $('#hint').hide();
+
             //console.log(firstTimeClick);
             e.preventDefault();
             //console.log("journal clicked!");
-            firstTimeClick = 1;
+
+//            ga("send", "event", 'book', 'click');
 
             if(firstTimeClick == 0) {
-                ga("send", "event", 'book', 'click');
                 var endTime = new Date().getTime();
                 var timeSpent = endTime - startTime;
+
+                firstTimeClick = 1;
 
                 ga('send', 'timing', 'time_spent', 'hit', timeSpent);
             }
@@ -313,6 +308,20 @@
         book_width = $('.page-wrapper').width() +  $('.page-wrapper').offset().left-90;
         //book_top = $('.page-wrapper').offset().top-10;
         $('#hint').css({"margin-left":book_width, "margin-top": "-50px"});
+
+        $('#share_btn').click(function(e){
+            ga('send', 'event', 'book_share', 'click');
+        });
+
+//        $('#book').bind('click', function(e){
+//            ga('send', 'event', 'test', 'click');
+//        });
+
+        $('#book').bind('turning', function(e){
+            ga('send', 'event', 'test', 'click');
+            $('#hint').hide();
+        });
+
 
     });
 
