@@ -35,7 +35,7 @@ exports.viewJournal = function(req, res){
             var lastBit = id.charAt(id.length-1) - '0';
 
             //render version A
-            if(lastBit % 2 == 1){
+            if(lastBit % 2 == 0){
 
                 console.log("render journal view version A");
 
