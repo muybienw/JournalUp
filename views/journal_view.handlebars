@@ -280,7 +280,11 @@
             }, function (isConfirm) {
                 if (isConfirm) {
                     $.post(window.location.href +'/delete', function() {
-                        swal("Deleted!", "Your journal has been deleted.", "success");
+                        swal({
+                            title: "Journal deleted!",
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
                         window.location.href = '/myjournal';
                     });
                 } else {

@@ -35,7 +35,7 @@ exports.viewJournal = function(req, res){
             var lastBit = id.charAt(id.length-1) - '0';
 
             //render version A
-            if(lastBit % 2 == 0){
+            if(lastBit % 2 == 1){
 
                 console.log("render journal view version A");
 
@@ -156,7 +156,7 @@ exports.createJournal = function(req, res) { 
     if(collaborators.indexOf(req.session.user.name)==-1) collaborators.push(req.session.user.name);
 
     var description = req.body.description;
-    var coverImage = req.file ? req.file.path.substring(6) : "/images/jenny.jpg";
+    var coverImage = req.file ? req.file.path.substring(6) : "/images/paris.jpg";
     
     var newJournal_json = {
         //"id" : id,
@@ -165,7 +165,7 @@ exports.createJournal = function(req, res) { 
         "collaborators" : collaborators,
         "description": description,
         "coverImage": coverImage,
-        "images": []
+        "images": ["/images/japan.jpg", "/images/bigben.jpg", "/images/antlope.jpg", "/images/101.jpg"]
     }
 
     console.log(newJournal_json);

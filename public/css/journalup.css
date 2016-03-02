@@ -239,6 +239,31 @@ a, a:link, a:visited, a:active, a:hover {
     padding-left: 0;
 }
 
+.collaborator {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: inline;
+    border-style: dashed;
+    border-color: white;
+    border-width: thin;
+
+    padding-bottom: 0.2em;
+    margin-right: 1em;
+    margin-bottom: 0.8em;
+}
+
+.collaborator p{
+    display: inline;
+}
+
+.collaborator a{
+    margin-left: 0.8em;
+}
+
+.collaborator_row{
+    margin: 0;
+}
+
 .sweet-alert{
     background-color: #21b2a6;
     font-family: inherit;
@@ -418,12 +443,6 @@ input[type="submit"] {
     font-size: 23px;
 }
 
-div .collaborator {
-    border-style: solid;
-    display: inline;
-}
-
-
 /*gallery page*/
 .journals-container{
     padding: 0.5em;
@@ -493,4 +512,26 @@ input[readonly] {
 /* hint on journal view page*/
 #hint{
     position: absolute;
+}
+
+/*#button-create{*/
+    /*margin: 2em;*/
+/*}*/
+
+.btn-info {
+    background-image: linear-gradient(to bottom,#21b2a6 0,#21b2a6 100%);
+    background-image: -webkit-linear-gradient(top,#21b2a6 0,#21b2a6 100%);
+}
+
+.row{
+    margin: 0;
+}
+
+.collaborator_search{
+    margin-left: -1.5em;
+}
+
+#add_image_btn{
+    padding-left:0.5em;
+
 }

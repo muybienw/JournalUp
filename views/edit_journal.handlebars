@@ -33,7 +33,7 @@
     <!--</div>-->
 
     <!--search bar-->
-    <div class="container">
+    <div class="container collaborator_search">
         <label for="title">Collaborators</label>
         <div class="row">
             <div class="col-md-6">
@@ -52,7 +52,7 @@
     </div>
 
     <div class="container">
-        <div class="row" id="collaborator_list">
+        <div class="row collaborator_row" id="collaborator_list">
             {{#each collaborators}}
                 <div id="{{this}}" class='collaborator'>
                     <p> {{this}}</p>
@@ -80,21 +80,24 @@
         <!--</div>-->
         <!--</div>-->
         <label for="form-photo">Cover Photo</label>
-        <div class="col-xs-12">
+        <div class="">
             <div class="thumbnail select_picture_thumbnail">
                 <img src="{{coverImage}}" alt="...">
-                <input type="file" name="image" class="12u$ button upload_btn"
-                       accept="application/x-zip-compressed,image/*"
-                       title="">
             </div>
+
+            <button class="12u button">
+                <input type="file" name="image" class="file-input" accept="application/x-zip-compressed,image/*">
+            </button>
+
         </div>
     </div>
 
-    <div id="button-create">
-        <input type="submit" class="button special" value="Save">
-    </div>
+    <!--<div id="button-create">-->
+        <!--<input type="submit" class="button special" value="Save">-->
+    <!--</div>-->
 
     <div class="12u 12u$(xsmall) actions">
+        <input type="submit" class="button special" value="Save" style="width:80%; margin-top:2em">
         <a href="/journal/{{_id}}" class="button" value="cancel" id="cancel_btn"/> Cancel </a>
     </div>
 

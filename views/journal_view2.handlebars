@@ -86,7 +86,8 @@
                 <!-- Loading Screen -->
                 <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                     <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px;height: 100%;"></div>
-                    <div style="position:absolute;display:block;background:url('/images/loading.gif') no-repeat center center;top:0px;left:0px;width:auto;height:100%;"></div>
+                    <div style="position:absolute;display:block;background:url('/images/loader.gif') no-repeat center
+                    center;top:0px;left:0px;width:auto;height:100%;"></div>
                 </div>
                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
                     <div data-p="112.50" style="display: none;">
@@ -108,14 +109,10 @@
                 <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
                 <a href="http://www.jssor.com" style="display:none">Slideshow Maker</a>
             </div>
-        <!--div>
-        <img src="{{coverImage}}" width="200px">
 
-        {{#each images}}
-            <img src="{{this}}" width="200px">
-        {{/each}}
-        </div-->
     </div>
+
+    <div class="empty"> </div>
 
     <script type="text/javascript">
 
@@ -300,7 +297,11 @@
             }, function (isConfirm) {
                 if (isConfirm) {
                     $.post(window.location.href +'/delete', function() {
-                        swal("Deleted!", "Your journal has been deleted.", "success");
+                        swal({
+                            title: "Journal deleted!",
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
                         window.location.href = '/myjournal';
                     });
                 } else {
