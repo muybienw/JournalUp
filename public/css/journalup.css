@@ -544,3 +544,20 @@ input[readonly] {
     font-style: oblique;
     text-decoration: underline;
 }
+
+/*placeholder text color*/
+input::-webkit-input-placeholder {
+    color: dimgrey !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: dimgrey !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: dimgrey !important;
+}
+
+input:-ms-input-placeholder {
+    color: dimgrey !important;
+}

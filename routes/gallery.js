@@ -10,12 +10,12 @@ exports.view = function(req, res){
         res.redirect('/');
     }
     else {
-        models.Journal.find(function (err, journals) {
+        models.Journal.find().sort({createdAt: -1}).limit(6).exec(function (err, journals) {
             if (err) {
                 console.log(err);
                 res.send(500);
             }
-            console.log(journals);
+            //console.log(journals);
             res.render('gallery', {'journals': journals});
         })
     }
@@ -35,7 +35,7 @@ exports.viewSearch = function(req, res){
                 console.log(err);
                 res.send(500);
             }
-            console.log(journals);
+            //console.log(journals);
             res.render('gallery', {'journals': journals});
         })
     }

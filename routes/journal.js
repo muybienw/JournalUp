@@ -156,7 +156,7 @@ exports.createJournal = function(req, res) { 
     if(collaborators.indexOf(req.session.user.name)==-1) collaborators.push(req.session.user.name);
 
     var description = req.body.description;
-    var coverImage = req.file ? req.file.path.substring(6) : "/images/paris.jpg";
+    var coverImage = req.file ? req.file.path.substring(6) : "/images/coverImage-placeholder.jpg";
     
     var newJournal_json = {
         //"id" : id,

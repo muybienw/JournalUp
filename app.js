@@ -176,7 +176,25 @@ var storage = multer.diskStorage({
   }
 })
 
-var upload = multer({ storage: storage });
+var upload = multer({ storage: storage,
+  onFileUploadComplete: function (file, req, res) {
+    console.log(file.fieldname + ' uploaded to  ' + file.path);
+
+    //var newFileName = req.files.file[0].name;
+    //if(!fileTooLarge) {
+    //  articles.uploadUserImage(req, res, newFileName, function() {
+    //    file.path = 'http://<myblobstorage>.blob.core.windows.net/userpictures/' + newFileName;
+    //    //file param is actually an object with the path as a property
+    //    res.send(file);
+    //    //delete file from local uploads folder
+    //    fs.unlink('packages/theme/public/assets/img/uploads/' + newFileName);
+    //  });
+    //} else {
+    //  fs.unlink('packages/theme/public/assets/img/uploads/' + newFileName);
+    //}
+  }
+
+});
 
 app.post('/change_setting', upload.single('image'), setting.changeSetting);
 app.post('/createjournal', upload.single('image'), journal.createJournal);
