@@ -29,11 +29,19 @@ exports.viewSearch = function(req, res){
 
     if(search.length==0) res.redirect('/gallery');
     else{
-        var searchOption = {title: new RegExp(search, "i")};
-        models.Journal.find(searchOption, function (err, journals) {
+
+        try {
+            var tt = new RegExp(search, "i")
+        }
+        catch(e){
+            console.log(e);
+            res.render('gallery', {'journals': []});
+        }
+        var searchOption = {title: tt};
+        models.Journal.find(searchOption).sort({createdAt: -1}).limit(6).exec(function (err, journals) {
             if (err) {
                 console.log(err);
-                res.send(500);
+                res.send(200);
             }
             //console.log(journals);
             res.render('gallery', {'journals': journals});
