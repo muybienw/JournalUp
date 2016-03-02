@@ -535,3 +535,12 @@ input[readonly] {
     padding-left:0.5em;
 
 }
+
+.notice {
+    padding: 0;
+}
+
+.notice a {
+    font-style: oblique;
+    text-decoration: underline;
+}

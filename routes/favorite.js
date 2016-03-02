@@ -18,7 +18,10 @@ exports.view = function(req, res) {
 
         models.User.findOne(searchOption).populate('journals').populate('favorites').exec(function (err, result) {
             if (err) return console.error(err);
-            res.render('my_favorite', {'favs': result["favorites"]});
+
+            var isEmpty = result["favorites"].length == 0;
+
+            res.render('my_favorite', {'favs': result["favorites"], 'isEmpty': isEmpty});
         });
     }
 

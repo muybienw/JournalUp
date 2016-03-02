@@ -14,9 +14,16 @@
 
 <div class="container">
 
-    {{#each journals}}
-        {{> journal_block }}
-    {{/each}}
+    {{#if isEmpty}}
+        <p class="notice"> Welcome! let's <a href="/newjournal">create</a> your first journal
+            to find
+            inspiring journals!</p>
+
+    {{else}}
+        {{#each journals}}
+            {{> journal_block }}
+        {{/each}}
+    {{/if}}
 
 </div>
 

@@ -37,8 +37,10 @@ exports.view = function(req, res){
         list.sort(compare);
         //console.log(list);
 
+        var isEmpty = result['journals'].length == 0;
+
         res.render('my_journal', {
-            'journals': result['journals'], 'user': result,
+            'journals': result['journals'], 'user': result, 'isEmpty' : isEmpty,
             helpers: {
                 formatDate: function (datetime) {
                     var date = new Date(datetime);

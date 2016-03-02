@@ -22,14 +22,20 @@
 
         <div class="row">
 
-            {{#each favs}}
-                <div class="col-xs-4 media-container">
-                    <a href="/journal/{{_id}}" class="thumbnail media">
-                        <img src="{{coverImage}}" alt="{{title}}">
-                    </a>
-                </div>
+            {{#if isEmpty}}
+                <p class="notice"> You have no favorite journal... Explore <span><a href="/gallery">gallery</a></span>
+                    to find
+                    inspiring journals!</p>
+            {{else}}
+                {{#each favs}}
+                    <div class="col-xs-4 media-container">
+                        <a href="/journal/{{_id}}" class="thumbnail media">
+                            <img src="{{coverImage}}" alt="{{title}}">
+                        </a>
+                    </div>
 
-            {{/each}}
+                {{/each}}
+            {{/if}}
 
         </div>
     </div>
