@@ -185,17 +185,17 @@
     <div id="somedialog" class="dialog">
         <div class="dialog__overlay"></div>
         <div class="dialog__content">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://journalup.herokuapp.com/journal/{{id}}"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://journalup.herokuapp.com/journal/{{journal._id}}"
                class="button"> Facebook
             </a>
 
             <!--share to weibo-->
-            <a href="http://service.weibo.com/share/share.php?url=http://journalup.herokuapp.com&appkey=&title=Let's journal up!&pic=&ralateUid=&language=zh_cn"  class="button">
+            <a href="http://service.weibo.com/share/share.php?url=http://journalup.herokuapp.com/journal/{{journal._id}}&appkey=&title=Let's journal up!&pic=&ralateUid=&language=zh_cn"  class="button">
                 Weibo
             </a>
 
-            <a href="http://twitter.com/home?status=https://journalup.herokuapp.com/journal/{{id}}"class="button"> Twitter </a>
-            <a href="https://plus.google.com/share?url=https://journalup.herokuapp.com/journal/{{id}}" class="button"> Google+ </a>
+            <a href="http://twitter.com/home?status=http://journalup.herokuapp.com/journal/{{journal._id}}"class="button"> Twitter </a>
+            <a href="https://plus.google.com/share?url=http://journalup.herokuapp.com/journal/{{journal._id}}" class="button"> Google+ </a>
 
             <div><button class="action" data-dialog-close>Close</button></div>
         </div>
