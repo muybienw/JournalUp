@@ -270,19 +270,23 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 .collaborator {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
     padding-left: 0.5em;
     padding-right: 0.5em;
     display: inline;
-    border-style: dashed;
+    border-radius: 10%;
+/*    border-style: dashed;
     border-color: white;
     border-width: thin;
-
+*/
     padding-bottom: 0.2em;
     margin-right: 1em;
     margin-bottom: 0.8em;
 }
 
 .collaborator p{
+    font-size: 10pt;
     display: inline;
 }
 
@@ -440,7 +444,7 @@ input[type="submit"] {
     border-radius: 6px;
     background-color: #fff;
 
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
 #custom-search-input input{
