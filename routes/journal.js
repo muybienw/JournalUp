@@ -34,41 +34,67 @@ exports.viewJournal = function(req, res){
             var id = req.session.user.id;
             var lastBit = id.charAt(id.length-1) - '0';
 
+
+            // render version B always
+            res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+                helpers: {
+                    foo: function () { return 'foo.'; },
+                    ifIn: function(elem, list, options) {
+                        if(list.indexOf(elem) > -1) {
+                            return options.fn(this);
+                        }
+                        return options.inverse(this);
+                    },
+                    formatDate: function (datetime) {
+                        var date = new Date(datetime);
+                        var options = {
+                            //weekday: "long",
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                            //hour: "2-digit",
+                            //minute: "2-digit"
+                        }
+
+                        return date.toLocaleDateString("en-US", options);
+                    },
+                }
+            });
+
             //render version A
-            if(lastBit % 2 == 0){
-
-                console.log("render journal view version A");
-
-                res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
-                    helpers: {
-                        foo: function () { return 'foo.'; },
-                        ifIn: function(elem, list, options) {
-                            if(list.indexOf(elem) > -1) {
-                                return options.fn(this);
-                            }
-                            return options.inverse(this);
-                        }
-                    }
-                });
-            }
-
-            //render version B
-            else{
-                console.log("render journal view version B");
-
-                res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
-                    helpers: {
-                        foo: function () { return 'foo.'; },
-                        ifIn: function(elem, list, options) {
-                            if(list.indexOf(elem) > -1) {
-                                return options.fn(this);
-                            }
-                            return options.inverse(this);
-                        }
-                    }
-                });
-            }
-
+            //if(lastBit % 2 == 0){
+            //
+            //    console.log("render journal view version A");
+            //
+            //    res.render('journal_view', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+            //        helpers: {
+            //            foo: function () { return 'foo.'; },
+            //            ifIn: function(elem, list, options) {
+            //                if(list.indexOf(elem) > -1) {
+            //                    return options.fn(this);
+            //                }
+            //                return options.inverse(this);
+            //            }
+            //        }
+            //    });
+            //}
+            //
+            ////render version B
+            //else{
+            //    console.log("render journal view version B");
+            //
+            //    res.render('journal_view2', {"journal" : journal, "user" : user[0], "isFav" : isFav, "isCollaborator" : isCollaborator,
+            //        helpers: {
+            //            foo: function () { return 'foo.'; },
+            //            ifIn: function(elem, list, options) {
+            //                if(list.indexOf(elem) > -1) {
+            //                    return options.fn(this);
+            //                }
+            //                return options.inverse(this);
+            //            }
+            //        }
+            //    });
+            //}
 
         });
     });
@@ -165,7 +191,8 @@ exports.createJournal = function(req, res) { 
         "collaborators" : collaborators,
         "description": description,
         "coverImage": coverImage,
-        "images": ["/images/japan.jpg", "/images/bigben.jpg", "/images/antlope.jpg", "/images/101.jpg"]
+        "images": []
+        //"images": ["/images/japan.jpg", "/images/bigben.jpg", "/images/antlope.jpg", "/images/101.jpg"]
     }
 
     console.log(newJournal_json);

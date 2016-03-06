@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html xmlns:wb="http://open.weibo.com/wb">
+
+<html>
+<head>
+    {{> html_head}}
+
+</head>
+
+<body>
+
+{{> header}}
+
+<!-- Banner -->
+<section id="banner">
+    <div class="inner">
+        <h2>Journal Up</h2>
+        <p>Create Shared Travel Story</p>
+    </div>
+</section>
+
+<div class="container">
+    <!--<form method="post" action="#">-->
+    <!--<div class="row uniform">-->
+
+    <!--div class="12u 12u$(xsmall)">
+        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+    </div>
+    <div class="12u 12u$(xsmall)">
+        <input type="text" name="demo-password" id="demo-password" value="" placeholder="Password" />
+    </div-->
+
+    <div class="12u$">
+        <ul class="actions">
+
+            <!--sign in with weibo-->
+            <li>
+                <wb:login-button id="wb_btn" type="3,2" onlogin="login" onlogout="logout">
+                    Login with Weibo</wb:login-button>
+            </li>
+
+        </ul>
+    </div>
+    <!--</div>-->
+    <!--</form>-->
+</div>
+
+<script>
+    $(document).on('ready', function() {
+        $('#header').hide();
+    });
+</script>
+
+
+</body>
+</html>

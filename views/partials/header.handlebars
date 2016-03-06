@@ -50,14 +50,18 @@
                 if (isConfirm) {
 //                    menu.show();
 
-                    if(WB2.checkLogin()){
-                        WB2.logout(function(){
-                            window.location.replace("/");
-                        });
-                    }
-                    else{
-                        window.location.replace("/");
-                    }
+                      // just go back to facebook login
+//                    if(WB2.checkLogin()){
+//                        WB2.logout(function(){
+//                            window.location.replace("/");
+//                        });
+//                    }
+//                    else{
+//                        window.location.replace("/");
+//                    }
+
+                    window.location.replace("/");
+
                 } else {
 //                    menu.show();
                 }

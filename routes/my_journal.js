@@ -45,7 +45,7 @@ exports.view = function(req, res){
                 formatDate: function (datetime) {
                     var date = new Date(datetime);
                     var options = {
-                        weekday: "long",
+                        //weekday: "long",
                         year: "numeric",
                         month: "short",
                         day: "numeric",

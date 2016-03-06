@@ -11,6 +11,13 @@ exports.signIn = function(req, res){
     res.render('signin');
 };
 
+exports.signInWeibo = function(req, res){
+    req.session.user = null;
+    console.log(req.session);
+
+    res.render('signin_weibo');
+};
+
 exports.signUp = function(req, res){
     res.render('signup');
 };
