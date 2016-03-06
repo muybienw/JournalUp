@@ -125,6 +125,22 @@ body {
     color: darkorange;
 }
 
+/* Profile */
+#profile-img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 98px;
+    height: 98px;
+    margin-left: auto;
+}
+
+#profile-img img {
+    width: 98px;
+    height: auto;
+    margin-right: 0;
+ }
+
+
 /* Create new journal page */
 .input-container{
     margin: 1.3em;
