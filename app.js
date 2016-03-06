@@ -93,7 +93,8 @@ function authentication(req, res, next) {
 
 // Add routes here
 app.get('/', signin.signIn);
-app.get('/weibo', signin.signInWeibo);
+//app.get('/weibo', signin.signInWeibo);
+
 app.get('/signup', signin.signUp);
 
 
