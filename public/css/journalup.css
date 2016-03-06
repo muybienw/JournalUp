@@ -125,6 +125,22 @@ body {
     color: darkorange;
 }
 
+/* Profile */
+#profile-img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 98px;
+    height: 98px;
+    margin-left: auto;
+}
+
+#profile-img img {
+    width: 98px;
+    height: auto;
+    margin-right: 0;
+ }
+
+
 /* Create new journal page */
 .input-container{
     margin: 1.3em;
@@ -214,13 +230,27 @@ body {
 }
 
 .journal_options{
-    margin-bottom: 0.8em;
+    margin-bottom: 1em;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .journal_options li{
      display: inline;
      text-decoration: none;
      margin-right:1.5em;
+}
+
+.title{
+    font-size: 16pt;
+}
+
+.title h1{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.description{
+    text-align: justify;
 }
 
 a, a:link, a:visited, a:active, a:hover {
@@ -240,19 +270,23 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 .collaborator {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
     padding-left: 0.5em;
     padding-right: 0.5em;
     display: inline;
-    border-style: dashed;
+    border-radius: 10%;
+/*    border-style: dashed;
     border-color: white;
     border-width: thin;
-
+*/
     padding-bottom: 0.2em;
     margin-right: 1em;
     margin-bottom: 0.8em;
 }
 
 .collaborator p{
+    font-size: 10pt;
     display: inline;
 }
 
@@ -410,7 +444,7 @@ input[type="submit"] {
     border-radius: 6px;
     background-color: #fff;
 
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
 #custom-search-input input{

@@ -32,13 +32,12 @@
         {{else}}
             <li><a href="#" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>
         {{/if}}
-    </ul>
-    <ul class="journal_options">
+    
         {{#if isCollaborator}}
             <!--<li><a href="/favorite" class="option" id="favorite_btn"><i class="fa fa-heart-o"> favorite </i></a></li>-->
             <li><a href="/journal/{{journal._id}}/edit " class="option"><i class="fa fa-pencil-square-o"> edit&nbsp;&nbsp;
             </i></a></li>
-            <li><a href="/journal/{{journal._id}}/media" class="option" id="add_btn"><i class="fa fa-picture-o"> photos
+            <li><a href="/journal/{{journal._id}}/media" class="option" id="add_btn"><i class="fa fa-picture-o"> add photos
             </i></a></li>
             <li><a href="/myjournal" class="option" id="delete_btn"><i class="fa fa-trash-o"> delete </i></a></li>
         {{else}}
@@ -68,47 +67,48 @@
 
 
     <div class="container">
-        <h2> {{journal.title}} </h2>
+        <div class= "title">
+            <h1> {{journal.title}} </h1>
+        </div>
 
-        <ul class="collaborator_list">
+
+        <!--ul class="collaborator_list">
             {{# each journal.collaborators}}
                 <li> {{this}} </li>
             {{/each}}
-        </ul>
+        </ul-->
 
-        <p>{{journal.time}} </p>
+        <!--p>{{journal.time}} </p-->
 
-        <p>{{journal.description}} </p>
-
-
+        <p class = "description">{{journal.description}} </p>
         
-            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-                <!-- Loading Screen -->
-                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px;height: 100%;"></div>
-                    <div style="position:absolute;display:block;background:url('/images/loader.gif') no-repeat center
-                    center;top:0px;left:0px;width:auto;height:100%;"></div>
-                </div>
-                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-                    <div data-p="112.50" style="display: none;">
-                        <img src="{{journal.coverImage}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
-                    </div>
-                    {{#each journal.images}}
-                    <div data-p="112.50" style="display: none;">
-                        <img src="{{this}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
-                    </div>
-                    {{/each}}
-                </div>
-                <!-- Bullet Navigator -->
-                <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
-                    <!-- bullet navigator item prototype -->
-                    <div data-u="prototype" style="width:16px;height:16px;"></div>
-                </div>
-                <!-- Arrow Navigator -->
-                <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
-                <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
-                <a href="http://www.jssor.com" style="display:none">Slideshow Maker</a>
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: -10px;  width: 600px; height: 600px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px;height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('/images/loader.gif') no-repeat center
+                center;top:0px;left:0px;width:auto;height:100%;"></div>
             </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 600px; overflow: hidden;">
+                <div data-p="112.50" style="display: none;">
+                    <img src="{{journal.coverImage}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
+                </div>
+                {{#each journal.images}}
+                <div data-p="112.50" style="display: none;">
+                    <img src="{{this}}" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto"/>
+                </div>
+                {{/each}}
+            </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                <!-- bullet navigator item prototype -->
+                <div data-u="prototype" style="width:16px;height:16px;"></div>
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+            <a href="http://www.jssor.com" style="display:none">Slideshow Maker</a>
+        </div>
 
     </div>
 
