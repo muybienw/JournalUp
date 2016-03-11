@@ -212,11 +212,16 @@
     <div id="somedialog" class="dialog">
         <div class="dialog__overlay"></div>
         <div class="dialog__content">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://journalup.herokuapp.com/journal/{{journal._id}}"
-               class="button"> Facebook
+            <!--<a href="https://www.facebook.com/sharer/sharer.php?u=http://journalup.herokuapp.com/journal/{{journal._id}}"-->
+               <!--class="button"> Facebook-->
+            <!--</a>-->
+
+            <a href="https://www.facebook.com/sharer/sharer.php?p[title]={{journal.title}}&p[url]=http://journalup.herokuapp.com/journal/{{journal._id}}&p[summary]={{journal.description}}&p[images][0]={{journal.coverImage}}"
+                class="button"> Facebook
             </a>
 
-            <!--share to weibo-->
+
+                <!--share to weibo-->
             <a href="http://service.weibo.com/share/share.php?url=http://journalup.herokuapp.com/journal/{{journal._id}}&appkey=&title=Let's journal up!&pic=&ralateUid=&language=zh_cn"  class="button">
                 Weibo
             </a>
