@@ -10,8 +10,8 @@ var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 var fileUpload = require('express-fileupload');
 var multer = require('multer');
-var passport = require('passport');
-var FacebookStrategy = require('passport-facebook').Strategy;
+//var passport = require('passport');
+//var FacebookStrategy = require('passport-facebook').Strategy;
 
 // mongoose session
 SessionStore = require("session-mongoose")(express);
@@ -152,9 +152,11 @@ app.post('/checkuser', user.checkUser);
 // authentication process by attempting to obtain an access token.  If
 // access was granted, the user will be logged in.  Otherwise,
 // authentication has failed.
-app.get('/myjournal',
-  passport.authenticate('facebook', { successRedirect: '/',
-                                      failureRedirect: '/login' }));
+
+//app.get('/myjournal',
+//  passport.authenticate('facebook', { successRedirect: '/',
+//
+//                                failureRedirect: '/login' }));
 /*
 app.get('/logout', function(req, res){
   //req.logout();
